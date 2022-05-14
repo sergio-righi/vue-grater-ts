@@ -1,0 +1,1268 @@
+[
+    {
+        "emoji": "💌",
+        "name": "love letter",
+        "html": "0x1f48c;",
+        "shortname": "loveletter"
+    },
+    {
+        "emoji": "🕳️",
+        "name": "hole",
+        "html": "0x1f573;",
+        "shortname": "hole"
+    },
+    {
+        "emoji": "💣",
+        "name": "bomb",
+        "html": "0x1f4a3;",
+        "shortname": "bomb"
+    },
+    {
+        "emoji": "🛀",
+        "name": "person taking bath",
+        "html": "0x1f6c0;",
+        "shortname": "takingbath"
+    },
+    {
+        "emoji": "🛌",
+        "name": "person in bed",
+        "html": "0x1f6cc;",
+        "shortname": "inbed"
+    },
+    {
+        "emoji": "🔪",
+        "name": "kitchen knife",
+        "html": "0x1f52a;",
+        "shortname": "knife"
+    },
+    {
+        "emoji": "🏺",
+        "name": "amphora",
+        "html": "0x1f3fa;",
+        "shortname": "amphora"
+    },
+    {
+        "emoji": "🗺️",
+        "name": "world map",
+        "html": "0x1f5fa;",
+        "shortname": "worldmap"
+    },
+    {
+        "emoji": "🧭",
+        "name": "compass",
+        "html": "0x1f9ed;",
+        "shortname": "compass"
+    },
+    {
+        "emoji": "🧱",
+        "name": "brick",
+        "html": "0x1f9f1;",
+        "shortname": "brick"
+    },
+    {
+        "emoji": "💈",
+        "name": "barber pole",
+        "html": "0x1f488;",
+        "shortname": "barber"
+    },
+    {
+        "emoji": "🦽",
+        "name": "manual wheelchair",
+        "html": "0x1f9bd;",
+        "shortname": "wheelchair"
+    },
+    {
+        "emoji": "🦼",
+        "name": "motorized wheelchair",
+        "html": "0x1f9bc;",
+        "shortname": "motorizedwheelchair"
+    },
+    {
+        "emoji": "🛢️",
+        "name": "oil drum",
+        "html": "0x1f6e2;",
+        "shortname": "oildrum"
+    },
+    {
+        "emoji": "🛎️",
+        "name": "bellhop bell",
+        "html": "0x1f6ce;",
+        "shortname": "bellhopbell"
+    },
+    {
+        "emoji": "🧳",
+        "name": "luggage",
+        "html": "0x1f9f3;",
+        "shortname": "luggage"
+    },
+    {
+        "emoji": "⌛",
+        "name": "hourglass done",
+        "html": "0x231b;",
+        "shortname": "hourglassdone"
+    },
+    {
+        "emoji": "⏳",
+        "name": "hourglass not done",
+        "html": "0x23f3;",
+        "shortname": "hourglass"
+    },
+    {
+        "emoji": "⌚",
+        "name": "watch",
+        "html": "0x231a;",
+        "shortname": "watch"
+    },
+    {
+        "emoji": "⏰",
+        "name": "alarm clock",
+        "html": "0x23f0;",
+        "shortname": "alarm"
+    },
+    {
+        "emoji": "⏱️",
+        "name": "stopwatch",
+        "html": "0x23f1;",
+        "shortname": "stopwatch"
+    },
+    {
+        "emoji": "⏲️",
+        "name": "timer clock",
+        "html": "0x23f2;",
+        "shortname": "timer"
+    },
+    {
+        "emoji": "🕰️",
+        "name": "mantelpiece clock",
+        "html": "0x1f570;",
+        "shortname": "mantelpiece"
+    },
+    {
+        "emoji": "🌡️",
+        "name": "thermometer",
+        "html": "0x1f321;",
+        "shortname": "thermometer"
+    },
+    {
+        "emoji": "⛱️",
+        "name": "umbrella on ground",
+        "html": "0x26f1;",
+        "shortname": "umbrellaground"
+    },
+    {
+        "emoji": "🧨",
+        "name": "firecracker",
+        "html": "0x1f9e8;",
+        "shortname": "firecracker"
+    },
+    {
+        "emoji": "🎈",
+        "name": "balloon",
+        "html": "0x1f388;",
+        "shortname": "balloon"
+    },
+    {
+        "emoji": "🎉",
+        "name": "party popper",
+        "html": "0x1f389;",
+        "shortname": "partypopper"
+    },
+    {
+        "emoji": "🎊",
+        "name": "confetti ball",
+        "html": "0x1f38a;",
+        "shortname": "confettiball"
+    },
+    {
+        "emoji": "🎎",
+        "name": "japanese dolls",
+        "html": "0x1f38e;",
+        "shortname": "japanesedoll"
+    },
+    {
+        "emoji": "🎏",
+        "name": "carp streamer",
+        "html": "0x1f38f;",
+        "shortname": "carpstreamer"
+    },
+    {
+        "emoji": "🎐",
+        "name": "wind chime",
+        "html": "0x1f390;",
+        "shortname": "windchime"
+    },
+    {
+        "emoji": "🧧",
+        "name": "red envelope",
+        "html": "0x1f9e7;",
+        "shortname": "redenvelope"
+    },
+    {
+        "emoji": "🎀",
+        "name": "ribbon",
+        "html": "0x1f380;",
+        "shortname": "ribbon"
+    },
+    {
+        "emoji": "🎁",
+        "name": "wrapped gift",
+        "html": "0x1f381;",
+        "shortname": "gift"
+    },
+    {
+        "emoji": "🤿",
+        "name": "diving mask",
+        "html": "0x1f93f;",
+        "shortname": "snorkel"
+    },
+    {
+        "emoji": "🪀",
+        "name": "yo yo",
+        "html": "0x1fa80;",
+        "shortname": "yoyo"
+    },
+    {
+        "emoji": "🪁",
+        "name": "kite",
+        "html": "0x1fa81;",
+        "shortname": "kite"
+    },
+    {
+        "emoji": "🔮",
+        "name": "crystal ball",
+        "html": "0x1f52e;",
+        "shortname": "crystalball"
+    },
+    {
+        "emoji": "🧿",
+        "name": "nazar amulet",
+        "html": "0x1f9ff;",
+        "shortname": "nazaramulet"
+    },
+    {
+        "emoji": "🕹️",
+        "name": "joystick",
+        "html": "0x1f579;",
+        "shortname": "joystick"
+    },
+    {
+        "emoji": "🧸",
+        "name": "teddy bear",
+        "html": "0x1f9f8;",
+        "shortname": "tedbear"
+    },
+    {
+        "emoji": "🖼️",
+        "name": "framed picture",
+        "html": "0x1f5bc;",
+        "shortname": "framedpicture"
+    },
+    {
+        "emoji": "🧶",
+        "name": "yarn",
+        "html": "0x1f9f6;",
+        "shortname": "yarn"
+    },
+    {
+        "emoji": "🛍️",
+        "name": "shopping bags",
+        "html": "0x1f6cd;",
+        "shortname": "shoppingbag"
+    },
+    {
+        "emoji": "📿",
+        "name": "prayer beads",
+        "html": "0x1f4ff;",
+        "shortname": "prayerbeads"
+    },
+    {
+        "emoji": "💎",
+        "name": "gem stone",
+        "html": "0x1f48e;",
+        "shortname": "diamond"
+    },
+    {
+        "emoji": "📯",
+        "name": "postal horn",
+        "html": "0x1f4ef;",
+        "shortname": "postalhorn"
+    },
+    {
+        "emoji": "🎙️",
+        "name": "studio microphone",
+        "html": "0x1f399;",
+        "shortname": "studiomic"
+    },
+    {
+        "emoji": "🎚️",
+        "name": "level slider",
+        "html": "0x1f39a;",
+        "shortname": "levelslider"
+    },
+    {
+        "emoji": "🎛️",
+        "name": "control knobs",
+        "html": "0x1f39b;",
+        "shortname": "controlknobs"
+    },
+    {
+        "emoji": "📻",
+        "name": "radio",
+        "html": "0x1f4fb;",
+        "shortname": "radio"
+    },
+    {
+        "emoji": "🪕",
+        "name": "banjo",
+        "html": "0x1fa95;",
+        "shortname": "banjo"
+    },
+    {
+        "emoji": "📱",
+        "name": "mobile phone",
+        "html": "0x1f4f1;",
+        "shortname": "smartphone"
+    },
+    {
+        "emoji": "📲",
+        "name": "mobile phone with arrow",
+        "html": "0x1f4f2;",
+        "shortname": "smartphonearrow"
+    },
+    {
+        "emoji": "☎️",
+        "name": "telephone",
+        "html": "0x260e;",
+        "shortname": "telephone"
+    },
+    {
+        "emoji": "📞",
+        "name": "telephone receiver",
+        "html": "0x1f4de;",
+        "shortname": "phone"
+    },
+    {
+        "emoji": "📟",
+        "name": "pager",
+        "html": "0x1f4df;",
+        "shortname": "pager"
+    },
+    {
+        "emoji": "📠",
+        "name": "fax machine",
+        "html": "0x1f4e0;",
+        "shortname": "fax"
+    },
+    {
+        "emoji": "🔋",
+        "name": "battery",
+        "html": "0x1f50b;",
+        "shortname": "battery"
+    },
+    {
+        "emoji": "🔌",
+        "name": "electric plug",
+        "html": "0x1f50c;",
+        "shortname": "plug"
+    },
+    {
+        "emoji": "💻",
+        "name": "laptop",
+        "html": "0x1f4bb;",
+        "shortname": "laptop"
+    },
+    {
+        "emoji": "🖥️",
+        "name": "desktop computer",
+        "html": "0x1f5a5;",
+        "shortname": "desktop"
+    },
+    {
+        "emoji": "🖨️",
+        "name": "printer",
+        "html": "0x1f5a8;",
+        "shortname": "printer"
+    },
+    {
+        "emoji": "⌨️",
+        "name": "keyboard",
+        "html": "0x2328;",
+        "shortname": "keyboard"
+    },
+    {
+        "emoji": "🖱️",
+        "name": "computer mouse",
+        "html": "0x1f5b1;",
+        "shortname": "computer_mouse"
+    },
+    {
+        "emoji": "🖲️",
+        "name": "trackball",
+        "html": "0x1f5b2;",
+        "shortname": "trackball"
+    },
+    {
+        "emoji": "💽",
+        "name": "computer disk",
+        "html": "0x1f4bd;",
+        "shortname": "computerdisk"
+    },
+    {
+        "emoji": "💾",
+        "name": "floppy disk",
+        "html": "0x1f4be;",
+        "shortname": "floppydisk"
+    },
+    {
+        "emoji": "💿",
+        "name": "optical disk",
+        "html": "0x1f4bf;",
+        "shortname": "cd"
+    },
+    {
+        "emoji": "📀",
+        "name": "dvd",
+        "html": "0x1f4c0;",
+        "shortname": "dvd"
+    },
+    {
+        "emoji": "🧮",
+        "name": "abacus",
+        "html": "0x1f9ee;",
+        "shortname": "abacus"
+    },
+    {
+        "emoji": "🎥",
+        "name": "movie camera",
+        "html": "0x1f3a5;",
+        "shortname": "moviecamera"
+    },
+    {
+        "emoji": "🎞️",
+        "name": "film frames",
+        "html": "0x1f39e;",
+        "shortname": "film"
+    },
+    {
+        "emoji": "📽️",
+        "name": "film projector",
+        "html": "0x1f4fd;",
+        "shortname": "projector"
+    },
+    {
+        "emoji": "📺",
+        "name": "television",
+        "html": "0x1f4fa;",
+        "shortname": "tv"
+    },
+    {
+        "emoji": "📷",
+        "name": "camera",
+        "html": "0x1f4f7;",
+        "shortname": "camera"
+    },
+    {
+        "emoji": "📸",
+        "name": "camera with flash",
+        "html": "0x1f4f8;",
+        "shortname": "cameraflash"
+    },
+    {
+        "emoji": "📹",
+        "name": "video camera",
+        "html": "0x1f4f9;",
+        "shortname": "videocamera"
+    },
+    {
+        "emoji": "📼",
+        "name": "videocassette",
+        "html": "0x1f4fc;",
+        "shortname": "videocassette"
+    },
+    {
+        "emoji": "🔍",
+        "name": "magnifying glass tilted left",
+        "html": "0x1f50d;",
+        "shortname": "magnifyleft"
+    },
+    {
+        "emoji": "🔎",
+        "name": "magnifying glass tilted right",
+        "html": "0x1f50e;",
+        "shortname": "magnifyright"
+    },
+    {
+        "emoji": "🕯️",
+        "name": "candle",
+        "html": "0x1f56f;",
+        "shortname": "candle"
+    },
+    {
+        "emoji": "💡",
+        "name": "light bulb",
+        "html": "0x1f4a1;",
+        "shortname": "lightbulb"
+    },
+    {
+        "emoji": "🔦",
+        "name": "flashlight",
+        "html": "0x1f526;",
+        "shortname": "flashlight"
+    },
+    {
+        "emoji": "🏮",
+        "name": "red paper lantern",
+        "html": "0x1f3ee;",
+        "shortname": "redlantern"
+    },
+    {
+        "emoji": "🪔",
+        "name": "diya lamp",
+        "html": "0x1fa94;",
+        "shortname": "diyalamp"
+    },
+    {
+        "emoji": "📔",
+        "name": "notebook with decorative cover",
+        "html": "0x1f4d4;",
+        "shortname": "notebookcover"
+    },
+    {
+        "emoji": "📕",
+        "name": "closed book",
+        "html": "0x1f4d5;",
+        "shortname": "book"
+    },
+    {
+        "emoji": "📖",
+        "name": "open book",
+        "html": "0x1f4d6;",
+        "shortname": "openbook"
+    },
+    {
+        "emoji": "📗",
+        "name": "green book",
+        "html": "0x1f4d7;",
+        "shortname": "greenbook"
+    },
+    {
+        "emoji": "📘",
+        "name": "blue book",
+        "html": "0x1f4d8;",
+        "shortname": "bluebook"
+    },
+    {
+        "emoji": "📙",
+        "name": "orange book",
+        "html": "0x1f4d9;",
+        "shortname": "orangebook"
+    },
+    {
+        "emoji": "📚",
+        "name": "books",
+        "html": "0x1f4da;",
+        "shortname": "books"
+    },
+    {
+        "emoji": "📓",
+        "name": "notebook",
+        "html": "0x1f4d3;",
+        "shortname": "notebook"
+    },
+    {
+        "emoji": "📒",
+        "name": "ledger",
+        "html": "0x1f4d2;",
+        "shortname": "ledger"
+    },
+    {
+        "emoji": "📃",
+        "name": "page with curl",
+        "html": "0x1f4c3;",
+        "shortname": "pagecurl"
+    },
+    {
+        "emoji": "📜",
+        "name": "scroll",
+        "html": "0x1f4dc;",
+        "shortname": "scroll"
+    },
+    {
+        "emoji": "📄",
+        "name": "page facing up",
+        "html": "0x1f4c4;",
+        "shortname": "pageup"
+    },
+    {
+        "emoji": "📰",
+        "name": "newspaper",
+        "html": "0x1f4f0;",
+        "shortname": "newspaper"
+    },
+    {
+        "emoji": "🗞️",
+        "name": "rolled up newspaper",
+        "html": "0x1f5de;",
+        "shortname": "rollednewspaper"
+    },
+    {
+        "emoji": "📑",
+        "name": "bookmark tabs",
+        "html": "0x1f4d1;",
+        "shortname": "bookmarktab"
+    },
+    {
+        "emoji": "🔖",
+        "name": "bookmark",
+        "html": "0x1f516;",
+        "shortname": "bookmark"
+    },
+    {
+        "emoji": "🏷️",
+        "name": "label",
+        "html": "0x1f3f7;",
+        "shortname": "label"
+    },
+    {
+        "emoji": "💰",
+        "name": "money bag",
+        "html": "0x1f4b0;",
+        "shortname": "moneybag"
+    },
+    {
+        "emoji": "💴",
+        "name": "yen banknote",
+        "html": "0x1f4b4;",
+        "shortname": "yen"
+    },
+    {
+        "emoji": "💵",
+        "name": "dollar banknote",
+        "html": "0x1f4b5;",
+        "shortname": "dollar"
+    },
+    {
+        "emoji": "💶",
+        "name": "euro banknote",
+        "html": "0x1f4b6;",
+        "shortname": "euro"
+    },
+    {
+        "emoji": "💷",
+        "name": "pound banknote",
+        "html": "0x1f4b7;",
+        "shortname": "pound"
+    },
+    {
+        "emoji": "💸",
+        "name": "money with wings",
+        "html": "0x1f4b8;",
+        "shortname": "moneywing"
+    },
+    {
+        "emoji": "💳",
+        "name": "credit card",
+        "html": "0x1f4b3;",
+        "shortname": "creditcard"
+    },
+    {
+        "emoji": "🧾",
+        "name": "receipt",
+        "html": "0x1f9fe;",
+        "shortname": "receipt"
+    },
+    {
+        "emoji": "✉️",
+        "name": "envelope",
+        "html": "0x2709;",
+        "shortname": "envelope"
+    },
+    {
+        "emoji": "📧",
+        "name": "e mail",
+        "html": "0x1f4e7;",
+        "shortname": "email"
+    },
+    {
+        "emoji": "📨",
+        "name": "incoming envelope",
+        "html": "0x1f4e8;",
+        "shortname": "incomingenvelope"
+    },
+    {
+        "emoji": "📩",
+        "name": "envelope with arrow",
+        "html": "0x1f4e9;",
+        "shortname": "arrowenvelope"
+    },
+    {
+        "emoji": "📤",
+        "name": "outbox tray",
+        "html": "0x1f4e4;",
+        "shortname": "outboxtray"
+    },
+    {
+        "emoji": "📥",
+        "name": "inbox tray",
+        "html": "0x1f4e5;",
+        "shortname": "inboxtray"
+    },
+    {
+        "emoji": "📦",
+        "name": "package",
+        "html": "0x1f4e6;",
+        "shortname": "package"
+    },
+    {
+        "emoji": "📫",
+        "name": "closed mailbox with raised flag",
+        "html": "0x1f4eb;",
+        "shortname": "mailboxfull"
+    },
+    {
+        "emoji": "📪",
+        "name": "closed mailbox with lowered flag",
+        "html": "0x1f4ea;",
+        "shortname": "mailboxempty"
+    },
+    {
+        "emoji": "📬",
+        "name": "open mailbox with raised flag",
+        "html": "0x1f4ec;",
+        "shortname": "openmailboxfull"
+    },
+    {
+        "emoji": "📭",
+        "name": "open mailbox with lowered flag",
+        "html": "0x1f4ed;",
+        "shortname": "openmailboxempty"
+    },
+    {
+        "emoji": "📮",
+        "name": "postbox",
+        "html": "0x1f4ee;",
+        "shortname": "postbox"
+    },
+    {
+        "emoji": "🗳️",
+        "name": "ballot box with ballot",
+        "html": "0x1f5f3;",
+        "shortname": "ballotbox"
+    },
+    {
+        "emoji": "✏️",
+        "name": "pencil",
+        "html": "0x270f;",
+        "shortname": "pencil"
+    },
+    {
+        "emoji": "✒️",
+        "name": "black nib",
+        "html": "0x2712;",
+        "shortname": "blacknib"
+    },
+    {
+        "emoji": "🖋️",
+        "name": "fountain pen",
+        "html": "0x1f58b;",
+        "shortname": "fountainpen"
+    },
+    {
+        "emoji": "🖊️",
+        "name": "pen",
+        "html": "0x1f58a;",
+        "shortname": "pen"
+    },
+    {
+        "emoji": "🖌️",
+        "name": "paintbrush",
+        "html": "0x1f58c;",
+        "shortname": "paintbrush"
+    },
+    {
+        "emoji": "🖍️",
+        "name": "crayon",
+        "html": "0x1f58d;",
+        "shortname": "crayon"
+    },
+    {
+        "emoji": "📝",
+        "name": "memo",
+        "html": "0x1f4dd;",
+        "shortname": "memo"
+    },
+    {
+        "emoji": "📁",
+        "name": "file folder",
+        "html": "0x1f4c1;",
+        "shortname": "folder"
+    },
+    {
+        "emoji": "📂",
+        "name": "open file folder",
+        "html": "0x1f4c2;",
+        "shortname": "openfolder"
+    },
+    {
+        "emoji": "🗂️",
+        "name": "card index dividers",
+        "html": "0x1f5c2;",
+        "shortname": "carddivider"
+    },
+    {
+        "emoji": "📅",
+        "name": "calendar",
+        "html": "0x1f4c5;",
+        "shortname": "calendar"
+    },
+    {
+        "emoji": "📆",
+        "name": "tear off calendar",
+        "html": "0x1f4c6;",
+        "shortname": "endcalendar"
+    },
+    {
+        "emoji": "🗒️",
+        "name": "spiral notepad",
+        "html": "0x1f5d2;",
+        "shortname": "notepad"
+    },
+    {
+        "emoji": "🗓️",
+        "name": "spiral calendar",
+        "html": "0x1f5d3;",
+        "shortname": "spiralcalendar"
+    },
+    {
+        "emoji": "📇",
+        "name": "card index",
+        "html": "0x1f4c7;",
+        "shortname": "cardindex"
+    },
+    {
+        "emoji": "📈",
+        "name": "chart increasing",
+        "html": "0x1f4c8;",
+        "shortname": "stocksup"
+    },
+    {
+        "emoji": "📉",
+        "name": "chart decreasing",
+        "html": "0x1f4c9;",
+        "shortname": "stocksdown"
+    },
+    {
+        "emoji": "📊",
+        "name": "bar chart",
+        "html": "0x1f4ca;",
+        "shortname": "barchart"
+    },
+    {
+        "emoji": "📋",
+        "name": "clipboard",
+        "html": "0x1f4cb;",
+        "shortname": "clipboard"
+    },
+    {
+        "emoji": "📌",
+        "name": "pushpin",
+        "html": "0x1f4cc;",
+        "shortname": "pushpin"
+    },
+    {
+        "emoji": "📍",
+        "name": "round pushpin",
+        "html": "0x1f4cd;",
+        "shortname": "roundpushpin"
+    },
+    {
+        "emoji": "📎",
+        "name": "paperclip",
+        "html": "0x1f4ce;",
+        "shortname": "paperclip"
+    },
+    {
+        "emoji": "🖇️",
+        "name": "linked paperclips",
+        "html": "0x1f587;",
+        "shortname": "linkedpaperclip"
+    },
+    {
+        "emoji": "📏",
+        "name": "straight ruler",
+        "html": "0x1f4cf;",
+        "shortname": "ruler"
+    },
+    {
+        "emoji": "📐",
+        "name": "triangular ruler",
+        "html": "0x1f4d0;",
+        "shortname": "triangularruler"
+    },
+    {
+        "emoji": "✂️",
+        "name": "scissors",
+        "html": "0x2702;",
+        "shortname": "scissor"
+    },
+    {
+        "emoji": "🗃️",
+        "name": "card file box",
+        "html": "0x1f5c3;",
+        "shortname": "filebox"
+    },
+    {
+        "emoji": "🗄️",
+        "name": "file cabinet",
+        "html": "0x1f5c4;",
+        "shortname": "filecabinet"
+    },
+    {
+        "emoji": "🗑️",
+        "name": "wastebasket",
+        "html": "0x1f5d1;",
+        "shortname": "wastebasket"
+    },
+    {
+        "emoji": "🔒",
+        "name": "locked",
+        "html": "0x1f512;",
+        "shortname": "locked"
+    },
+    {
+        "emoji": "🔓",
+        "name": "unlocked",
+        "html": "0x1f513;",
+        "shortname": "unlocked"
+    },
+    {
+        "emoji": "🔏",
+        "name": "locked with pen",
+        "html": "0x1f50f;",
+        "shortname": "lockedpen"
+    },
+    {
+        "emoji": "🔐",
+        "name": "locked with key",
+        "html": "0x1f510;",
+        "shortname": "lockedkey"
+    },
+    {
+        "emoji": "🔑",
+        "name": "key",
+        "html": "0x1f511;",
+        "shortname": "key"
+    },
+    {
+        "emoji": "🗝️",
+        "name": "old key",
+        "html": "0x1f5dd;",
+        "shortname": "oldkey"
+    },
+    {
+        "emoji": "🔨",
+        "name": "hammer",
+        "html": "0x1f528;",
+        "shortname": "hammer"
+    },
+    {
+        "emoji": "🪓",
+        "name": "axe",
+        "html": "0x1fa93;",
+        "shortname": "axe"
+    },
+    {
+        "emoji": "⛏️",
+        "name": "pick",
+        "html": "0x26cf;",
+        "shortname": "pick"
+    },
+    {
+        "emoji": "⚒️",
+        "name": "hammer and pick",
+        "html": "0x2692;",
+        "shortname": "hammerpick"
+    },
+    {
+        "emoji": "🛠️",
+        "name": "hammer and wrench",
+        "html": "0x1f6e0;",
+        "shortname": "hammerwrench"
+    },
+    {
+        "emoji": "🗡️",
+        "name": "dagger",
+        "html": "0x1f5e1;",
+        "shortname": "dagger"
+    },
+    {
+        "emoji": "⚔️",
+        "name": "crossed swords",
+        "html": "0x2694;",
+        "shortname": "crossedsword"
+    },
+    {
+        "emoji": "🔫",
+        "name": "pistol",
+        "html": "0x1f52b;",
+        "shortname": "pistol"
+    },
+    {
+        "emoji": "🛡️",
+        "name": "shield",
+        "html": "0x1f6e1;",
+        "shortname": "shield"
+    },
+    {
+        "emoji": "🔧",
+        "name": "wrench",
+        "html": "0x1f527;",
+        "shortname": "wrench"
+    },
+    {
+        "emoji": "🔩",
+        "name": "nut and bolt",
+        "html": "0x1f529;",
+        "shortname": "nutbolt"
+    },
+    {
+        "emoji": "⚙️",
+        "name": "gear",
+        "html": "0x2699;",
+        "shortname": "gear"
+    },
+    {
+        "emoji": "🗜️",
+        "name": "clamp",
+        "html": "0x1f5dc;",
+        "shortname": "clamp"
+    },
+    {
+        "emoji": "⚖️",
+        "name": "balance scale",
+        "html": "0x2696;",
+        "shortname": "scale"
+    },
+    {
+        "emoji": "🦯",
+        "name": "white cane",
+        "html": "0x1f9af;",
+        "shortname": "whitecane"
+    },
+    {
+        "emoji": "🔗",
+        "name": "link",
+        "html": "0x1f517;",
+        "shortname": "link"
+    },
+    {
+        "emoji": "⛓️",
+        "name": "chains",
+        "html": "0x26d3;",
+        "shortname": "chains"
+    },
+    {
+        "emoji": "🧰",
+        "name": "toolbox",
+        "html": "0x1f9f0;",
+        "shortname": "toolbox"
+    },
+    {
+        "emoji": "🧲",
+        "name": "magnet",
+        "html": "0x1f9f2;",
+        "shortname": "magnet"
+    },
+    {
+        "emoji": "⚗️",
+        "name": "alembic",
+        "html": "0x2697;",
+        "shortname": "alembic"
+    },
+    {
+        "emoji": "🧪",
+        "name": "test tube",
+        "html": "0x1f9ea;",
+        "shortname": "testtube"
+    },
+    {
+        "emoji": "🧫",
+        "name": "petri dish",
+        "html": "0x1f9eb;",
+        "shortname": "petridish"
+    },
+    {
+        "emoji": "🧬",
+        "name": "dna",
+        "html": "0x1f9ec;",
+        "shortname": "dna"
+    },
+    {
+        "emoji": "🔬",
+        "name": "microscope",
+        "html": "0x1f52c;",
+        "shortname": "microscope"
+    },
+    {
+        "emoji": "🔭",
+        "name": "telescope",
+        "html": "0x1f52d;",
+        "shortname": "telescope"
+    },
+    {
+        "emoji": "📡",
+        "name": "satellite antenna",
+        "html": "0x1f4e1;",
+        "shortname": "antenna"
+    },
+    {
+        "emoji": "💉",
+        "name": "syringe",
+        "html": "0x1f489;",
+        "shortname": "syringe"
+    },
+    {
+        "emoji": "🩸",
+        "name": "drop of blood",
+        "html": "0x1fa78;",
+        "shortname": "blooddrop"
+    },
+    {
+        "emoji": "💊",
+        "name": "pill",
+        "html": "0x1f48a;",
+        "shortname": "pill"
+    },
+    {
+        "emoji": "🩹",
+        "name": "adhesive bandage",
+        "html": "0x1fa79;",
+        "shortname": "bandaid"
+    },
+    {
+        "emoji": "🩺",
+        "name": "stethoscope",
+        "html": "0x1fa7a;",
+        "shortname": "stethoscope"
+    },
+    {
+        "emoji": "🚪",
+        "name": "door",
+        "html": "0x1f6aa;",
+        "shortname": "door"
+    },
+    {
+        "emoji": "🛏️",
+        "name": "bed",
+        "html": "0x1f6cf;",
+        "shortname": "bed"
+    },
+    {
+        "emoji": "🛋️",
+        "name": "couch and lamp",
+        "html": "0x1f6cb;",
+        "shortname": "couchlamp"
+    },
+    {
+        "emoji": "🪑",
+        "name": "chair",
+        "html": "0x1fa91;",
+        "shortname": "chair"
+    },
+    {
+        "emoji": "🚽",
+        "name": "toilet",
+        "html": "0x1f6bd;",
+        "shortname": "toilet"
+    },
+    {
+        "emoji": "🚿",
+        "name": "shower",
+        "html": "0x1f6bf;",
+        "shortname": "shower"
+    },
+    {
+        "emoji": "🛁",
+        "name": "bathtub",
+        "html": "0x1f6c1;",
+        "shortname": "bathtub"
+    },
+    {
+        "emoji": "🪒",
+        "name": "razor",
+        "html": "0x1fa92;",
+        "shortname": "razor"
+    },
+    {
+        "emoji": "🧴",
+        "name": "lotion bottle",
+        "html": "0x1f9f4;",
+        "shortname": "lotion"
+    },
+    {
+        "emoji": "🧷",
+        "name": "safety pin",
+        "html": "0x1f9f7;",
+        "shortname": "safetypin"
+    },
+    {
+        "emoji": "🧹",
+        "name": "broom",
+        "html": "0x1f9f9;",
+        "shortname": "broom"
+    },
+    {
+        "emoji": "🧺",
+        "name": "basket",
+        "html": "0x1f9fa;",
+        "shortname": "basket"
+    },
+    {
+        "emoji": "🧻",
+        "name": "roll of paper",
+        "html": "0x1f9fb;",
+        "shortname": "paperroll"
+    },
+    {
+        "emoji": "🧼",
+        "name": "soap",
+        "html": "0x1f9fc;",
+        "shortname": "soap"
+    },
+    {
+        "emoji": "🧽",
+        "name": "sponge",
+        "html": "0x1f9fd;",
+        "shortname": "sponge"
+    },
+    {
+        "emoji": "🧯",
+        "name": "fire extinguisher",
+        "html": "0x1f9ef;",
+        "shortname": "extinguisher"
+    },
+    {
+        "emoji": "🛒",
+        "name": "shopping cart",
+        "html": "0x1f6d2;",
+        "shortname": "shoppingcart"
+    },
+    {
+        "emoji": "🚬",
+        "name": "cigarette",
+        "html": "0x1f6ac;",
+        "shortname": "cigarette"
+    },
+    {
+        "emoji": "⚰️",
+        "name": "coffin",
+        "html": "0x26b0;",
+        "shortname": "coffin"
+    },
+    {
+        "emoji": "⚱️",
+        "name": "funeral urn",
+        "html": "0x26b1;",
+        "shortname": "funeralurn"
+    }
+]

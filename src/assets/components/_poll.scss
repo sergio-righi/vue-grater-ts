@@ -1,0 +1,66 @@
+@use '../utils/index' as *;
+
+.gv-poll {
+  &.done {
+    & > .gv-content {
+      & > .gv-item {
+        pointer-events: none;
+
+        &:not(.selected) {
+          & > .gv-content {
+            & > .gv-title {
+              text-decoration: line-through;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  & > .gv-header {
+    font-weight: 700;
+    margin-bottom: $default-distance * 0.5;
+
+    & > small {
+      display: block;
+      font-weight: 300;
+      font-size: $font-size * 0.75;
+    }
+  }
+
+  & > .gv-content {
+    & > .gv-item {
+      cursor: pointer;
+      overflow: hidden;
+      margin-bottom: $default-distance * 0.5;
+      @include border-radius($border-radius);
+      background-color: var(--gv-secondary-light);
+
+      & > .gv-content {
+        @include d-flex;
+        @include align-items(center);
+        padding: $default-distance * 0.5 $default-distance * 0.5
+          $default-distance * 0.25 $default-distance * 0.5;
+
+        & > .gv-leading {
+          @include d-flex;
+          margin-right: $default-distance * 0.5;
+
+          & > i {
+            color: var(--gv-accent);
+            font-size: $font-size * 1.25;
+          }
+        }
+
+        & > .gv-title {
+        }
+
+        & > .gv-trailing {
+          @include d-flex;
+          margin-left: auto;
+          font-size: $font-size * 1;
+        }
+      }
+    }
+  }
+}

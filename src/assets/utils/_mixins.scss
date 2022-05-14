@@ -1,0 +1,359 @@
+﻿@mixin box-shadow($property...) {
+  box-shadow: $property;
+  // -moz-box-shadow: $property;
+  // -webkit-box-shadow: $property;
+}
+
+@mixin transition($property...) {
+  transition: $property;
+  // -o-transition: $property;
+  // -moz-transition: $property;
+  // -webkit-transition: $property;
+}
+
+@mixin filter($property...) {
+  filter: $property;
+  // -ms-filter: $property;
+  // -moz-filter: $property;
+  // -webkit-filter: $property;
+}
+
+@mixin animation($property...) {
+  animation: $property;
+  // -o-animation: $property;
+  // -moz-animation: $property;
+  // -webkit-animation: $property;
+}
+
+@mixin animation-name($property) {
+  animation-name: $property;
+  // -o-animation-name: $property;
+  // -moz-animation-name: $property;
+  // -webkit-animation-name: $property;
+}
+
+@mixin animation-fill-mode($property) {
+  animation-fill-mode: $property;
+  // -o-animation-fill-mode: $property;
+  // -moz-animation-fill-mode: $property;
+  // -webkit-animation-fill-mode: $property;
+}
+
+@mixin animation-delay($property) {
+  animation-delay: $property;
+  // -o-animation-delay: $property;
+  // -moz-animation-delay: $property;
+  // -webkit-animation-delay: $property;
+}
+
+@mixin animation-duration($property) {
+  animation-duration: $property;
+  // -o-animation-duration: $property;
+  // -ms-animation-duration: $property;
+  // -moz-animation-duration: $property;
+  // -webkit-animation-duration: $property;
+}
+
+@mixin animation-play-state($property) {
+  animation-play-state: $property;
+  // -o-animation-play-state: $property;
+  // -ms-animation-play-state: $property;
+  // -moz-animation-play-state: $property;
+  // -webkit-animation-play-state: $property;
+}
+
+@mixin transition-delay($property) {
+  transition-delay: $property;
+  // -o-transition-delay: $property;
+  // -moz-transition-delay: $property;
+  // -webkit-transition-delay: $property;
+}
+
+@mixin transform($property) {
+  transform: $property;
+  // -ms-transform: $property;
+  // -moz-transform: $property;
+  // -webkit-transform: $property;
+}
+
+@mixin transform-origin($property) {
+  // -moz-transform-origin: $property;
+  // -ms-transform-origin: $property;
+  // -o-transform-origin: $property;
+  // -webkit-transform-origin: $property;
+  transform-origin: $property;
+}
+
+@mixin border-radius($property) {
+  border-radius: $property;
+  // -moz-border-radius: $property;
+  // -webkit-border-radius: $property;
+}
+
+@mixin flex($property) {
+  flex: $property;
+  // -ms-flex: $property;
+  // -webkit-flex: $property;
+  // -moz-box-flex: $property;
+}
+
+@mixin flex-direction($property) {
+  flex-direction: $property;
+  // -ms-flex-direction: $property;
+  // -moz-flex-direction: $property;
+  // -webkit-flex-direction: $property;
+}
+
+@mixin flex-order($property) {
+  order: $property;
+  // -webkit-order: $property;
+  // -ms-flex-order: $property;
+  // -moz-box-ordinal-group: $property;
+  // -webkit-box-ordinal-group: $property;
+}
+
+@mixin justify-content($property) {
+  // -webkit-justify-content: $property;
+  justify-content: $property;
+}
+
+@mixin justify-self($property) {
+  // -webkit-justify-self: $property;
+  justify-self: $property;
+}
+
+@mixin align-items($property) {
+  // -webkit-align-items: $property;
+  align-items: $property;
+}
+
+@mixin align-self($property) {
+  // -webkit-align-self: $property;
+  align-self: $property;
+}
+
+@mixin flex-wrap($property) {
+  flex-wrap: $property;
+  // -ms-flex-wrap: $property;
+}
+
+@mixin appearance($property) {
+  appearance: $property;
+  // -moz-appearance: $property;
+  // -webkit-appearance: $property;
+}
+
+@mixin user-select($property) {
+  user-select: $property;
+  // -ms-user-select: $property;
+  // -moz-user-select: $property;
+  // -webkit-user-select: $property;
+}
+
+@mixin bg-lighten($color, $opacity) {
+  background-color: $color;
+  @include box-shadow(inset 0 0 0 100px rgba(255, 255, 255, $opacity));
+}
+
+@mixin bg-darken($color, $opacity) {
+  background-color: $color;
+  @include box-shadow(inset 0 0 0 100px rgba(0, 0, 0, $opacity));
+}
+
+@mixin image-rendering {
+  image-rendering: -moz-crisp-edges;
+  image-rendering: -o-crisp-edges;
+  image-rendering: -webkit-optimize-contrast;
+  image-rendering: crisp-edges;
+  -ms-interpolation-mode: nearest-neighbor;
+}
+
+@mixin d-flex {
+  display: flex;
+  // display: -moz-box;
+  // display: -webkit-box;
+  // display: -ms-flexbox;
+  // display: -webkit-flex;
+}
+
+@mixin d-inline-flex {
+  display: inline-flex;
+  // display: -ms-inline-flexbox;
+  // display: -webkit-inline-flex;
+}
+
+@mixin block-selection {
+  user-select: none;
+  touch-action: none;
+  // -ms-user-select: none;
+  // -ms-touch-action: none;
+  // -moz-user-select: none;
+  // -khtml-user-select: none;
+  // -webkit-user-select: none;
+  // -webkit-touch-callout: none;
+}
+
+@mixin box-sizing {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+@mixin center-absolute {
+  top: 50%;
+  left: 50%;
+  position: absolute;
+  @include transform(translate(-50%, -50%));
+}
+
+@mixin horizontal-absolute {
+  left: 50%;
+  position: absolute;
+  @include transform(translateX(-50%));
+}
+
+@mixin vertical-absolute {
+  top: 50%;
+  position: absolute;
+  @include transform(translateY(-50%));
+}
+
+@mixin readonly {
+  border: none !important;
+  box-shadow: none !important;
+  background: transparent !important;
+  -webkit-appearance: none !important;
+}
+
+@mixin box-shadow-default {
+  @include box-shadow(
+    0 3px 1px -2px rgba(0, 0, 0, 0.14),
+    0 2px 2px 0 rgba(0, 0, 0, 0.098),
+    0 1px 5px 0 rgba(0, 0, 0, 0.084)
+  );
+}
+
+@mixin box-shadow-inset-default {
+  @include box-shadow(
+    inset 0 3px 1px -2px rgba(0, 0, 0, 0.14),
+    inset 0 2px 2px 0 rgba(0, 0, 0, 0.098),
+    inset 0 1px 5px 0 rgba(0, 0, 0, 0.084)
+  );
+}
+
+@mixin w-transition {
+  @include transition(all, 300ms, ease-in-out);
+}
+
+@mixin horizontal-scroll {
+  overflow-x: scroll;
+  white-space: nowrap;
+  -ms-overflow-style: none;
+  scroll-behavior: smooth;
+  overflow: -moz-scrollbars-none;
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+@mixin width-fill-available {
+  width: fit-content;
+  width: -moz-available;
+  width: -webkit-fill-available;
+}
+
+@mixin height-fill-available {
+  height: fit-content;
+  height: -moz-available;
+  height: -webkit-fill-available;
+}
+
+@mixin input-placeholder {
+  &.placeholder {
+    @content;
+  }
+
+  &:-moz-placeholder {
+    @content;
+  }
+
+  &::-moz-placeholder {
+    @content;
+  }
+
+  &:-ms-input-placeholder {
+    @content;
+  }
+
+  &::-webkit-input-placeholder {
+    @content;
+  }
+}
+
+@mixin keyframes($property) {
+  @-webkit-keyframes #{$property} {
+    @content;
+  }
+
+  @-moz-keyframes #{$property} {
+    @content;
+  }
+
+  @-o-keyframes #{$property} {
+    @content;
+  }
+
+  @keyframes #{$property} {
+    @content;
+  }
+}
+
+@mixin fontface($family, $path, $formats, $list) {
+  @each $item in $list {
+    $src: ();
+    @each $format in $formats {
+      $ext: $format;
+
+      @if ($format == "truetype") {
+        $ext: "ttf";
+      }
+
+      $filename: map-get($item, "filename");
+
+      $url: url("#{$path}/#{$filename}.#{$ext}") format(quote($format));
+      $src: append($src, $url, comma);
+    }
+
+    @font-face {
+      font-family: quote($family);
+      font-weight: map-get($item, "weight");
+      font-style: map-get($item, "style");
+      font-display: swap;
+      src: $src;
+    }
+  }
+}
+
+@mixin c-grabbing {
+  cursor: grabbing;
+  cursor: -moz-grabbing;
+  cursor: -webkit-grabbing;
+}
+
+@mixin c-grab {
+  cursor: grab;
+  cursor: -moz-grab;
+  cursor: -webkit-grab;
+
+  &:active {
+    @include c-grabbing;
+  }
+}
+
+@mixin o-ellipsis {
+  display: block;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}

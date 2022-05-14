@@ -1,0 +1,46 @@
+@use '../utils/index' as *;
+
+.gv-input-group {
+  width: 100%;
+  @include d-flex;
+  @include border-radius($border-radius);
+  border: 1px solid var(--gv-color-border);
+
+  &:focus-within {
+    border-color: var(--gv-color-border-focus);
+  }
+
+  &.error {
+    border-color: var(--gv-error);
+  }
+
+  & > .gv-input > input,
+  .gv-select > .gv-header {
+    border: 0;
+    @include border-radius(0);
+  }
+
+  & > a,
+  & > i,
+  & > button {
+    margin-left: 0;
+    height: inherit;
+    text-decoration: none;
+    @include border-radius(0);
+  }
+  
+  & > .gv-btn-group {
+    height: inherit;
+    & > button:first-child {
+      @include border-radius(0);
+    }
+  }
+
+  & > button:first-child {
+    @include border-radius($border-radius 0 0 $border-radius);
+  }
+
+  & > button:last-child {
+    @include border-radius(0 $border-radius $border-radius 0);
+  }
+}

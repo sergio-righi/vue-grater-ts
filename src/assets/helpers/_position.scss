@@ -1,0 +1,29 @@
+﻿@use '../utils/index' as *;
+
+.p-absolute {
+  position: absolute;
+}
+
+.p-fixed {
+  position: fixed;
+}
+
+.p-sticky {
+  position: sticky;
+}
+
+.p-relative {
+  position: relative;
+}
+
+.p-center-absolute {
+  @include center-absolute;
+}
+
+.p-horizontal-absolute {
+  @include horizontal-absolute;
+}
+
+.p-vertical-absolute {
+  @include vertical-absolute;
+}

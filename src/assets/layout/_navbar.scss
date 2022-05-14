@@ -1,0 +1,345 @@
+﻿@use '../utils/index' as *;
+@use '../animations/index' as animation;
+
+.gv-nav {
+  &.active {
+    & > .gv-sidebar {
+      opacity: 1;
+      z-index: 21;
+      & > .gv-drawer {
+        @include transform(translateX(0));
+      }
+    }
+  }
+
+  &.fixed {
+    margin-bottom: $nav-navbar-height;
+    & > .gv-navbar {
+      top: 0;
+      left: 0;
+      right: 0;
+      position: fixed;
+      @include box-shadow-default;
+    }
+  }
+
+  &.aside {
+    & > .gv-navbar {
+      & > .gv-content {
+        & > .gv-menu {
+          display: none;
+        }
+      }
+    }
+  }
+
+  & > .gv-navbar {
+    width: 100%;
+    z-index: 20;
+    position: relative;
+    @include d-inline-flex;
+    height: $nav-navbar-height;
+    color: var(--gv-color-primary);
+    padding-left: $default-distance;
+    padding-right: $default-distance;
+    background-color: var(--gv-primary);
+
+    &.center {
+      & > .gv-content {
+        margin: 0 auto;
+      }
+    }
+
+    & > .gv-content {
+      width: 100%;
+      height: inherit;
+      display: inherit;
+      background-color: inherit;
+
+      & > .gv-menu {
+        width: 100%;
+        display: none;
+
+        & > .gv-item {
+          @include d-inline-flex;
+          @include align-items(center);
+          padding: 0 $default-distance * 0.75;
+        }
+      }
+
+      & > .gv-control {
+        margin-left: auto;
+        @include d-inline-flex;
+
+        & > .gv-item {
+          width: 100%;
+          min-width: 50px;
+          @include d-inline-flex;
+          @include align-items(center);
+          @include justify-content(center);
+
+          & > i {
+            &:before {
+              font-size: $font-size * 1.5;
+            }
+          }
+        }
+      }
+
+      & > .gv-menu,
+      & > .gv-control {
+        color: inherit;
+        height: inherit;
+
+        & > .gv-item {
+          color: inherit;
+          height: inherit;
+        }
+      }
+    }
+  }
+
+  & > .gv-sidebar {
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    opacity: 0;
+    z-index: -1;
+    position: fixed;
+    @include transform(translateZ(0));
+    background-color: var(--gv-color-overlay-dark);
+
+    & > .gv-drawer {
+      top: 0;
+      left: 0;
+      bottom: 0;
+      width: 256px;
+      position: absolute;
+      color: var(--gv-color-primary);
+      background-color: var(--gv-primary);
+      @include transform(translate(-100%));
+      @include transition(transform 200ms ease);
+
+      &.animation-close {
+        @include animation.a-slide-out-zero;
+      }
+
+      & > .gv-wrapper {
+        height: 100%;
+        @include d-flex;
+        @include flex-direction(column);
+
+        & > .gv-header {
+          @include d-flex;
+          height: $nav-navbar-height;
+          @include align-items(center);
+          padding-left: $default-distance;
+          padding-right: $default-distance;
+        }
+
+        & > .gv-item {
+          padding: $default-distance * 0.5 $default-distance;
+        }
+      }
+    }
+  }
+
+  & > .gv-navbar > .gv-content,
+  & > .gv-sidebar > .gv-drawer > .gv-wrapper {
+    & > a {
+      color: inherit;
+      text-decoration: none !important;
+    }
+
+    & > .gv-trigger,
+    & > .gv-header > .gv-trigger {
+      min-width: 60px;
+      cursor: pointer;
+      height: inherit;
+      @include d-flex;
+      margin-left: -$default-distance;
+      @include justify-content(center);
+
+      & > i {
+        @include align-self(center);
+
+        &:before {
+          font-size: $font-size * 1.5;
+        }
+      }
+    }
+
+    & > .gv-brand,
+    & > .gv-header > .gv-brand {
+      color: inherit;
+      line-height: initial;
+
+      & > a {
+        color: inherit;
+        font-weight: 600;
+        width: max-content;
+        text-decoration: none;
+        font-size: $font-size * 1.5;
+      }
+
+      & > a,
+      & > img,
+      & > .gv-image {
+        line-height: 1;
+      }
+
+      & > img,
+      & > .gv-image {
+        height: inherit;
+      }
+
+      & img {
+        padding-top: $default-distance * 0.5;
+        padding-bottom: $default-distance * 0.5;
+      }
+    }
+
+    & > .gv-menu,
+    & > .gv-control {
+      & > .gv-item {
+        cursor: pointer;
+        font-weight: 300;
+        text-decoration: none;
+        font-size: $font-size * 0.875;
+
+        & > img {
+          padding: $default-distance * 0.5;
+        }
+
+        &.active {
+          pointer-events: none;
+        }
+
+        &.active,
+        &:hover {
+          @include box-shadow(inset 0 0 100px var(--gv-color-overlay-dark));
+        }
+
+        & > i,
+        & > img {
+          height: inherit;
+          @include d-flex;
+          @include align-items(center);
+          @include justify-content(center);
+        }
+      }
+
+      & .gv-dropdown {
+        & > .gv-content {
+          @include border-radius(0 0 $border-radius $border-radius);
+        }
+      }
+    }
+  }
+
+  & > .gv-navbar {
+    & > .gv-content {
+      & > .gv-brand {
+        @include d-flex;
+        @include align-items(center);
+        margin-right: $default-distance;
+      }
+    }
+  }
+}
+
+@media (min-width: $media-xs) {
+  .gv-nav {
+    & > .gv-navbar {
+      &.center {
+        & > .gv-content {
+          max-width: 540px;
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: $media-sm) {
+  .gv-nav {
+    &:not(.aside) {
+      & > .gv-navbar {
+        & > .gv-content {
+          & > .gv-trigger {
+            display: none;
+          }
+
+          & > .gv-menu {
+            overflow: hidden;
+            @include d-inline-flex;
+          }
+        }
+      }
+    }
+
+    & > .gv-navbar {
+      &.center {
+        & > .gv-content {
+          max-width: 720px;
+        }
+      }
+
+      &.right {
+        & > .gv-content {
+          & > .gv-menu {
+            margin-left: auto;
+          }
+        }
+      }
+
+      & > .gv-content {
+        & > .gv-menu {
+          margin-right: $default-distance;
+
+          & > .gv-item {
+            & > a {
+              padding: 0 $default-distance * 0.75;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: $media-md) {
+  .gv-nav {
+    & > .gv-navbar {
+      &.center {
+        & > .gv-content {
+          max-width: 960px;
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: $media-lg) {
+  .gv-nav {
+    & > .gv-navbar {
+      &.center {
+        & > .gv-content {
+          max-width: 1140px;
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: $media-xl) {
+  .gv-nav {
+    & > .gv-navbar {
+      &.center {
+        & > .gv-content {
+          max-width: 1360px;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,44 @@
+@use '../utils/index' as *;
+
+.container,
+.container-fluid {
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: $default-distance;
+  padding-right: $default-distance;
+
+  &.inherit {
+    height: inherit;
+  }
+}
+
+@media (min-width: $media-xs) {
+  .container {
+    max-width: 540px;
+  }
+}
+
+@media (min-width: $media-sm) {
+  .container {
+    max-width: 720px;
+  }
+}
+
+@media (min-width: $media-md) {
+  .container {
+    max-width: 960px;
+  }
+}
+
+@media (min-width: $media-lg) {
+  .container {
+    max-width: 1140px;
+  }
+}
+
+@media (min-width: $media-xl) {
+  .container {
+    max-width: 1360px;
+  }
+}

@@ -1,0 +1,14 @@
+@use '../utils/index' as *;
+
+.gv-gap {
+  all: inherit;
+  gap: $default-distance * 0.75;
+
+  &.sm {
+    gap: $default-distance * 0.5;
+  }
+
+  &.lg {
+    gap: $default-distance * 1;
+  }
+}

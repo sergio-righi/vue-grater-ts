@@ -1,0 +1,105 @@
+﻿@use '../utils/index' as *;
+
+@mixin a-slide-in-up($duration: 300ms) {
+  @include animation(slide-in-up $duration ease forwards);
+}
+
+@mixin a-slide-in-down($duration: 300ms) {
+  @include animation(slide-in-down $duration linear);
+}
+
+@mixin a-slide-out-up($duration: 300ms) {
+  @include animation(slide-out-up $duration ease forwards);
+}
+
+@mixin a-slide-out-down($duration: 300ms) {
+  @include animation(slide-out-down $duration linear);
+}
+
+@mixin a-slide-in-zero($duration: 200ms) {
+  @include animation(slide-in-zero $duration ease forwards);
+}
+
+@mixin a-slide-out-zero($duration: 200ms) {
+  @include animation(slide-out-zero $duration linear forwards);
+}
+
+@include keyframes(slide-in-up) {
+  0% {
+    @include transform(translateY(-100px));
+  }
+
+  100% {
+    @include transform(translateY(0));
+  }
+}
+
+@include keyframes(slide-in-down) {
+  0% {
+    @include transform(translateY(100px));
+  }
+
+  100% {
+    @include transform(translateY(0));
+  }
+}
+
+@include keyframes(slide-in-right) {
+  0% {
+    @include transform(translateX(100px));
+  }
+
+  100% {
+    @include transform(translateX(0));
+  }
+}
+
+@include keyframes(slide-in-left) {
+  0% {
+    @include transform(translateX(-100px));
+  }
+
+  100% {
+    @include transform(translateX(0));
+  }
+}
+
+@include keyframes(slide-out-up) {
+  0% {
+    @include transform(translateY(100px));
+  }
+
+  100% {
+    @include transform(translateY(0));
+  }
+}
+
+@include keyframes(slide-out-down) {
+  0% {
+    @include transform(translateY(-100px));
+  }
+
+  100% {
+    @include transform(translateY(0));
+  }
+}
+
+@include keyframes(slide-in-zero) {
+  0% {
+    @include transform(translateX(-100%));
+  }
+
+  100% {
+    @include transform(translateX(0));
+  }
+}
+
+@include keyframes(slide-out-zero) {
+  0% {
+    @include transform(translateX(0));
+  }
+
+  100% {
+    @include transform(translateX(-100%));
+  }
+}

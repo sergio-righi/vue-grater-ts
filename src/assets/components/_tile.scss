@@ -1,0 +1,132 @@
+@use '../utils/index' as *;
+
+.gv-tile {
+  width: 100%;
+  color: inherit;
+  border-color: inherit;
+  @include transition(box-shadow 200ms ease-in);
+
+  &.active {
+    & > .gv-wrap {
+      @include box-shadow(inset 0 0 0 100px rgba(100, 100, 100, 0.1));
+    }
+  }
+
+  &.activatable {
+    & > .gv-wrap {
+      cursor: pointer;
+
+      input {
+        pointer-events: none;
+      }
+    }
+  }
+
+  &.disabled,
+  &.disabled * {
+    opacity: 0.8;
+    pointer-events: none;
+  }
+
+  &.condensed {
+    & > .gv-wrap {
+      padding: $default-distance * 0.5 $default-distance * 0.75;
+
+      & > .gv-leading {
+        margin-right: $default-distance * 0.75;
+      }
+
+      & > .gv-trailing {
+        margin-left: $default-distance * 0.75;
+      }
+    }
+
+    & > .gv-expandable {
+      padding: 0 $default-distance * 0.75;
+    }
+  }
+
+  &:not(.header) + .gv-tile {
+    border-top-width: 1px;
+    border-top-style: solid;
+    border-top-color: inherit;
+  }
+
+  & > .gv-wrap {
+    width: 100%;
+    @include d-inline-flex;
+    @include align-items(center);
+    padding: $default-distance * 0.75 $default-distance;
+
+    & > .gv-content {
+      @include d-flex;
+      @include flex(1);
+      @include o-ellipsis;
+      @include flex-wrap(wrap);
+
+      & > .gv-header {
+        width: 100%;
+        font-weight: 600;
+        @include o-ellipsis;
+        @include flex-wrap(wrap);
+        font-size: $font-size * 1;
+
+        &.sm {
+          font-weight: 300;
+          font-size: $font-size * 0.875;
+        }
+
+        &.sub {
+          font-weight: 300;
+          font-size: $font-size * 0.8125;
+        }
+
+        & + .gv-header {
+          margin-top: $default-distance * 0.25;
+        }
+      }
+    }
+
+    & > .gv-leading {
+      width: 40px;
+      @include d-flex;
+      @include align-items(center);
+      margin-right: $default-distance;
+      @include justify-content(center);
+
+      i:before {
+        font-size: $font-size * 1.125;
+      }
+    }
+
+    & > .gv-trailing {
+      width: 40px;
+      @include d-inline-flex;
+      @include align-items(center);
+      margin-left: $default-distance;
+      @include justify-content(flex-end);
+
+      i {
+        &:before {
+          font-size: $font-size * 1.125;
+        }
+
+        & + i {
+          margin-left: $default-distance * 0.5;
+        }
+      }
+    }
+  }
+
+  & > .gv-expandable {
+    width: 100%;
+    display: none;
+    position: relative;
+    // padding: 0 $default-distance;
+    @include transition(max-height 300ms ease);
+
+    &.active {
+      display: block;
+    }
+  }
+}

@@ -1,0 +1,39 @@
+@use '../utils/index' as *;
+
+.gv-breadcrumb {
+  margin: 0;
+  width: 100%;
+  padding-left: 0;
+  margin-bottom: 0;
+  list-style: none;
+  display: inline-block;
+  font-size: $font-size * 0.75;
+  background-color: transparent;
+
+  li {
+    display: inline-block;
+    color: var(--gv-color-link);
+
+    &:last-child {
+      color: var(--gv-color-font);
+    }
+
+    &:not(:last-child):after {
+      content: "/";
+      display: inline-block;
+      color: var(--gv-color-font);
+      margin-left: $default-distance * 0.5;
+      margin-right: $default-distance * 0.25;
+    }
+
+    i {
+      color: inherit;
+      margin-right: $default-distance * 0.5;
+    }
+
+    a {
+      color: inherit;
+      font-weight: 700;
+    }
+  }
+}

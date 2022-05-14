@@ -1,0 +1,14 @@
+@use '../utils/index' as *;
+
+@include fontface(
+  $font-lato,
+  "#{$font-path}/lato",
+  ("truetype"),
+  (
+    family("Lato-Thin", 100),
+    family("Lato-Light", 300),
+    family("Lato-Regular", 400),
+    family("Lato-Bold", 700),
+    family("Lato-Black", 900)
+  )
+);

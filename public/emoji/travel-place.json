@@ -1,0 +1,770 @@
+[
+    {
+        "emoji": "🗾",
+        "name": "map of japan",
+        "html": "0x1f5fe;",
+        "shortname": "mapjapan"
+    },
+    {
+        "emoji": "🏔️",
+        "name": "snow capped mountain",
+        "html": "0x1f3d4;",
+        "shortname": "snowmountain"
+    },
+    {
+        "emoji": "⛰️",
+        "name": "mountain",
+        "html": "0x26f0;",
+        "shortname": "mountain"
+    },
+    {
+        "emoji": "🌋",
+        "name": "volcano",
+        "html": "0x1f30b;",
+        "shortname": "volcano"
+    },
+    {
+        "emoji": "🗻",
+        "name": "mount fuji",
+        "html": "0x1f5fb;",
+        "shortname": "mountfuji"
+    },
+    {
+        "emoji": "🏕️",
+        "name": "camping",
+        "html": "0x1f3d5;",
+        "shortname": "camping"
+    },
+    {
+        "emoji": "🏖️",
+        "name": "beach with umbrella",
+        "html": "0x1f3d6;",
+        "shortname": "beach"
+    },
+    {
+        "emoji": "🏜️",
+        "name": "desert",
+        "html": "0x1f3dc;",
+        "shortname": "desert"
+    },
+    {
+        "emoji": "🏝️",
+        "name": "desert island",
+        "html": "0x1f3dd;",
+        "shortname": "desertisland"
+    },
+    {
+        "emoji": "🏞️",
+        "name": "national park",
+        "html": "0x1f3de;",
+        "shortname": "nationalpark"
+    },
+    {
+        "emoji": "🏟️",
+        "name": "stadium",
+        "html": "0x1f3df;",
+        "shortname": "stadium"
+    },
+    {
+        "emoji": "🏛️",
+        "name": "classical building",
+        "html": "0x1f3db;",
+        "shortname": "classicalbuilding"
+    },
+    {
+        "emoji": "🏗️",
+        "name": "building construction",
+        "html": "0x1f3d7;",
+        "shortname": "underconstruction"
+    },
+    {
+        "emoji": "🏘️",
+        "name": "houses",
+        "html": "0x1f3d8;",
+        "shortname": "neighborhood"
+    },
+    {
+        "emoji": "🏚️",
+        "name": "derelict house",
+        "html": "0x1f3da;",
+        "shortname": "derelicthouse"
+    },
+    {
+        "emoji": "🏠",
+        "name": "house",
+        "html": "0x1f3e0;",
+        "shortname": "house"
+    },
+    {
+        "emoji": "🏡",
+        "name": "house with garden",
+        "html": "0x1f3e1;",
+        "shortname": "housegarden"
+    },
+    {
+        "emoji": "🏢",
+        "name": "office building",
+        "html": "0x1f3e2;",
+        "shortname": "office"
+    },
+    {
+        "emoji": "🏣",
+        "name": "japanese post office",
+        "html": "0x1f3e3;",
+        "shortname": "japanesepostoffice"
+    },
+    {
+        "emoji": "🏤",
+        "name": "post office",
+        "html": "0x1f3e4;",
+        "shortname": "postoffice"
+    },
+    {
+        "emoji": "🏥",
+        "name": "hospital",
+        "html": "0x1f3e5;",
+        "shortname": "hospital"
+    },
+    {
+        "emoji": "🏦",
+        "name": "bank",
+        "html": "0x1f3e6;",
+        "shortname": "bank"
+    },
+    {
+        "emoji": "🏨",
+        "name": "hotel",
+        "html": "0x1f3e8;",
+        "shortname": "hotel"
+    },
+    {
+        "emoji": "🏩",
+        "name": "love hotel",
+        "html": "0x1f3e9;",
+        "shortname": "lovehotel"
+    },
+    {
+        "emoji": "🏪",
+        "name": "convenience store",
+        "html": "0x1f3ea;",
+        "shortname": "conveniencestore"
+    },
+    {
+        "emoji": "🏫",
+        "name": "school",
+        "html": "0x1f3eb;",
+        "shortname": "school"
+    },
+    {
+        "emoji": "🏬",
+        "name": "department store",
+        "html": "0x1f3ec;",
+        "shortname": "departmentstore"
+    },
+    {
+        "emoji": "🏭",
+        "name": "factory",
+        "html": "0x1f3ed;",
+        "shortname": "factory"
+    },
+    {
+        "emoji": "🏯",
+        "name": "japanese castle",
+        "html": "0x1f3ef;",
+        "shortname": "japanesecastle"
+    },
+    {
+        "emoji": "🏰",
+        "name": "castle",
+        "html": "0x1f3f0;",
+        "shortname": "castle"
+    },
+    {
+        "emoji": "💒",
+        "name": "wedding",
+        "html": "0x1f492;",
+        "shortname": "wedding"
+    },
+    {
+        "emoji": "🗼",
+        "name": "tokyo tower",
+        "html": "0x1f5fc;",
+        "shortname": "tokyotower"
+    },
+    {
+        "emoji": "🗽",
+        "name": "statue of liberty",
+        "html": "0x1f5fd;",
+        "shortname": "statueliberty"
+    },
+    {
+        "emoji": "⛪",
+        "name": "church",
+        "html": "0x26ea;",
+        "shortname": "church"
+    },
+    {
+        "emoji": "🕌",
+        "name": "mosque",
+        "html": "0x1f54c;",
+        "shortname": "mosque"
+    },
+    {
+        "emoji": "🛕",
+        "name": "hindu temple",
+        "html": "0x1f6d5;",
+        "shortname": "temple"
+    },
+    {
+        "emoji": "🕍",
+        "name": "synagogue",
+        "html": "0x1f54d;",
+        "shortname": "synagogue"
+    },
+    {
+        "emoji": "⛩️",
+        "name": "shinto shrine",
+        "html": "0x26e9;",
+        "shortname": "shintoshrine"
+    },
+    {
+        "emoji": "🕋",
+        "name": "kaaba",
+        "html": "0x1f54b;",
+        "shortname": "kaaba"
+    },
+    {
+        "emoji": "⛲",
+        "name": "fountain",
+        "html": "0x26f2;",
+        "shortname": "fountain"
+    },
+    {
+        "emoji": "⛺",
+        "name": "tent",
+        "html": "0x26fa;",
+        "shortname": "tent"
+    },
+    {
+        "emoji": "🌁",
+        "name": "foggy",
+        "html": "0x1f301;",
+        "shortname": "foggy"
+    },
+    {
+        "emoji": "🌃",
+        "name": "night with stars",
+        "html": "0x1f303;",
+        "shortname": "nightstars"
+    },
+    {
+        "emoji": "🏙️",
+        "name": "cityscape",
+        "html": "0x1f3d9;",
+        "shortname": "cityscape"
+    },
+    {
+        "emoji": "🌄",
+        "name": "sunrise over mountains",
+        "html": "0x1f304;",
+        "shortname": "mountainsunrise"
+    },
+    {
+        "emoji": "🌅",
+        "name": "sunrise",
+        "html": "0x1f305;",
+        "shortname": "sunrise"
+    },
+    {
+        "emoji": "🌆",
+        "name": "cityscape at dusk",
+        "html": "0x1f306;",
+        "shortname": "cityscapedusk"
+    },
+    {
+        "emoji": "🌇",
+        "name": "sunset",
+        "html": "0x1f307;",
+        "shortname": "sunset"
+    },
+    {
+        "emoji": "🌉",
+        "name": "bridge at night",
+        "html": "0x1f309;",
+        "shortname": "nightbridge"
+    },
+    {
+        "emoji": "🎠",
+        "name": "carousel horse",
+        "html": "0x1f3a0;",
+        "shortname": "carouselhorse"
+    },
+    {
+        "emoji": "🎡",
+        "name": "ferris wheel",
+        "html": "0x1f3a1;",
+        "shortname": "ferriswheel"
+    },
+    {
+        "emoji": "🎢",
+        "name": "roller coaster",
+        "html": "0x1f3a2;",
+        "shortname": "rollercoaster"
+    },
+    {
+        "emoji": "🚂",
+        "name": "locomotive",
+        "html": "0x1f682;",
+        "shortname": "locomotive"
+    },
+    {
+        "emoji": "🚃",
+        "name": "railway car",
+        "html": "0x1f683;",
+        "shortname": "railwaycar"
+    },
+    {
+        "emoji": "🚄",
+        "name": "high speed train",
+        "html": "0x1f684;",
+        "shortname": "fasttrain"
+    },
+    {
+        "emoji": "🚅",
+        "name": "bullet train",
+        "html": "0x1f685;",
+        "shortname": "bullettrain"
+    },
+    {
+        "emoji": "🚆",
+        "name": "train",
+        "html": "0x1f686;",
+        "shortname": "train"
+    },
+    {
+        "emoji": "🚇",
+        "name": "metro",
+        "html": "0x1f687;",
+        "shortname": "subway"
+    },
+    {
+        "emoji": "🚈",
+        "name": "light rail",
+        "html": "0x1f688;",
+        "shortname": "lightrail"
+    },
+    {
+        "emoji": "🚉",
+        "name": "station",
+        "html": "0x1f689;",
+        "shortname": "station"
+    },
+    {
+        "emoji": "🚊",
+        "name": "tram",
+        "html": "0x1f68a;",
+        "shortname": "tram"
+    },
+    {
+        "emoji": "🚝",
+        "name": "monorail",
+        "html": "0x1f69d;",
+        "shortname": "monorail"
+    },
+    {
+        "emoji": "🚞",
+        "name": "mountain railway",
+        "html": "0x1f69e;",
+        "shortname": "mountainrailway"
+    },
+    {
+        "emoji": "🚋",
+        "name": "tram car",
+        "html": "0x1f68b;",
+        "shortname": "tramcar"
+    },
+    {
+        "emoji": "🚌",
+        "name": "bus",
+        "html": "0x1f68c;",
+        "shortname": "bus"
+    },
+    {
+        "emoji": "🚍",
+        "name": "oncoming bus",
+        "html": "0x1f68d;",
+        "shortname": "fbus"
+    },
+    {
+        "emoji": "🚎",
+        "name": "trolleybus",
+        "html": "0x1f68e;",
+        "shortname": "trolleybus"
+    },
+    {
+        "emoji": "🚐",
+        "name": "minibus",
+        "html": "0x1f690;",
+        "shortname": "minibus"
+    },
+    {
+        "emoji": "🚑",
+        "name": "ambulance",
+        "html": "0x1f691;",
+        "shortname": "ambulance"
+    },
+    {
+        "emoji": "🚒",
+        "name": "fire engine",
+        "html": "0x1f692;",
+        "shortname": "fireengine"
+    },
+    {
+        "emoji": "🚓",
+        "name": "police car",
+        "html": "0x1f693;",
+        "shortname": "policecar"
+    },
+    {
+        "emoji": "🚔",
+        "name": "oncoming police car",
+        "html": "0x1f694;",
+        "shortname": "fpolicecar"
+    },
+    {
+        "emoji": "🚕",
+        "name": "taxi",
+        "html": "0x1f695;",
+        "shortname": "taxi"
+    },
+    {
+        "emoji": "🚖",
+        "name": "oncoming taxi",
+        "html": "0x1f696;",
+        "shortname": "ftaxi"
+    },
+    {
+        "emoji": "🚗",
+        "name": "automobile",
+        "html": "0x1f697;",
+        "shortname": "automobile"
+    },
+    {
+        "emoji": "🚘",
+        "name": "oncoming automobile",
+        "html": "0x1f698;",
+        "shortname": "fautomobile"
+    },
+    {
+        "emoji": "🚙",
+        "name": "sport utility vehicle",
+        "html": "0x1f699;",
+        "shortname": "utilityvehicle"
+    },
+    {
+        "emoji": "🚚",
+        "name": "delivery truck",
+        "html": "0x1f69a;",
+        "shortname": "deliverytruck"
+    },
+    {
+        "emoji": "🚛",
+        "name": "articulated lorry",
+        "html": "0x1f69b;",
+        "shortname": "articulatedlorry"
+    },
+    {
+        "emoji": "🚜",
+        "name": "tractor",
+        "html": "0x1f69c;",
+        "shortname": "tractor"
+    },
+    {
+        "emoji": "🏎️",
+        "name": "racing car",
+        "html": "0x1f3ce;",
+        "shortname": "racingcar"
+    },
+    {
+        "emoji": "🏍️",
+        "name": "motorcycle",
+        "html": "0x1f3cd;",
+        "shortname": "moto"
+    },
+    {
+        "emoji": "🛵",
+        "name": "motor scooter",
+        "html": "0x1f6f5;",
+        "shortname": "scooter"
+    },
+    {
+        "emoji": "🛺",
+        "name": "auto rickshaw",
+        "html": "0x1f6fa;",
+        "shortname": "rickshaw"
+    },
+    {
+        "emoji": "🚲",
+        "name": "bicycle",
+        "html": "0x1f6b2;",
+        "shortname": "bicycle"
+    },
+    {
+        "emoji": "🛴",
+        "name": "kick scooter",
+        "html": "0x1f6f4;",
+        "shortname": "kickscooter"
+    },
+    {
+        "emoji": "🚏",
+        "name": "bus stop",
+        "html": "0x1f68f;",
+        "shortname": "busstop"
+    },
+    {
+        "emoji": "🛣️",
+        "name": "motorway",
+        "html": "0x1f6e3;",
+        "shortname": "motorway"
+    },
+    {
+        "emoji": "🛤️",
+        "name": "railway track",
+        "html": "0x1f6e4;",
+        "shortname": "railway"
+    },
+    {
+        "emoji": "⛽",
+        "name": "fuel pump",
+        "html": "0x26fd;",
+        "shortname": "fuelpump"
+    },
+    {
+        "emoji": "🚨",
+        "name": "police car light",
+        "html": "0x1f6a8;",
+        "shortname": "policelight"
+    },
+    {
+        "emoji": "🚦",
+        "name": "vertical traffic light",
+        "html": "0x1f6a6;",
+        "shortname": "trafficlight"
+    },
+    {
+        "emoji": "🚥",
+        "name": "horizontal traffic light",
+        "html": "0x1f6a5;",
+        "shortname": "horizontaltrafficlight"
+    },
+    {
+        "emoji": "🚧",
+        "name": "construction",
+        "html": "0x1f6a7;",
+        "shortname": "roadclosed"
+    },
+    {
+        "emoji": "⚓",
+        "name": "anchor",
+        "html": "0x2693;",
+        "shortname": "anchor"
+    },
+    {
+        "emoji": "⛵",
+        "name": "sailboat",
+        "html": "0x26f5;",
+        "shortname": "sailboat"
+    },
+    {
+        "emoji": "🚤",
+        "name": "speedboat",
+        "html": "0x1f6a4;",
+        "shortname": "speedboat"
+    },
+    {
+        "emoji": "🛳️",
+        "name": "passenger ship",
+        "html": "0x1f6f3;",
+        "shortname": "cruise"
+    },
+    {
+        "emoji": "⛴️",
+        "name": "ferry",
+        "html": "0x26f4;",
+        "shortname": "ferry"
+    },
+    {
+        "emoji": "🛥️",
+        "name": "motor boat",
+        "html": "0x1f6e5;",
+        "shortname": "motorboat"
+    },
+    {
+        "emoji": "🚢",
+        "name": "ship",
+        "html": "0x1f6a2;",
+        "shortname": "ship"
+    },
+    {
+        "emoji": "✈️",
+        "name": "airplane",
+        "html": "0x2708;",
+        "shortname": "airplane"
+    },
+    {
+        "emoji": "🛩️",
+        "name": "small airplane",
+        "html": "0x1f6e9;",
+        "shortname": "smallairplane"
+    },
+    {
+        "emoji": "🛫",
+        "name": "airplane departure",
+        "html": "0x1f6eb;",
+        "shortname": "departure"
+    },
+    {
+        "emoji": "🛬",
+        "name": "airplane arrival",
+        "html": "0x1f6ec;",
+        "shortname": "arrival"
+    },
+    {
+        "emoji": "🪂",
+        "name": "parachute",
+        "html": "0x1fa82;",
+        "shortname": "parachute"
+    },
+    {
+        "emoji": "💺",
+        "name": "seat",
+        "html": "0x1f4ba;",
+        "shortname": "seat"
+    },
+    {
+        "emoji": "🚁",
+        "name": "helicopter",
+        "html": "0x1f681;",
+        "shortname": "helicopter"
+    },
+    {
+        "emoji": "🚟",
+        "name": "suspension railway",
+        "html": "0x1f69f;",
+        "shortname": "suspensionrailway"
+    },
+    {
+        "emoji": "🚠",
+        "name": "mountain cableway",
+        "html": "0x1f6a0;",
+        "shortname": "mountaincableway"
+    },
+    {
+        "emoji": "🚡",
+        "name": "aerial tramway",
+        "html": "0x1f6a1;",
+        "shortname": "aerialtramway"
+    },
+    {
+        "emoji": "🛰️",
+        "name": "satellite",
+        "html": "0x1f6f0;",
+        "shortname": "satellite"
+    },
+    {
+        "emoji": "🚀",
+        "name": "rocket",
+        "html": "0x1f680;",
+        "shortname": "rocket"
+    },
+    {
+        "emoji": "🛸",
+        "name": "flying saucer",
+        "html": "0x1f6f8;",
+        "shortname": "flyingsaucer"
+    },
+    {
+        "emoji": "🪐",
+        "name": "ringed planet",
+        "html": "0x1fa90;",
+        "shortname": "ringedplanet"
+    },
+    {
+        "emoji": "🌠",
+        "name": "shooting star",
+        "html": "0x1f320;",
+        "shortname": "shooting_star"
+    },
+    {
+        "emoji": "☄️",
+        "name": "comet",
+        "html": "0x2604;",
+        "shortname": "comet"
+    },
+    {
+        "emoji": "⭐",
+        "name": "star",
+        "html": "0x2b50;",
+        "shortname": "star"
+    },
+    {
+        "emoji": "🌟",
+        "name": "glowing star",
+        "html": "0x1f31f;",
+        "shortname": "glowingstar"
+    },
+    {
+        "emoji": "🌌",
+        "name": "milky way",
+        "html": "0x1f30c;",
+        "shortname": "milkyway"
+    },
+    {
+        "emoji": "🎆",
+        "name": "fireworks",
+        "html": "0x1f386;",
+        "shortname": "fireworks"
+    },
+    {
+        "emoji": "🎇",
+        "name": "sparkler",
+        "html": "0x1f387;",
+        "shortname": "sparkler"
+    },
+    {
+        "emoji": "🎑",
+        "name": "moon viewing ceremony",
+        "html": "0x1f391;",
+        "shortname": "moonviewingceremony"
+    },
+    {
+        "emoji": "🗿",
+        "name": "moai",
+        "html": "0x1f5ff;",
+        "shortname": "moai"
+    },
+    {
+        "emoji": "🛂",
+        "name": "passport control",
+        "html": "0x1f6c2;",
+        "shortname": "passportcontrol"
+    },
+    {
+        "emoji": "🛃",
+        "name": "customs",
+        "html": "0x1f6c3;",
+        "shortname": "customs"
+    },
+    {
+        "emoji": "🛄",
+        "name": "baggage claim",
+        "html": "0x1f6c4;",
+        "shortname": "baggageclaim"
+    },
+    {
+        "emoji": "🛅",
+        "name": "left luggage",
+        "html": "0x1f6c5;",
+        "shortname": "leftluggage"
+    }
+]

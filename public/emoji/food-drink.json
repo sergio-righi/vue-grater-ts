@@ -1,0 +1,692 @@
+[
+    {
+        "emoji": "🍇",
+        "name": "grapes",
+        "html": "0x1f347;",
+        "shortname": "grape"
+    },
+    {
+        "emoji": "🍈",
+        "name": "melon",
+        "html": "0x1f348;",
+        "shortname": "melon"
+    },
+    {
+        "emoji": "🍉",
+        "name": "watermelon",
+        "html": "0x1f349;",
+        "shortname": "watermelon"
+    },
+    {
+        "emoji": "🍊",
+        "name": "tangerine",
+        "html": "0x1f34a;",
+        "shortname": "tangerine"
+    },
+    {
+        "emoji": "🍋",
+        "name": "lemon",
+        "html": "0x1f34b;",
+        "shortname": "lemon"
+    },
+    {
+        "emoji": "🍌",
+        "name": "banana",
+        "html": "0x1f34c;",
+        "shortname": "banana"
+    },
+    {
+        "emoji": "🍍",
+        "name": "pineapple",
+        "html": "0x1f34d;",
+        "shortname": "pineapple"
+    },
+    {
+        "emoji": "🥭",
+        "name": "mango",
+        "html": "0x1f96d;",
+        "shortname": "mango"
+    },
+    {
+        "emoji": "🍎",
+        "name": "red apple",
+        "html": "0x1f34e;",
+        "shortname": "redapple"
+    },
+    {
+        "emoji": "🍏",
+        "name": "green apple",
+        "html": "0x1f34f;",
+        "shortname": "greenapple"
+    },
+    {
+        "emoji": "🍐",
+        "name": "pear",
+        "html": "0x1f350;",
+        "shortname": "pear"
+    },
+    {
+        "emoji": "🍑",
+        "name": "peach",
+        "html": "0x1f351;",
+        "shortname": "peach"
+    },
+    {
+        "emoji": "🍒",
+        "name": "cherries",
+        "html": "0x1f352;",
+        "shortname": "cherry"
+    },
+    {
+        "emoji": "🍓",
+        "name": "strawberry",
+        "html": "0x1f353;",
+        "shortname": "strawberry"
+    },
+    {
+        "emoji": "🥝",
+        "name": "kiwi fruit",
+        "html": "0x1f95d;",
+        "shortname": "kiwi"
+    },
+    {
+        "emoji": "🍅",
+        "name": "tomato",
+        "html": "0x1f345;",
+        "shortname": "tomato"
+    },
+    {
+        "emoji": "🥥",
+        "name": "coconut",
+        "html": "0x1f965;",
+        "shortname": "coconut"
+    },
+    {
+        "emoji": "🥑",
+        "name": "avocado",
+        "html": "0x1f951;",
+        "shortname": "avocado"
+    },
+    {
+        "emoji": "🍆",
+        "name": "eggplant",
+        "html": "0x1f346;",
+        "shortname": "eggplant"
+    },
+    {
+        "emoji": "🥔",
+        "name": "potato",
+        "html": "0x1f954;",
+        "shortname": "potato"
+    },
+    {
+        "emoji": "🥕",
+        "name": "carrot",
+        "html": "0x1f955;",
+        "shortname": "carrot"
+    },
+    {
+        "emoji": "🌽",
+        "name": "ear of corn",
+        "html": "0x1f33d;",
+        "shortname": "corn"
+    },
+    {
+        "emoji": "🌶️",
+        "name": "hot pepper",
+        "html": "0x1f336;",
+        "shortname": "pepper"
+    },
+    {
+        "emoji": "🥒",
+        "name": "cucumber",
+        "html": "0x1f952;",
+        "shortname": "cucumber"
+    },
+    {
+        "emoji": "🥬",
+        "name": "leafy green",
+        "html": "0x1f96c;",
+        "shortname": "celery"
+    },
+    {
+        "emoji": "🥦",
+        "name": "broccoli",
+        "html": "0x1f966;",
+        "shortname": "broccoli"
+    },
+    {
+        "emoji": "🧄",
+        "name": "garlic",
+        "html": "0x1f9c4;",
+        "shortname": "garlic"
+    },
+    {
+        "emoji": "🧅",
+        "name": "onion",
+        "html": "0x1f9c5;",
+        "shortname": "onion"
+    },
+    {
+        "emoji": "🍄",
+        "name": "mushroom",
+        "html": "0x1f344;",
+        "shortname": "mushroom"
+    },
+    {
+        "emoji": "🥜",
+        "name": "peanuts",
+        "html": "0x1f95c;",
+        "shortname": "peanut"
+    },
+    {
+        "emoji": "🌰",
+        "name": "chestnut",
+        "html": "0x1f330;",
+        "shortname": "chestnut"
+    },
+    {
+        "emoji": "🍞",
+        "name": "bread",
+        "html": "0x1f35e;",
+        "shortname": "bread"
+    },
+    {
+        "emoji": "🥐",
+        "name": "croissant",
+        "html": "0x1f950;",
+        "shortname": "croissant"
+    },
+    {
+        "emoji": "🥖",
+        "name": "baguette bread",
+        "html": "0x1f956;",
+        "shortname": "baguette"
+    },
+    {
+        "emoji": "🥨",
+        "name": "pretzel",
+        "html": "0x1f968;",
+        "shortname": "pretzel"
+    },
+    {
+        "emoji": "🥯",
+        "name": "bagel",
+        "html": "0x1f96f;",
+        "shortname": "bagel"
+    },
+    {
+        "emoji": "🥞",
+        "name": "pancakes",
+        "html": "0x1f95e;",
+        "shortname": "pancake"
+    },
+    {
+        "emoji": "🧇",
+        "name": "waffle",
+        "html": "0x1f9c7;",
+        "shortname": "waffle"
+    },
+    {
+        "emoji": "🧀",
+        "name": "cheese wedge",
+        "html": "0x1f9c0;",
+        "shortname": "cheese"
+    },
+    {
+        "emoji": "🍖",
+        "name": "meat on bone",
+        "html": "0x1f356;",
+        "shortname": "meatbone"
+    },
+    {
+        "emoji": "🍗",
+        "name": "poultry leg",
+        "html": "0x1f357;",
+        "shortname": "chickenleg"
+    },
+    {
+        "emoji": "🥩",
+        "name": "cut of meat",
+        "html": "0x1f969;",
+        "shortname": "steak"
+    },
+    {
+        "emoji": "🥓",
+        "name": "bacon",
+        "html": "0x1f953;",
+        "shortname": "bacon"
+    },
+    {
+        "emoji": "🍔",
+        "name": "hamburger",
+        "html": "0x1f354;",
+        "shortname": "hamburger"
+    },
+    {
+        "emoji": "🍟",
+        "name": "french fries",
+        "html": "0x1f35f;",
+        "shortname": "frenchfries"
+    },
+    {
+        "emoji": "🍕",
+        "name": "pizza",
+        "html": "0x1f355;",
+        "shortname": "pizza"
+    },
+    {
+        "emoji": "🌭",
+        "name": "hot dog",
+        "html": "0x1f32d;",
+        "shortname": "hotdog"
+    },
+    {
+        "emoji": "🥪",
+        "name": "sandwich",
+        "html": "0x1f96a;",
+        "shortname": "sandwich"
+    },
+    {
+        "emoji": "🌮",
+        "name": "taco",
+        "html": "0x1f32e;",
+        "shortname": "taco"
+    },
+    {
+        "emoji": "🌯",
+        "name": "burrito",
+        "html": "0x1f32f;",
+        "shortname": "burrito"
+    },
+    {
+        "emoji": "🥙",
+        "name": "stuffed flatbread",
+        "html": "0x1f959;",
+        "shortname": "flatbread"
+    },
+    {
+        "emoji": "🧆",
+        "name": "falafel",
+        "html": "0x1f9c6;",
+        "shortname": "falafel"
+    },
+    {
+        "emoji": "🥚",
+        "name": "egg",
+        "html": "0x1f95a;",
+        "shortname": "egg"
+    },
+    {
+        "emoji": "🍳",
+        "name": "cooking",
+        "html": "0x1f373;",
+        "shortname": "cooking"
+    },
+    {
+        "emoji": "🥘",
+        "name": "shallow pan of food",
+        "html": "0x1f958;",
+        "shortname": "panfood"
+    },
+    {
+        "emoji": "🍲",
+        "name": "pot of food",
+        "html": "0x1f372;",
+        "shortname": "potfood"
+    },
+    {
+        "emoji": "🥣",
+        "name": "bowl with spoon",
+        "html": "0x1f963;",
+        "shortname": "bowlspoon"
+    },
+    {
+        "emoji": "🥗",
+        "name": "green salad",
+        "html": "0x1f957;",
+        "shortname": "greensalad"
+    },
+    {
+        "emoji": "🍿",
+        "name": "popcorn",
+        "html": "0x1f37f;",
+        "shortname": "popcorn"
+    },
+    {
+        "emoji": "🧈",
+        "name": "butter",
+        "html": "0x1f9c8;",
+        "shortname": "butter"
+    },
+    {
+        "emoji": "🧂",
+        "name": "salt",
+        "html": "0x1f9c2;",
+        "shortname": "salt"
+    },
+    {
+        "emoji": "🥫",
+        "name": "canned food",
+        "html": "0x1f96b;",
+        "shortname": "cannedfood"
+    },
+    {
+        "emoji": "🍱",
+        "name": "bento box",
+        "html": "0x1f371;",
+        "shortname": "bentobox"
+    },
+    {
+        "emoji": "🍘",
+        "name": "rice cracker",
+        "html": "0x1f358;",
+        "shortname": "ricecracker"
+    },
+    {
+        "emoji": "🍙",
+        "name": "rice ball",
+        "html": "0x1f359;",
+        "shortname": "riceball"
+    },
+    {
+        "emoji": "🍚",
+        "name": "cooked rice",
+        "html": "0x1f35a;",
+        "shortname": "cookedrice"
+    },
+    {
+        "emoji": "🍛",
+        "name": "curry rice",
+        "html": "0x1f35b;",
+        "shortname": "curryrice"
+    },
+    {
+        "emoji": "🍜",
+        "name": "steaming bowl",
+        "html": "0x1f35c;",
+        "shortname": "steamingbowl"
+    },
+    {
+        "emoji": "🍝",
+        "name": "spaghetti",
+        "html": "0x1f35d;",
+        "shortname": "spaghetti"
+    },
+    {
+        "emoji": "🍠",
+        "name": "roasted sweet potato",
+        "html": "0x1f360;",
+        "shortname": "sweetpotato"
+    },
+    {
+        "emoji": "🍢",
+        "name": "oden",
+        "html": "0x1f362;",
+        "shortname": "oden"
+    },
+    {
+        "emoji": "🍣",
+        "name": "sushi",
+        "html": "0x1f363;",
+        "shortname": "sushi"
+    },
+    {
+        "emoji": "🍤",
+        "name": "fried shrimp",
+        "html": "0x1f364;",
+        "shortname": "shrimp"
+    },
+    {
+        "emoji": "🍥",
+        "name": "fish cake with swirl",
+        "html": "0x1f365;",
+        "shortname": "fishcake"
+    },
+    {
+        "emoji": "🥮",
+        "name": "moon cake",
+        "html": "0x1f96e;",
+        "shortname": "mooncake"
+    },
+    {
+        "emoji": "🍡",
+        "name": "dango",
+        "html": "0x1f361;",
+        "shortname": "dango"
+    },
+    {
+        "emoji": "🥟",
+        "name": "dumpling",
+        "html": "0x1f95f;",
+        "shortname": "dumpling"
+    },
+    {
+        "emoji": "🥠",
+        "name": "fortune cookie",
+        "html": "0x1f960;",
+        "shortname": "fortunecookie"
+    },
+    {
+        "emoji": "🥡",
+        "name": "takeout box",
+        "html": "0x1f961;",
+        "shortname": "takeoutbox"
+    },
+    {
+        "emoji": "🦪",
+        "name": "oyster",
+        "html": "0x1f9aa;",
+        "shortname": "oyster"
+    },
+    {
+        "emoji": "🍦",
+        "name": "soft ice cream",
+        "html": "0x1f366;",
+        "shortname": "coneicecream"
+    },
+    {
+        "emoji": "🍧",
+        "name": "shaved ice",
+        "html": "0x1f367;",
+        "shortname": "shavedice"
+    },
+    {
+        "emoji": "🍨",
+        "name": "ice cream",
+        "html": "0x1f368;",
+        "shortname": "icecream"
+    },
+    {
+        "emoji": "🍩",
+        "name": "doughnut",
+        "html": "0x1f369;",
+        "shortname": "doughnut"
+    },
+    {
+        "emoji": "🍪",
+        "name": "cookie",
+        "html": "0x1f36a;",
+        "shortname": "cookie"
+    },
+    {
+        "emoji": "🎂",
+        "name": "birthday cake",
+        "html": "0x1f382;",
+        "shortname": "birthdaycake"
+    },
+    {
+        "emoji": "🍰",
+        "name": "shortcake",
+        "html": "0x1f370;",
+        "shortname": "cakeslice"
+    },
+    {
+        "emoji": "🧁",
+        "name": "cupcake",
+        "html": "0x1f9c1;",
+        "shortname": "cupcake"
+    },
+    {
+        "emoji": "🥧",
+        "name": "pie",
+        "html": "0x1f967;",
+        "shortname": "pie"
+    },
+    {
+        "emoji": "🍫",
+        "name": "chocolate bar",
+        "html": "0x1f36b;",
+        "shortname": "chocolatebar"
+    },
+    {
+        "emoji": "🍬",
+        "name": "candy",
+        "html": "0x1f36c;",
+        "shortname": "candy"
+    },
+    {
+        "emoji": "🍭",
+        "name": "lollipop",
+        "html": "0x1f36d;",
+        "shortname": "lollipop"
+    },
+    {
+        "emoji": "🍮",
+        "name": "custard",
+        "html": "0x1f36e;",
+        "shortname": "custard"
+    },
+    {
+        "emoji": "🍯",
+        "name": "honey pot",
+        "html": "0x1f36f;",
+        "shortname": "honeypot"
+    },
+    {
+        "emoji": "🍼",
+        "name": "baby bottle",
+        "html": "0x1f37c;",
+        "shortname": "babybottle"
+    },
+    {
+        "emoji": "🥛",
+        "name": "glass of milk",
+        "html": "0x1f95b;",
+        "shortname": "glassmilk"
+    },
+    {
+        "emoji": "☕",
+        "name": "hot beverage",
+        "html": "0x2615;",
+        "shortname": "hotbeverage"
+    },
+    {
+        "emoji": "🍵",
+        "name": "teacup without handle",
+        "html": "0x1f375;",
+        "shortname": "teacup"
+    },
+    {
+        "emoji": "🍶",
+        "name": "sake",
+        "html": "0x1f376;",
+        "shortname": "sake"
+    },
+    {
+        "emoji": "🍾",
+        "name": "bottle with popping cork",
+        "html": "0x1f37e;",
+        "shortname": "champagne"
+    },
+    {
+        "emoji": "🍷",
+        "name": "wine glass",
+        "html": "0x1f377;",
+        "shortname": "wine"
+    },
+    {
+        "emoji": "🍸",
+        "name": "cocktail glass",
+        "html": "0x1f378;",
+        "shortname": "cocktail"
+    },
+    {
+        "emoji": "🍹",
+        "name": "tropical drink",
+        "html": "0x1f379;",
+        "shortname": "tropicaldrink"
+    },
+    {
+        "emoji": "🍺",
+        "name": "beer mug",
+        "html": "0x1f37a;",
+        "shortname": "beermug"
+    },
+    {
+        "emoji": "🍻",
+        "name": "clinking beer mugs",
+        "html": "0x1f37b;",
+        "shortname": "clinking"
+    },
+    {
+        "emoji": "🥂",
+        "name": "clinking glasses",
+        "html": "0x1f942;",
+        "shortname": "cheers"
+    },
+    {
+        "emoji": "🥃",
+        "name": "tumbler glass",
+        "html": "0x1f943;",
+        "shortname": "tumblerglass"
+    },
+    {
+        "emoji": "🥤",
+        "name": "cup with straw",
+        "html": "0x1f964;",
+        "shortname": "cupstraw"
+    },
+    {
+        "emoji": "🧃",
+        "name": "beverage box",
+        "html": "0x1f9c3;",
+        "shortname": "beveragebox"
+    },
+    {
+        "emoji": "🧉",
+        "name": "mate",
+        "html": "0x1f9c9;",
+        "shortname": "mate"
+    },
+    {
+        "emoji": "🧊",
+        "name": "ice",
+        "html": "0x1f9ca;",
+        "shortname": "ice"
+    },
+    {
+        "emoji": "🥢",
+        "name": "chopsticks",
+        "html": "0x1f962;",
+        "shortname": "chopsticks"
+    },
+    {
+        "emoji": "🍽️",
+        "name": "fork and knife with plate",
+        "html": "0x1f37d;",
+        "shortname": "utensilsplate"
+    },
+    {
+        "emoji": "🍴",
+        "name": "fork and knife",
+        "html": "0x1f374;",
+        "shortname": "utensils"
+    },
+    {
+        "emoji": "🥄",
+        "name": "spoon",
+        "html": "0x1f944;",
+        "shortname": "spoon"
+    }
+]

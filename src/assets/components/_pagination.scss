@@ -1,0 +1,129 @@
+﻿@use '../utils/index' as *;
+
+.gv-pagination {
+  @include d-inline-flex;
+  @include block-selection;
+  gap: $default-distance * 0.5;
+  @include align-items(center);
+
+  &.center {
+    width: 100%;
+    @include justify-content(center);
+  }
+
+  &.condensed {
+    & > .gv-content {
+      gap: initial;
+      @include border-radius($border-radius);
+
+      & > .gv-item {
+        &:not(:first-child, :last-child) {
+          @include border-radius(0 !important);
+        }
+
+        &:focus {
+          outline: none;
+          background-color: var(--gv-secondary);
+        }
+
+        &:first-child {
+          @include border-radius($border-radius 0 0 $border-radius);
+        }
+
+        &:last-child {
+          @include border-radius(0 $border-radius $border-radius 0);
+        }
+      }
+    }
+  }
+
+  &.arrow-only {
+    color: var(--gv-color-font);
+
+    & > .gv-control {
+      @include border-radius($border-radius);
+      // border: 1px solid var(--gv-color-border);
+      background-color: var(--gv-secondary-light);
+    }
+  }
+
+  & > .gv-content {
+    @include d-inline-flex;
+    color: var(--gv-color-font);
+    gap: $default-distance * 0.5;
+    @include align-items(center);
+    @include justify-content(center);
+
+    & > .gv-item {
+      background-color: var(--gv-secondary-light);
+      --current-border-color: var(--gv-color-border);
+
+      &:not(.ellipsis) {
+        @include border-radius($border-radius);
+        // border: 1px solid var(--current-border-color);
+
+        &:hover {
+          color: var(--gv-color-font);
+          background-color: var(--gv-secondary-light);
+        }
+      }
+
+      &:active {
+        outline: none;
+      }
+
+      &.active {
+        font-weight: 600;
+        pointer-events: none;
+        color: var(--gv-color-accent);
+        --current-border-color: --gv-accent;
+        background-color: var(--gv-accent) !important;
+      }
+    }
+  }
+
+  & > .gv-control {
+    border: 0;
+    margin: 0;
+    height: 35px;
+    outline: none;
+    font-size: $font-size * 1.125;
+    background-color: transparent;
+
+    &.disabled {
+      opacity: 0.5;
+      pointer-events: none;
+    }
+
+    i {
+      vertical-align: middle;
+    }
+  }
+
+  & > .gv-control,
+  & > .gv-content > .gv-item {
+    width: 35px;
+    cursor: pointer;
+    position: relative;
+    line-height: normal;
+    @include d-inline-flex;
+    @include align-items(center);
+    @include justify-content(center);
+
+    &:before {
+      height: 0;
+      content: "";
+      width: 100%;
+      display: block;
+      padding-bottom: 100%;
+    }
+
+    &:after {
+      height: 0;
+      content: "";
+      width: 100%;
+      display: block;
+      padding-bottom: 100%;
+    }
+  }
+}

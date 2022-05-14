@@ -1,0 +1,656 @@
+[
+    {
+        "emoji": "🧗",
+        "name": "person climbing",
+        "html": "0x1f9d7;",
+        "shortname": "climbing"
+    },
+    {
+        "emoji": "🧗‍♂️",
+        "name": "man climbing",
+        "html": "0x1f9d7;",
+        "shortname": "mclimbing"
+    },
+    {
+        "emoji": "🧗‍♀️",
+        "name": "woman climbing",
+        "html": "0x1f9d7;",
+        "shortname": "wclimbing"
+    },
+    {
+        "emoji": "🤺",
+        "name": "person fencing",
+        "html": "0x1f93a;",
+        "shortname": "fencing"
+    },
+    {
+        "emoji": "🏇",
+        "name": "horse racing",
+        "html": "0x1f3c7;",
+        "shortname": "horseracing"
+    },
+    {
+        "emoji": "⛷️",
+        "name": "skier",
+        "html": "0x26f7;",
+        "shortname": "skier"
+    },
+    {
+        "emoji": "🏂",
+        "name": "snowboarder",
+        "html": "0x1f3c2;",
+        "shortname": "snowboarder"
+    },
+    {
+        "emoji": "🏌️",
+        "name": "person golfing",
+        "html": "0x1f3cc;",
+        "shortname": "golfing"
+    },
+    {
+        "emoji": "🏌️‍♂️",
+        "name": "man golfing",
+        "html": "0x1f3cc;",
+        "shortname": "mgolfing"
+    },
+    {
+        "emoji": "🏌️‍♀️",
+        "name": "woman golfing",
+        "html": "0x1f3cc;",
+        "shortname": "wgolfing"
+    },
+    {
+        "emoji": "🏄",
+        "name": "person surfing",
+        "html": "0x1f3c4;",
+        "shortname": "surfing"
+    },
+    {
+        "emoji": "🏄‍♂️",
+        "name": "man surfing",
+        "html": "0x1f3c4;",
+        "shortname": "msurfing"
+    },
+    {
+        "emoji": "🏄‍♀️",
+        "name": "woman surfing",
+        "html": "0x1f3c4;",
+        "shortname": "wsurfing"
+    },
+    {
+        "emoji": "🚣",
+        "name": "person rowing boat",
+        "html": "0x1f6a3;",
+        "shortname": "rowing"
+    },
+    {
+        "emoji": "🚣‍♂️",
+        "name": "man rowing boat",
+        "html": "0x1f6a3;",
+        "shortname": "mrowing"
+    },
+    {
+        "emoji": "🚣‍♀️",
+        "name": "woman rowing boat",
+        "html": "0x1f6a3;",
+        "shortname": "wrowing"
+    },
+    {
+        "emoji": "🏊",
+        "name": "person swimming",
+        "html": "0x1f3ca;",
+        "shortname": "swimming"
+    },
+    {
+        "emoji": "🏊‍♂️",
+        "name": "man swimming",
+        "html": "0x1f3ca;",
+        "shortname": "mswimming"
+    },
+    {
+        "emoji": "🏊‍♀️",
+        "name": "woman swimming",
+        "html": "0x1f3ca;",
+        "shortname": "wswimming"
+    },
+    {
+        "emoji": "⛹️",
+        "name": "person bouncing ball",
+        "html": "0x26f9;",
+        "shortname": "bouncing"
+    },
+    {
+        "emoji": "⛹️‍♂️",
+        "name": "man bouncing ball",
+        "html": "0x26f9;",
+        "shortname": "mbouncing"
+    },
+    {
+        "emoji": "⛹️‍♀️",
+        "name": "woman bouncing ball",
+        "html": "0x26f9;",
+        "shortname": "wbouncing"
+    },
+    {
+        "emoji": "🏋️",
+        "name": "person lifting weights",
+        "html": "0x1f3cb;",
+        "shortname": "lifting"
+    },
+    {
+        "emoji": "🏋️‍♂️",
+        "name": "man lifting weights",
+        "html": "0x1f3cb;",
+        "shortname": "mlifting"
+    },
+    {
+        "emoji": "🏋️‍♀️",
+        "name": "woman lifting weights",
+        "html": "0x1f3cb;",
+        "shortname": "wlifting"
+    },
+    {
+        "emoji": "🚴",
+        "name": "person biking",
+        "html": "0x1f6b4;",
+        "shortname": "biking"
+    },
+    {
+        "emoji": "🚴‍♂️",
+        "name": "man biking",
+        "html": "0x1f6b4;",
+        "shortname": "mbiking"
+    },
+    {
+        "emoji": "🚴‍♀️",
+        "name": "woman biking",
+        "html": "0x1f6b4;",
+        "shortname": "wbiking"
+    },
+    {
+        "emoji": "🚵",
+        "name": "person mountain biking",
+        "html": "0x1f6b5;",
+        "shortname": "mountainbiking"
+    },
+    {
+        "emoji": "🚵‍♂️",
+        "name": "man mountain biking",
+        "html": "0x1f6b5;",
+        "shortname": "mmountainbiking"
+    },
+    {
+        "emoji": "🚵‍♀️",
+        "name": "woman mountain biking",
+        "html": "0x1f6b5;",
+        "shortname": "wmountainbiking"
+    },
+    {
+        "emoji": "🤸",
+        "name": "person cartwheeling",
+        "html": "0x1f938;",
+        "shortname": "cartwheeling"
+    },
+    {
+        "emoji": "🤸‍♂️",
+        "name": "man cartwheeling",
+        "html": "0x1f938;",
+        "shortname": "mcartwheeling"
+    },
+    {
+        "emoji": "🤸‍♀️",
+        "name": "woman cartwheeling",
+        "html": "0x1f938;",
+        "shortname": "wcartwheeling"
+    },
+    {
+        "emoji": "🤼",
+        "name": "people wrestling",
+        "html": "0x1f93c;",
+        "shortname": "wrestling"
+    },
+    {
+        "emoji": "🤼‍♂️",
+        "name": "men wrestling",
+        "html": "0x1f93c;",
+        "shortname": "mwrestling"
+    },
+    {
+        "emoji": "🤼‍♀️",
+        "name": "women wrestling",
+        "html": "0x1f93c;",
+        "shortname": "wwrestling"
+    },
+    {
+        "emoji": "🤽",
+        "name": "person playing water polo",
+        "html": "0x1f93d;",
+        "shortname": "waterpolo"
+    },
+    {
+        "emoji": "🤽‍♂️",
+        "name": "man playing water polo",
+        "html": "0x1f93d;",
+        "shortname": "mwaterpolo"
+    },
+    {
+        "emoji": "🤽‍♀️",
+        "name": "woman playing water polo",
+        "html": "0x1f93d;",
+        "shortname": "wwaterpolo"
+    },
+    {
+        "emoji": "🤾",
+        "name": "person playing handball",
+        "html": "0x1f93e;",
+        "shortname": "handball"
+    },
+    {
+        "emoji": "🤾‍♂️",
+        "name": "man playing handball",
+        "html": "0x1f93e;",
+        "shortname": "mhandball"
+    },
+    {
+        "emoji": "🤾‍♀️",
+        "name": "woman playing handball",
+        "html": "0x1f93e;",
+        "shortname": "whandball"
+    },
+    {
+        "emoji": "🤹",
+        "name": "person juggling",
+        "html": "0x1f939;",
+        "shortname": "juggling"
+    },
+    {
+        "emoji": "🤹‍♂️",
+        "name": "man juggling",
+        "html": "0x1f939;",
+        "shortname": "mjuggling"
+    },
+    {
+        "emoji": "🤹‍♀️",
+        "name": "woman juggling",
+        "html": "0x1f939;",
+        "shortname": "wjuggling"
+    },
+    {
+        "emoji": "🧘",
+        "name": "person in lotus position",
+        "html": "0x1f9d8;",
+        "shortname": "lotus"
+    },
+    {
+        "emoji": "🧘‍♂️",
+        "name": "man in lotus position",
+        "html": "0x1f9d8;",
+        "shortname": "mlotus"
+    },
+    {
+        "emoji": "🧘‍♀️",
+        "name": "woman in lotus position",
+        "html": "0x1f9d8;",
+        "shortname": "wlotus"
+    },
+    {
+        "emoji": "🎪",
+        "name": "circus tent",
+        "html": "0x1f3aa;",
+        "shortname": "circus"
+    },
+    {
+        "emoji": "🛹",
+        "name": "skateboard",
+        "html": "0x1f6f9;",
+        "shortname": "skateboard"
+    },
+    {
+        "emoji": "🛶",
+        "name": "canoe",
+        "html": "0x1f6f6;",
+        "shortname": "canoe"
+    },
+    {
+        "emoji": "🎗️",
+        "name": "reminder ribbon",
+        "html": "0x1f397;",
+        "shortname": "reminderribbon"
+    },
+    {
+        "emoji": "🎟️",
+        "name": "admission tickets",
+        "html": "0x1f39f;",
+        "shortname": "admticket"
+    },
+    {
+        "emoji": "🎫",
+        "name": "ticket",
+        "html": "0x1f3ab;",
+        "shortname": "ticket"
+    },
+    {
+        "emoji": "🎖️",
+        "name": "military medal",
+        "html": "0x1f396;",
+        "shortname": "armymedal"
+    },
+    {
+        "emoji": "🏆",
+        "name": "trophy",
+        "html": "0x1f3c6;",
+        "shortname": "trophy"
+    },
+    {
+        "emoji": "🏅",
+        "name": "sports medal",
+        "html": "0x1f3c5;",
+        "shortname": "medal"
+    },
+    {
+        "emoji": "🥇",
+        "name": "1st place medal",
+        "html": "0x1f947;",
+        "shortname": "gmedal"
+    },
+    {
+        "emoji": "🥈",
+        "name": "2nd place medal",
+        "html": "0x1f948;",
+        "shortname": "smedal"
+    },
+    {
+        "emoji": "🥉",
+        "name": "3rd place medal",
+        "html": "0x1f949;",
+        "shortname": "bmedal"
+    },
+    {
+        "emoji": "⚽",
+        "name": "soccer ball",
+        "html": "0x26bd;",
+        "shortname": "soccerball"
+    },
+    {
+        "emoji": "⚾",
+        "name": "baseball",
+        "html": "0x26be;",
+        "shortname": "baseball"
+    },
+    {
+        "emoji": "🥎",
+        "name": "softball",
+        "html": "0x1f94e;",
+        "shortname": "softball"
+    },
+    {
+        "emoji": "🏀",
+        "name": "basketball",
+        "html": "0x1f3c0;",
+        "shortname": "basketball"
+    },
+    {
+        "emoji": "🏐",
+        "name": "volleyball",
+        "html": "0x1f3d0;",
+        "shortname": "volleyball"
+    },
+    {
+        "emoji": "🏈",
+        "name": "american football",
+        "html": "0x1f3c8;",
+        "shortname": "football"
+    },
+    {
+        "emoji": "🏉",
+        "name": "rugby football",
+        "html": "0x1f3c9;",
+        "shortname": "rugby"
+    },
+    {
+        "emoji": "🎾",
+        "name": "tennis",
+        "html": "0x1f3be;",
+        "shortname": "tennis"
+    },
+    {
+        "emoji": "🥏",
+        "name": "flying disc",
+        "html": "0x1f94f;",
+        "shortname": "flyingdisc"
+    },
+    {
+        "emoji": "🎳",
+        "name": "bowling",
+        "html": "0x1f3b3;",
+        "shortname": "bowling"
+    },
+    {
+        "emoji": "🏏",
+        "name": "cricket game",
+        "html": "0x1f3cf;",
+        "shortname": "cricket"
+    },
+    {
+        "emoji": "🏑",
+        "name": "field hockey",
+        "html": "0x1f3d1;",
+        "shortname": "fhockey"
+    },
+    {
+        "emoji": "🏒",
+        "name": "ice hockey",
+        "html": "0x1f3d2;",
+        "shortname": "ihockey"
+    },
+    {
+        "emoji": "🥍",
+        "name": "lacrosse",
+        "html": "0x1f94d;",
+        "shortname": "lacrosse"
+    },
+    {
+        "emoji": "🏓",
+        "name": "ping pong",
+        "html": "0x1f3d3;",
+        "shortname": "pingpong"
+    },
+    {
+        "emoji": "🏸",
+        "name": "badminton",
+        "html": "0x1f3f8;",
+        "shortname": "badminton"
+    },
+    {
+        "emoji": "🥊",
+        "name": "boxing glove",
+        "html": "0x1f94a;",
+        "shortname": "boxing"
+    },
+    {
+        "emoji": "🥋",
+        "name": "martial arts uniform",
+        "html": "0x1f94b;",
+        "shortname": "martialarts"
+    },
+    {
+        "emoji": "🥅",
+        "name": "goal net",
+        "html": "0x1f945;",
+        "shortname": "net"
+    },
+    {
+        "emoji": "⛳",
+        "name": "flag in hole",
+        "html": "0x26f3;",
+        "shortname": "golfhole"
+    },
+    {
+        "emoji": "⛸️",
+        "name": "ice skate",
+        "html": "0x26f8;",
+        "shortname": "iskate"
+    },
+    {
+        "emoji": "🎣",
+        "name": "fishing pole",
+        "html": "0x1f3a3;",
+        "shortname": "fishing"
+    },
+    {
+        "emoji": "🎽",
+        "name": "running shirt",
+        "html": "0x1f3bd;",
+        "shortname": "runningshirt"
+    },
+    {
+        "emoji": "🎿",
+        "name": "skis",
+        "html": "0x1f3bf;",
+        "shortname": "ski"
+    },
+    {
+        "emoji": "🛷",
+        "name": "sled",
+        "html": "0x1f6f7;",
+        "shortname": "sled"
+    },
+    {
+        "emoji": "🥌",
+        "name": "curling stone",
+        "html": "0x1f94c;",
+        "shortname": "curling"
+    },
+    {
+        "emoji": "🎯",
+        "name": "direct hit",
+        "html": "0x1f3af;",
+        "shortname": "target"
+    },
+    {
+        "emoji": "🎱",
+        "name": "pool 8 ball",
+        "html": "0x1f3b1;",
+        "shortname": "billard"
+    },
+    {
+        "emoji": "🎮",
+        "name": "video game",
+        "html": "0x1f3ae;",
+        "shortname": "gamepad"
+    },
+    {
+        "emoji": "🎰",
+        "name": "slot machine",
+        "html": "0x1f3b0;",
+        "shortname": "slotmachine"
+    },
+    {
+        "emoji": "🎲",
+        "name": "game die",
+        "html": "0x1f3b2;",
+        "shortname": "dice"
+    },
+    {
+        "emoji": "🧩",
+        "name": "puzzle piece",
+        "html": "0x1f9e9;",
+        "shortname": "puzzle"
+    },
+    {
+        "emoji": "♟️",
+        "name": "chess pawn",
+        "html": "0x265f;",
+        "shortname": "pawn"
+    },
+    {
+        "emoji": "🎭",
+        "name": "performing arts",
+        "html": "0x1f3ad;",
+        "shortname": "acting"
+    },
+    {
+        "emoji": "🎨",
+        "name": "artist palette",
+        "html": "0x1f3a8;",
+        "shortname": "palette"
+    },
+    {
+        "emoji": "🧵",
+        "name": "thread",
+        "html": "0x1f9f5;",
+        "shortname": "thread"
+    },
+    {
+        "emoji": "🧶",
+        "name": "yarn",
+        "html": "0x1f9f6;",
+        "shortname": "yarn"
+    },
+    {
+        "emoji": "🎼",
+        "name": "musical score",
+        "html": "0x1f3bc;",
+        "shortname": "musicalscore"
+    },
+    {
+        "emoji": "🎤",
+        "name": "microphone",
+        "html": "0x1f3a4;",
+        "shortname": "mic"
+    },
+    {
+        "emoji": "🎧",
+        "name": "headphone",
+        "html": "0x1f3a7;",
+        "shortname": "headphone"
+    },
+    {
+        "emoji": "🎷",
+        "name": "saxophone",
+        "html": "0x1f3b7;",
+        "shortname": "saxophone"
+    },
+    {
+        "emoji": "🎸",
+        "name": "guitar",
+        "html": "0x1f3b8;",
+        "shortname": "guitar"
+    },
+    {
+        "emoji": "🎹",
+        "name": "musical keyboard",
+        "html": "0x1f3b9;",
+        "shortname": "piano"
+    },
+    {
+        "emoji": "🎺",
+        "name": "trumpet",
+        "html": "0x1f3ba;",
+        "shortname": "trumpet"
+    },
+    {
+        "emoji": "🎻",
+        "name": "violin",
+        "html": "0x1f3bb;",
+        "shortname": "violin"
+    },
+    {
+        "emoji": "🥁",
+        "name": "drum",
+        "html": "0x1f941;",
+        "shortname": "drum"
+    },
+    {
+        "emoji": "🎬",
+        "name": "clapper board",
+        "html": "0x1f3ac;",
+        "shortname": "clapperboard"
+    },
+    {
+        "emoji": "🏹",
+        "name": "bow and arrow",
+        "html": "0x1f3f9;",
+        "shortname": "archery"
+    }
+]

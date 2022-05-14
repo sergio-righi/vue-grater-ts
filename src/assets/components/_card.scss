@@ -1,0 +1,87 @@
+﻿@use '../utils/index' as *;
+
+.gv-card {
+  z-index: 1;
+  width: 100%;
+  @include d-flex;
+  color: var(--gv-color-font);
+  @include flex-direction(column);
+  margin-bottom: $default-distance;
+  background-color: var(--gv-color-theme);
+  border: 1px solid var(--gv-color-border);
+  @include border-radius($border-radius);
+  @include box-shadow(map-get($box-shadow, 0) var(--gv-color-box-shadow));
+
+  &.flex {
+    height: calc(100% - #{$default-distance});
+  }
+
+  &.embed {
+    border: 0;
+  }
+
+  &.overflow {
+    overflow: hidden;
+  }
+
+  & > .gv-content {
+    flex-grow: 1;
+    color: inherit;
+    @include d-flex;
+    border-color: inherit;
+    @include flex-direction(column);
+
+    & .gv-image {
+      @include border-radius(0);
+    }
+
+    &
+      > *:not(.gv-tab, .gv-divider, .gv-scroll, .gv-tile, .gv-image, .gv-placeholder, .gv-video) {
+      margin: 0;
+      color: inherit;
+      padding: $default-distance * 0.5 $default-distance;
+    }
+
+    & > p {
+      padding-top: 0;
+      font-size: $font-size * 0.875;
+    }
+
+    & > .gv-divider {
+      margin-top: auto;
+    }
+  }
+
+  & > .gv-footer {
+    @include block-selection;
+  }
+
+  & > .gv-header,
+  & > .gv-footer {
+    color: inherit;
+    @include d-flex;
+    @include align-items(center);
+    padding: $default-distance * 0.5 $default-distance;
+
+    & > a,
+    & > i {
+      &:not(.gv-btn) {
+        color: inherit;
+      }
+    }
+
+    & > .gv-tile > .gv-wrap {
+      padding: 0;
+    }
+
+    & > * + * {
+      margin-left: $default-distance * 0.5;
+    }
+  }
+
+  & > .gv-header,
+  & > .gv-content,
+  & > .gv-footer {
+    position: relative;
+  }
+}

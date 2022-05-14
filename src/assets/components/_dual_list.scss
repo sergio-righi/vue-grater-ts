@@ -1,0 +1,128 @@
+@use '../utils/index' as *;
+@use '../vendors/material-design-icons/functions' as icon;
+
+.gv-dual-list {
+  width: 100%;
+  @include d-flex;
+  overflow: hidden;
+  @include flex-direction(column);
+  @include border-radius($border-radius);
+  border: 1px solid var(--gv-color-border);
+
+  & > .gv-header {
+    @include d-flex;
+
+    & > .gv-filter {
+      width: 100%;
+      height: 40px;
+      position: relative;
+
+      & > input {
+        border: 0;
+        outline: 0;
+        width: 100%;
+        height: inherit;
+        padding-right: $default-distance * 2.5;
+        padding-left: $default-distance * 0.75;
+        background-color: var(--gv-secondary-light);
+      }
+
+      & > i {
+        pointer-events: none;
+        @include vertical-absolute;
+        right: $default-distance * 0.75;
+      }
+    }
+  }
+
+  & > .gv-content {
+    @include d-flex;
+    @include flex(1);
+    overflow-y: auto;
+    @include flex-wrap(wrap);
+    border-top: 1px solid var(--gv-color-border);
+
+    & > .gv-column {
+      width: 100%;
+      overflow-y: auto;
+      min-height: 200px;
+      max-height: 200px;
+      position: relative;
+
+      & + .gv-column {
+        border-top: 10px solid var(--gv-color-border);
+      }
+
+      & > span {
+        text-align: center;
+        @include center-absolute;
+      }
+
+      & > .gv-item {
+        cursor: pointer;
+        font-weight: 400;
+        @include user-select(none);
+        padding: $default-distance * 0.35 $default-distance * 0.5;
+
+        &.disabled {
+          opacity: 0.4;
+          font-weight: 300;
+          pointer-events: none;
+        }
+
+        &:not(:last-child) {
+          border-bottom: 1px solid var(--gv-color-border);
+        }
+
+        & > span {
+          width: 100%;
+          @include o-ellipsis;
+        }
+
+        & > small {
+          display: block;
+          font-weight: 300;
+          @include o-ellipsis;
+          font-size: $font-size * 0.75;
+          margin-top: -#{$default-distance * 0.25};
+        }
+      }
+    }
+  }
+
+  & > .gv-footer {
+    @include d-flex;
+    @include user-select(none);
+    @include align-items(center);
+    padding: $default-distance * 0.5;
+    border-top: 1px solid var(--gv-color-border);
+
+    & > .gv-note {
+      font-size: $font-size * 0.75;
+    }
+
+    & > .gv-control {
+      margin-left: auto;
+      white-space: nowrap;
+    }
+  }
+}
+
+@media (min-width: $media-sm) {
+  .gv-dual-list {
+    & > .gv-content {
+      @include flex-wrap(nowrap);
+
+      & > .gv-column {
+        width: 50%;
+        min-height: 250px;
+        max-height: 250px;
+
+        & + .gv-column {
+          border-top: 0;
+          border-left: 1px solid var(--gv-color-border);
+        }
+      }
+    }
+  }
+}

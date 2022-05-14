@@ -1,0 +1,83 @@
+{
+    "alert": {
+        "dismiss": "Cerrar"
+    },
+    "dropzone": {
+        "file_sent": "enviado",
+        "file_added": "adicional",
+        "file_waiting": "esperando",
+        "file_sending": "enviando",
+        "file_error": "un error ha ocurrido",
+        "queue_sent": "todo listo",
+        "queue_sending": "en curso",
+        "queue_waiting": "en fila",
+        "drop_here": "Suelta los archivos aquí",
+        "queue_error": "un error ha ocurrido",
+        "click_here": "Haga clic aquí para subir",
+        "single_exception": "Un archivo a la vez",
+        "size_exception": "El archivo es más grande que el tamaño admitido",
+        "extension_exception": "La extensión no es compatible",
+        "queue_try_again": "¿Quieres intentar enviar el archivo de nuevo?",
+        "queue_remove": "¿Está seguro?"
+    },
+    "dual_list": {
+        "placeholder": "filtrar elementos por texto",
+        "filtered": "mostrando {0} elemento(s) disponible y {1} seleccionado(s)",
+        "note": "{0} elemento(s), {1} disponible y {2} seleccionado(s)",
+        "no_record": "la lista está vacía"
+    },
+    "lazyload": {
+        "click_load": "haga clic para cargar"
+    },
+    "picker": {
+        "am": "am",
+        "pm": "pm",
+        "day": "día",
+        "month": "mes",
+        "year": "año"
+    },
+    "poll": {
+        "footnote": "Total de votos: {0}"
+    },
+    "quiz": {
+        "next": "Siguiente",
+        "prev": "Anterior",
+        "submit": "Entregar",
+        "required": "Esta pregunta es obligatoria",
+        "confirmation": {
+            "no": "No",
+            "yes": "Sí",
+            "title": "Se requiere confirmación de envío",
+            "description": "Esta acción requiere la confirmación del usuario para continuar. Si se confirma, la prueba se enviará y la acción no se puede deshacer. ¿Quieres continuar con el envío?"
+        }
+    },
+    "snackbar": {
+        "dismiss": "Despedir "
+    },
+    "table": {
+        "no_value": "Llave inválida"
+    },
+    "validation": {
+        "required": "es requerido",
+        "alpha": "Debe ser alfanumérico",
+        "maxLength": "máximo de {0} caracteres",
+        "minLength": "mínimo de {0} caracteres",
+        "range": "entre {0} y {1}",
+        "date": "fecha invalida",
+        "number": "Tiene que ser un número",
+        "pattern": "es invalido",
+        "email": "email inválido",
+        "url": "URL invalida",
+        "match": "debe coincidir con",
+        "group": {
+            "min": "se debe seleccionar al menos {0}",
+            "max": "máx. de {0} selecciones"
+        }
+    },
+    "video": {
+        "loop": "Círculo",
+        "speed": "Velocidad",
+        "undock": "Desacoplar",
+        "resolution": "Resolución"
+    }
+}

@@ -1,0 +1,91 @@
+﻿@use '../utils/index' as *;
+
+@mixin a-bounce($duration: 1.5s) {
+  @include animation(bounce $duration cubic-bezier(0.4, 0, 1, 1) infinite);
+}
+
+@mixin a-bounce-in($duration: 1s) {
+  @include animation(bounce-in $duration cubic-bezier(0.4, 0, 1, 1) forwards);
+}
+
+@mixin a-bounce-in-left($duration: 1s) {
+  @include animation(
+    bounce-in-left $duration cubic-bezier(0.4, 0, 1, 1) forwards
+  );
+}
+
+@mixin a-bounce-in-right($duration: 1s) {
+  @include animation(
+    bounce-in-right $duration cubic-bezier(0.4, 0, 1, 1) forwards
+  );
+}
+
+@include keyframes(bounce) {
+  0% {
+    @include transform(translateX(var(--current-translate-x)) translateY(0));
+  }
+
+  100% {
+    @include transform(translateX(var(--current-translate-x)) translateY(-10px));
+  }
+}
+
+@include keyframes(bounce-in) {
+  0% {
+    opacity: 0;
+    transform: scale(0.3);
+  }
+
+  50% {
+    transform: scale(1.05);
+  }
+
+  70% {
+    transform: scale(0.9);
+  }
+
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@include keyframes(bounce-in-left) {
+  0% {
+    opacity: 0;
+    transform: translateX(-2000px);
+  }
+
+  60% {
+    transform: translateX(20px);
+  }
+
+  80% {
+    transform: translateX(-5px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@include keyframes(bounce-in-right) {
+  0% {
+    opacity: 0;
+    transform: translateX(2000px);
+  }
+
+  60% {
+    transform: translateX(-20px);
+  }
+
+  80% {
+    transform: translateX(5px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}

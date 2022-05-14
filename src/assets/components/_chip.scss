@@ -1,0 +1,137 @@
+﻿@use '../utils/index' as *;
+
+.gv-chip {
+  width: auto;
+  margin: 2px 3px;
+  position: relative;
+  white-space: nowrap;
+  height: $chip-height;
+  text-decoration: none;
+  @include d-inline-flex;
+  vertical-align: middle;
+  @include block-selection;
+  color: var(--current-color);
+  @include align-items(center);
+  font-size: $font-size * 0.875;
+  --current-color: var(--gv-color-font);
+  @include border-radius($border-radius-round);
+  background-color: var(--current-background-color);
+  --current-background-color: var(--gv-secondary-light);
+
+  &:hover {
+    --current-color: var(--gv-color-font);
+  }
+
+  &:focus {
+    outline-offset: 1px;
+    outline: 2px solid var(--current-background-color);
+  }
+
+  & + .gv-chip {
+    margin-left: $default-distance * 0.5;
+  }
+
+  &.square {
+    @include border-radius(initial);
+  }
+
+  &.round {
+    @include border-radius($border-radius);
+  }
+
+  &.outline {
+    color: var(--current-color);
+    --current-background-color: transparent;
+    --current-border-color: var(--gv-color-border);
+    border: 1px solid var(--current-border-color);
+
+    &:focus {
+      outline-offset: 0;
+      outline: 1px solid var(--current-border-color);
+    }
+  }
+
+  &.active {
+    &:not(.outline) {
+      --current-color: var(--gv-color-primary);
+      --current-background-color: var(--gv-primary);
+    }
+
+    &.outline {
+      --current-color: var(--current-color-focus) !important;
+      --current-background-color: var(--current-border-color);
+    }
+  }
+
+  &.sm {
+    font-size: $font-size * 0.75;
+    height: $chip-height - $size-variation;
+    & > .gv-leading {
+      width: $chip-height - $size-variation;
+    }
+  }
+
+  &.lg {
+    font-size: $font-size;
+    height: $chip-height + $size-variation;
+    & > .gv-leading {
+      width: $chip-height + $size-variation;
+    }
+  }
+
+  &.outline.active,
+  &:not(.outline) {
+    & > .gv-leading {
+      background-color: rgba(0, 0, 0, 0.15);
+    }
+  }
+
+  & > .gv-leading {
+    height: 100%;
+    overflow: hidden;
+    width: $chip-height;
+    @include d-inline-flex;
+    background-color: inherit;
+    @include align-items(center);
+    @include border-radius(inherit);
+    @include justify-content(center);
+
+    img {
+      object-fit: cover;
+      object-position: center;
+    }
+
+    i:before {
+      color: inherit;
+      font-size: $font-size * 1.125;
+      line-height: normal;
+    }
+  }
+
+  & > .gv-label {
+    color: inherit;
+    line-height: 1;
+    white-space: nowrap;
+    font-weight: $font-weight;
+    padding-left: $default-distance * 0.75;
+    padding-right: $default-distance * 0.75;
+  }
+
+  & > .gv-trailing {
+    line-height: 1;
+    cursor: pointer;
+    display: inline-block;
+    margin-right: $default-distance * 0.5;
+
+    &.gv-btn {
+      padding: 0;
+    }
+
+    i:before {
+      width: 20px;
+      color: inherit;
+      text-align: center;
+      font-size: $font-size * 1.125;
+    }
+  }
+}

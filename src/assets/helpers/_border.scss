@@ -1,0 +1,13 @@
+﻿@use '../utils/index' as *;
+
+.border-radius {
+  @include border-radius($border-radius);
+}
+
+.border-circle {
+  @include border-radius($border-radius-circle);
+}
+
+.border-round {
+  @include border-radius($border-radius-round);
+}

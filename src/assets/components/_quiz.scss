@@ -1,0 +1,55 @@
+@use '../utils/index' as *;
+
+.gv-quiz {
+  & > .gv-content {
+    & > .gv-quiz-item {
+      display: none;
+
+      &.active {
+        display: block;
+      }
+
+      &.done {
+        opacity: 0.7;
+        pointer-events: none;
+        text-decoration: line-through;
+      }
+
+      & > .gv-header {
+        font-weight: 500;
+        text-align: justify;
+      }
+
+      & > .gv-content {
+        margin: $default-distance * 0.5 0;
+
+        & > .gv-wrapper {
+          padding: 0 $default-distance * 1;
+        }
+      }
+
+      & > .gv-footer {
+        font-size: $font-size * 0.75;
+        margin-bottom: $default-distance * 0.5;
+
+        & > span {
+          font-weight: 600;
+          color: var(--gv-error);
+          &:before {
+            content: "*";
+            margin-right: $default-distance * 0.25;
+          }
+        }
+      }
+    }
+  }
+
+  & > .gv-footer {
+    @include d-flex;
+    margin-top: $default-distance * 1;
+
+    & > .gv-control {
+      margin-right: auto;
+    }
+  }
+}

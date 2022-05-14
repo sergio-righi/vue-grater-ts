@@ -1,0 +1,85 @@
+﻿@use '../utils/index' as *;
+
+.gv-tooltip {
+  z-index: 100;
+  color: #fff;
+  position: fixed;
+  max-width: 280px;
+  font-size: $font-size * 0.875;
+  pointer-events: none;
+  background-color: var(--gv-color-dark);
+  @include border-radius($border-radius);
+  padding: $default-distance * 0.25 $default-distance * 0.75;
+  @include box-shadow(map-get($box-shadow, 0) var(--gv-color-box-shadow-dark));
+
+  &.tooltip-hidden {
+    opacity: 0;
+    z-index: -1;
+  }
+
+  &.tooltip-animation {
+    &[data-tooltip-placement="top"] {
+      @include animation(fade-top 200ms ease-in-out);
+    }
+
+    &[data-tooltip-placement="left"] {
+      @include animation(fade-left 200ms ease-in-out);
+    }
+
+    &[data-tooltip-placement="right"] {
+      @include animation(fade-right 200ms ease-in-out);
+    }
+
+    &[data-tooltip-placement="bottom"] {
+      @include animation(fade-bottom 200ms ease-in-out);
+    }
+  }
+}
+
+@include keyframes(fade-top) {
+  0% {
+    opacity: 0;
+    @include transform(translateY(15px));
+  }
+
+  100% {
+    opacity: 1;
+    @include transform(translateY(0));
+  }
+}
+
+@include keyframes(fade-left) {
+  0% {
+    opacity: 0;
+    @include transform(translateX(15px));
+  }
+
+  100% {
+    opacity: 1;
+    @include transform(translateX(0));
+  }
+}
+
+@include keyframes(fade-right) {
+  0% {
+    opacity: 0;
+    @include transform(translateX(-15px));
+  }
+
+  100% {
+    opacity: 1;
+    @include transform(translateX(0));
+  }
+}
+
+@include keyframes(fade-bottom) {
+  0% {
+    opacity: 0;
+    @include transform(translateY(-15px));
+  }
+
+  100% {
+    opacity: 1;
+    @include transform(translateY(0));
+  }
+}

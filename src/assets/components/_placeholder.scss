@@ -1,0 +1,114 @@
+@use '../utils/index' as *;
+
+.gv-placeholder {
+  @include d-flex;
+  overflow: hidden;
+  position: relative;
+  @include flex-wrap(wrap);
+  padding-top: $default-distance;
+  padding-bottom: $default-distance;
+  @include border-radius($border-radius);
+  background-color: var(--gv-secondary-light);
+
+  &.tight {
+    padding: 0;
+  }
+
+  > * {
+    @include d-flex;
+    flex-flow: column;
+    @include flex(1 1 auto);
+    padding-left: $default-distance;
+    padding-right: $default-distance;
+    @include animation(fading 1.5s infinite);
+  }
+
+  .ph-v-center {
+    height: 100%;
+    @include d-flex;
+    @include align-items(center);
+  }
+
+  .ph-h-center {
+    width: 100%;
+    @include d-flex;
+    @include justify-content(center);
+  }
+
+  .ph-group {
+    width: 100%;
+    @include d-flex;
+    @include flex-wrap(wrap);
+
+    .ph-row {
+      margin-top: 0 !important;
+      margin-bottom: $default-distance * 0.5;
+    }
+
+    .empty {
+      background-color: var(--gv-secondary-light);
+    }
+  }
+
+  .ph-row {
+    height: 16px;
+    display: table;
+    @include border-radius($border-radius);
+    background-color: var(--gv-secondary-dark);
+
+    & + .ph-row {
+      margin-top: $default-distance * 0.5;
+    }
+
+    &.thick {
+      height: 32px;
+      margin-bottom: $default-distance;
+    }
+  }
+
+  .ph-avatar {
+    width: 64px;
+    height: 64px;
+    overflow: hidden;
+    position: relative;
+    margin-bottom: $default-distance;
+    background-color: var(--gv-secondary-dark);
+    @include border-radius($border-radius-circle);
+
+    &.sm {
+      width: 48px;
+      height: 48px;
+    }
+  }
+
+  .ph-image {
+    width: 100%;
+    height: 150px;
+    display: table;
+    margin-bottom: $default-distance;
+    background-color: var(--gv-secondary-dark);
+
+    &.sm {
+      height: 100px;
+    }
+  }
+
+  .ph-gap {
+    height: 16px;
+    display: table;
+  }
+}
+
+@include keyframes(fading) {
+  0% {
+    opacity: 0.1;
+  }
+
+  50% {
+    opacity: 0.2;
+  }
+
+  100% {
+    opacity: 0.1;
+  }
+}

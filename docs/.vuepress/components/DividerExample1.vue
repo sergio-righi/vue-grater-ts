@@ -1,0 +1,3 @@
+<template>
+  <gv-divider />
+</template>

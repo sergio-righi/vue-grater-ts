@@ -1,0 +1,144 @@
+﻿@use '../utils/index' as *;
+
+.gv-badge {
+  position: relative;
+  height: min-content;
+  vertical-align: middle;
+  @include d-inline-flex;
+  @include align-items(center);
+
+  & > i {
+    &:before {
+      font-size: $font-size * 1.5;
+    }
+  }
+
+  .gv-badge-icon {
+    top: auto;
+    right: auto;
+    font-size: $font-size * 0.75;
+    min-width: 20px;
+    min-height: 20px;
+    line-height: 20px;
+    position: absolute;
+    text-align: center;
+    white-space: nowrap;
+    pointer-events: auto;
+    display: inline-block;
+    left: calc(100% - 4px);
+    bottom: calc(100% - 4px);
+    color: var(--gv-color-white);
+    background-color: var(--gv-color-red);
+    @include border-radius($border-radius-circle);
+
+    &.round {
+      @include border-radius($border-radius-round);
+    }
+
+    &.square {
+      @include border-radius(0);
+    }
+
+    &.inline {
+      position: initial;
+      margin-left: $default-distance * 0.25;
+
+      &.left {
+        @include flex-order(-1);
+      }
+    }
+
+    &.dot {
+      top: auto;
+      padding: 0;
+      width: 9px;
+      right: auto;
+      min-width: 0;
+      min-height: 9px;
+      left: calc(100% - 6px);
+      bottom: calc(100% - 6px);
+
+      &.overlap {
+        left: calc(100% - #{$default-distance * 0.75});
+        bottom: calc(100% - #{$default-distance * 0.75});
+      }
+    }
+
+    &.overlap {
+      top: auto;
+      right: auto;
+      left: calc(100% - #{$default-distance});
+      bottom: calc(100% - #{$default-distance});
+    }
+
+    &.left {
+      top: auto;
+      left: auto !important;
+      right: calc(100% - #{$default-distance * 0.5});
+      bottom: calc(100% - #{$default-distance * 0.5});
+
+      &.overlap {
+        right: calc(100% - #{$default-distance});
+        bottom: calc(100% - #{$default-distance});
+      }
+
+      &.dot {
+        right: calc(100% - 6px);
+        bottom: calc(100% - 6px);
+
+        &.overlap {
+          right: calc(100% - #{$default-distance * 0.75});
+          bottom: calc(100% - #{$default-distance * 0.75});
+        }
+      }
+    }
+
+    &.bottom {
+      right: auto;
+      bottom: auto !important;
+      top: calc(100% - #{$default-distance * 0.5});
+      left: calc(100% - #{$default-distance * 0.5});
+
+      &.overlap {
+        top: calc(100% - #{$default-distance});
+        left: calc(100% - #{$default-distance});
+      }
+
+      &.dot {
+        top: calc(100% - 6px);
+        left: calc(100% - 6px);
+
+        &.overlap {
+          top: calc(100% - #{$default-distance * 0.75});
+          left: calc(100% - #{$default-distance * 0.75});
+        }
+      }
+    }
+
+    &.bottom.left {
+      top: calc(100% - #{$default-distance * 0.5});
+      right: calc(100% - #{$default-distance * 0.5});
+
+      &.overlap {
+        top: calc(100% - #{$default-distance});
+        right: calc(100% - #{$default-distance});
+      }
+
+      &.dot {
+        top: calc(100% - 6px);
+        right: calc(100% - 6px);
+
+        &.overlap {
+          top: calc(100% - #{$default-distance * 0.75});
+          right: calc(100% - #{$default-distance * 0.75});
+        }
+      }
+    }
+
+    i {
+      &:before {
+        font-size: $font-size * 0.875;
+      }
+    }
+  }
+}

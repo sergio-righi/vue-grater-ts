@@ -1,0 +1,79 @@
+﻿@use '../utils/index' as *;
+@use '../vendors/material-design-icons/functions' as icon;
+
+.gv-lazyload {
+  all: inherit;
+  margin: 0;
+  padding: 0;
+  @include d-flex;
+  position: relative;
+  @include width-fill-available;
+
+  & > .gv-image {
+    width: 100%;
+  }
+
+  & > .gv-overlay {
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    display: none;
+    cursor: pointer;
+    color: #ffffff;
+    text-align: center;
+    position: absolute;
+
+    &.active {
+      display: initial;
+    }
+
+    & > .gv-info {
+      width: 80%;
+      display: none;
+      color: inherit;
+      white-space: pre-wrap;
+      @include center-absolute;
+      font-weight: $font-weight;
+
+      &:after {
+        font-size: $font-size * 0.75;
+        content: attr(data-message);
+      }
+
+      &.active {
+        display: grid;
+      }
+    }
+
+    & > .gv-progress {
+      opacity: 0;
+      z-index: -1;
+      @include center-absolute;
+
+      &.active {
+        z-index: 0;
+        opacity: 1;
+      }
+    }
+
+    & > .gv-dismiss {
+      display: none;
+      color: inherit;
+      cursor: pointer;
+      font-weight: 400;
+      position: absolute;
+      top: $default-distance * 0.75;
+      right: $default-distance * 0.75;
+
+      &:before {
+        content: icon.mdi("close");
+        font-family: $font-family-icon;
+      }
+
+      &.active {
+        display: initial;
+      }
+    }
+  }
+}

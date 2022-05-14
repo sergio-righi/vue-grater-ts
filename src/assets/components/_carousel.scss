@@ -1,0 +1,181 @@
+﻿@use '../utils/index' as *;
+@use '../vendors/material-design-icons/functions' as icon;
+
+.gv-carousel {
+  width: 100%;
+  @include d-flex;
+  overflow: hidden;
+  position: relative;
+  @include flex(1 100%);
+  height: auto !important;
+  @include flex-wrap(wrap);
+  @include align-items(center);
+  @include justify-content(center);
+  @include border-radius($border-radius);
+
+  &.embed {
+    @include border-radius(0);
+  }
+
+  & > .gv-content {
+    margin: 0;
+    padding: 0;
+    display: block;
+    overflow: hidden;
+    position: relative;
+
+    & > .gv-items {
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      height: 100%;
+      display: block;
+      position: relative;
+
+      &.animation-transition {
+        @include transition(transform 300ms ease);
+      }
+
+      & > .gv-item,
+      & > .gv-item.item-clone {
+        float: left;
+        height: 100%;
+        min-height: 1px;
+        position: relative;
+        background-color: var(--gv-color-black);
+
+        &:not(a) {
+          @include c-grab;
+        }
+
+        &.gv-image {
+          height: inherit;
+          text-align: center;
+          @include border-radius(0);
+
+          img {
+            width: 100%;
+            height: inherit;
+            object-fit: cover;
+          }
+        }
+
+        &.contain {
+          img {
+            object-fit: contain;
+          }
+        }
+      }
+
+      & > .gv-item:active,
+      & > .gv-item.item-clone:active {
+        @include c-grabbing;
+      }
+    }
+
+    & > .gv-control {
+      &.active {
+        & > .gv-nav {
+          bottom: $default-distance;
+        }
+
+        & > .gv-arrow {
+          &.arrow-left {
+            left: $default-distance;
+          }
+
+          &.arrow-right {
+            right: $default-distance;
+          }
+        }
+      }
+
+      & > .gv-nav {
+        bottom: -80px;
+        @include d-inline-flex;
+        @include horizontal-absolute;
+
+        & > .gv-item {
+          width: 15px;
+          height: 15px;
+          cursor: pointer;
+          margin: 0 $default-distance * 0.5;
+          background-color: var(--gv-secondary);
+          @include border-radius($border-radius-circle);
+
+          &.active {
+            color: #ffffff;
+            font-weight: 600;
+            background-color: var(--gv-accent);
+          }
+
+          &.square {
+            @include border-radius(0);
+          }
+
+          &.number {
+            width: 30px;
+            height: 30px;
+            line-height: 30px;
+            text-align: center;
+          }
+        }
+      }
+
+      & > .gv-nav,
+      & > .gv-arrow {
+        @include transition(all 300ms ease);
+      }
+
+      & > .gv-arrow {
+        line-height: 1;
+        cursor: pointer;
+        text-align: center;
+        color: var(--gv-color-font);
+        @include vertical-absolute;
+        @include box-shadow-default;
+        background-color: var(--gv-color-theme);
+        @include border-radius($border-radius);
+
+        &:before {
+          font-size: $font-size * 1.5;
+          font-family: $font-family-icon;
+        }
+
+        &.arrow-left {
+          left: -80px;
+
+          &:before {
+            content: icon.mdi("chevron-left");
+          }
+        }
+
+        &.arrow-right {
+          right: -80px;
+
+          &:before {
+            content: icon.mdi("chevron-right");
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: $media-md) {
+  .gv-carousel {
+    height: initial;
+
+    & > .gv-content {
+      & > .gv-control {
+        & > .gv-arrow {
+          &:before {
+            font-size: $font-size * 1.5;
+            font-family: $font-family-icon;
+          }
+        }
+      }
+    }
+  }
+}

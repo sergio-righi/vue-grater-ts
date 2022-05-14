@@ -1,0 +1,104 @@
+@use '../utils/index' as *;
+@use '../vendors/material-design-icons/functions' as icon;
+
+.gv-select {
+  outline: 0;
+  width: 100%;
+  @include d-flex;
+  position: relative;
+  @include block-selection;
+
+  &.active {
+    & > .gv-content {
+      display: block;
+    }
+  }
+
+  & > .gv-content {
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 11;
+    display: none;
+    overflow: auto;
+    cursor: default;
+    max-height: 220px;
+    position: absolute;
+    padding: $default-distance * 0.75;
+    background-color: var(--gv-color-theme);
+    border: 1px solid var(--gv-color-border);
+    border-top: 0;
+    @include border-radius(0 0 $border-radius $border-radius);
+
+    & > .gv-item {
+      width: 100%;
+      outline: none;
+      cursor: pointer;
+      @include d-flex;
+      min-height: 32px;
+      overflow: hidden;
+      position: relative;
+      color: var(--gv-color-font);
+      @include block-selection;
+      @include align-items(center);
+      font-size: $font-size * 0.875;
+      padding: 0 $default-distance * 0.75;
+      @include border-radius($border-radius);
+      @include transition(all 150ms ease-in-out);
+
+      &:not(:first-child) {
+        margin-top: $default-distance * 0.5;
+      }
+
+      &:hover,
+      &.focused {
+        font-weight: 500;
+        padding-left: $default-distance;
+        background-color: var(--gv-secondary);
+      }
+
+      &.disabled {
+        pointer-events: none;
+        background: transparent;
+        color: var(--gv-color-disabled);
+      }
+
+      &.selected {
+        font-weight: 700;
+        color: var(--gv-accent);
+      }
+    }
+
+    .gv-input-box {
+      display: block;
+      cursor: pointer;
+
+      &:not(:first-child) {
+        margin-top: $default-distance * 0.5;
+      }
+    }
+  }
+
+  .gv-search {
+    z-index: 2;
+    line-height: 1;
+    position: absolute;
+    right: $default-distance;
+    content: attr(data-term);
+    font-size: $font-size * 0.8125;
+    top: calc(-#{$field-height} / 2);
+    @include transform(translateY(-50%));
+    background-color: var(--gv-secondary);
+    @include border-radius($border-radius);
+    border: 1px solid var(--gv-secondary-dark);
+    padding: $default-distance * 0.25 $default-distance * 0.5 $default-distance *
+      0.5;
+
+    &:before {
+      font-size: $font-size * 0.75;
+      content: icon.mdi("magnify");
+      font-family: $font-family-icon;
+      margin-right: $default-distance * 0.25;
+    }
+  }
+}

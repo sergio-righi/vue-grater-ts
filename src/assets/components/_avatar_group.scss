@@ -1,0 +1,13 @@
+@use '../utils/index' as *;
+
+.gv-avatar-group {
+  @include d-inline-flex;
+
+  & > .gv-avatar {
+    border: 2px solid var(--gv-color-theme);
+
+    &:nth-child(n + 2) {
+      margin-left: -#{$default-distance * 1};
+    }
+  }
+}

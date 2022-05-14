@@ -1,0 +1,17 @@
+@use "../utils/colors" as *;
+
+:root {
+  --gv-color-black: #{$color-black};
+  --gv-color-white: #{$color-white};
+  --gv-transparent: transparent;
+
+  @each $colorname, $shades in $palette {
+    @each $key, $value in $shades {
+      $keyname: "--gv-color-" + $colorname + "-" + $key;
+      @if $key == 500 {
+        $keyname: "--gv-color-" + $colorname;
+      }
+      #{$keyname}: #{$value};
+    }
+  }
+}

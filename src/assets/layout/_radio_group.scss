@@ -1,0 +1,9 @@
+@use '../utils/index' as *;
+
+.gv-radio-group {
+  @include d-flex;
+  @include flex-wrap(wrap);
+  // gap: $default-distance * 0.25;
+  margin-left: -$default-distance * 0.5;
+  margin-right: -$default-distance * 0.5;
+}

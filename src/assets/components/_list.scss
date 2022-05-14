@@ -1,0 +1,71 @@
+﻿@use '../utils/index' as *;
+@use '../vendors/material-design-icons/functions' as icon;
+
+.gv-list {
+  width: 100%;
+  display: block;
+  color: var(--gv-color-font);
+
+  &:is(ol) {
+    padding-left: 0;
+    counter-reset: item;
+
+    li {
+      display: block;
+
+      & > ol,
+      & > ul {
+        padding-left: $default-distance * 1.2;
+      }
+
+      &:before {
+        margin-right: $default-distance * 0.25;
+        content: counters(item, ".") ". ";
+        counter-increment: item;
+      }
+    }
+  }
+
+  &.tree {
+    &:is(ul) {
+      padding-left: 0;
+      list-style: none;
+
+      li {
+        & > ul {
+          padding-left: $default-distance * 1.2;
+        }
+
+        &:before {
+          font-family: $font-family-icon;
+          content: icon.mdi("circle-medium");
+          margin-right: $default-distance * 0.25;
+        }
+
+        &.opened {
+          &:before {
+            content: icon.mdi("chevron-down");
+          }
+        }
+
+        &.closed {
+          &:before {
+            content: icon.mdi("chevron-right");
+          }
+        }
+      }
+    }
+
+    li {
+      &.closed {
+        & > *:not(span) {
+          display: none;
+        }
+      }
+
+      & > span {
+        cursor: pointer;
+      }
+    }
+  }
+}

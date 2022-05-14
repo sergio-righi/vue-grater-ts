@@ -1,0 +1,81 @@
+@use '../utils/index' as *;
+
+.gv-month-picker {
+  width: 280px;
+
+  & > .gv-header {
+    width: 100%;
+    height: 100px;
+    @include d-flex;
+    padding: $default-distance;
+    color: var(--gv-color-accent);
+    @include align-items(flex-end);
+    @include justify-content(flex-end);
+    background-color: var(--gv-accent);
+
+    & > .gv-month {
+      color: inherit;
+      line-height: 1;
+      font-size: $font-size * 2.5;
+      text-transform: capitalize;
+    }
+  }
+
+  & > .gv-content {
+    z-index: 0;
+    height: 300px;
+    margin: 0 auto;
+    @include d-flex;
+    overflow: hidden;
+    position: relative;
+    color: var(--gv-color-font);
+    background-color: var(--gv-color-theme);
+
+    & > .gv-items {
+      width: 100%;
+      color: inherit;
+      @include d-flex;
+      text-align: center;
+      letter-spacing: 0.5px;
+      @include flex-wrap(wrap);
+      text-transform: uppercase;
+      @include flex-direction(row);
+
+      & > .gv-item {
+        margin: 1%;
+        cursor: pointer;
+        font-weight: 400;
+        @include flex(1 1 30%);
+        @include align-self(center);
+        font-size: $font-size * 0.8125;
+        padding: $default-distance * 0.75;
+        @include border-radius($border-radius);
+        @include transition(background-color 300ms ease);
+
+        &:hover {
+          color: var(--gv-color-font);
+          background-color: var(--gv-secondary);
+        }
+
+        &.active {
+          color: var(--gv-color-accent);
+          background-color: var(--gv-accent);
+        }
+
+        &.current {
+          border: 1px solid var(--gv-accent);
+        }
+
+        &.disabled {
+          opacity: 0.3;
+        }
+
+        &.active,
+        &.disabled {
+          cursor: default;
+          pointer-events: none;
+        }
+      }
+    }
+  }
+}

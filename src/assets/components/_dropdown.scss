@@ -1,0 +1,121 @@
+﻿@use '../utils/index' as *;
+@use '../vendors/material-design-icons/functions' as icon;
+
+.gv-dropdown {
+  width: inherit;
+  height: inherit;
+  position: relative;
+  @include d-inline-flex;
+
+  &.active {
+    & > .gv-content {
+      opacity: 1;
+      z-index: 11;
+      visibility: visible;
+    }
+  }
+
+  &.arrow {
+    &:after {
+      margin-left: $default-distance;
+      content: icon.mdi("menu-down");
+      font-family: $font-family-icon;
+    }
+  }
+
+  & > .gv-trigger {
+    line-height: 1;
+    width: inherit;
+    height: inherit;
+    @include d-flex;
+    @include align-items(center);
+    @include justify-content(center);
+
+    & > .gv-image {
+      img {
+        padding: $default-distance * 0.5;
+      }
+    }
+  }
+
+  & > .gv-content {
+    left: 0;
+    top: 100%;
+    opacity: 0;
+    z-index: -1;
+    min-width: 200px;
+    overflow-y: auto;
+    max-width: 350px;
+    max-height: 350px;
+    visibility: hidden;
+    position: absolute;
+    white-space: nowrap;
+    list-style-type: none;
+    background-color: var(--gv-color-theme);
+    border: 1px solid var(--gv-color-border);
+    @include border-radius($border-radius);
+    @include box-shadow(map-get($box-shadow, 0) var(--gv-color-box-shadow));
+
+    &:focus {
+      outline: none;
+    }
+
+    &.left {
+      right: 0;
+      left: auto;
+    }
+
+    & > .gv-item {
+      width: 100%;
+      height: 45px;
+      line-height: 1;
+      @include d-flex;
+      text-align: left;
+      list-style: none;
+      text-decoration: none;
+      color: var(--gv-color-font);
+      font-weight: $font-weight;
+      gap: $default-distance * 0.5;
+      @include align-items(center);
+      font-size: $font-size * 0.875;
+      padding: 0 $default-distance * 0.75;
+
+      &:not(.header):hover {
+        color: var(--gv-color-font);
+        background-color: var(--gv-secondary-light);
+      }
+
+      &:not(.header):not(:last-child) {
+        border-bottom: 1px solid var(--gv-color-border);
+      }
+
+      &.selected {
+        color: var(--gv-color-font);
+        background-color: var(--gv-secondary);
+      }
+
+      &.header {
+        height: 45px;
+        font-size: $font-size * 0.875;
+        font-weight: 500;
+        pointer-events: none;
+      }
+
+      a {
+        height: 100%;
+        color: inherit;
+        width: inherit;
+        @include d-flex;
+        position: relative;
+        white-space: nowrap;
+        font-weight: inherit;
+        @include align-items(center);
+      }
+
+      img {
+        width: 25px;
+        object-fit: contain;
+      }
+    }
+  }
+}

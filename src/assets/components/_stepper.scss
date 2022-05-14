@@ -1,0 +1,205 @@
+﻿@use '../utils/index' as *;
+
+.gv-stepper {
+  width: 100%;
+  @include d-flex;
+  overflow: hidden;
+  @include flex(1 1 auto);
+  color: var(--gv-color-font);
+  @include flex-direction(column);
+  background-color: var(--gv-color-theme);
+  @include border-radius($border-radius);
+
+  &.inline,
+  &.locked {
+    & > .gv-header {
+      & > .gv-wrapper {
+        & > .gv-content {
+          & > .gv-item {
+            pointer-events: none;
+          }
+        }
+      }
+    }
+  }
+
+  &.inline {
+    & > .gv-header {
+      @include border-radius($border-radius);
+    }
+    & > .gv-content {
+      display: none;
+    }
+  }
+
+  & > .gv-header {
+    height: 48px;
+    @include d-flex;
+    max-width: 100%;
+    position: relative;
+    @include flex(0 1 auto);
+    @include block-selection;
+    border: 1px solid var(--gv-color-border);
+    @include border-radius($border-radius $border-radius 0 0);
+    @include transition(300ms cubic-bezier(0.25, 0.8, 0.5, 1));
+
+    & > .gv-arrow {
+      cursor: pointer;
+      min-width: 52px;
+      @include d-flex;
+      @include flex(0 1 52px);
+      @include align-items(center);
+      @include justify-content(center);
+      @include transition(300ms cubic-bezier(0.25, 0.8, 0.5, 1));
+
+      &.hidden {
+        display: none;
+      }
+
+      &.disabled {
+        opacity: 0.3;
+        pointer-events: none;
+      }
+    }
+
+    & > .gv-wrapper {
+      @include d-flex;
+      contain: content;
+      touch-action: none;
+      @include flex(1 1 auto);
+      @include horizontal-scroll;
+
+      & > .gv-content {
+        @include d-flex;
+        position: relative;
+        white-space: nowrap;
+        @include flex(1 0 auto);
+        @include transform(translateX(0px));
+        @include transition(300ms cubic-bezier(0.25, 0.8, 0.5, 1));
+
+        & > .gv-item {
+          width: 100%;
+          outline: none;
+          @include d-flex;
+          cursor: pointer;
+          font-weight: 500;
+          position: relative;
+          @include flex(0 1 auto);
+          @include transition(none);
+          padding: 0 $default-distance;
+          @include align-items(center);
+          @include justify-content(center);
+
+          &:not(.active).success {
+            & > .gv-indicator {
+              color: var(--gv-color-success);
+              background-color: var(--gv-success);
+            }
+          }
+
+          &:not(.active).error {
+            & > .gv-indicator {
+              color: var(--gv-color-error);
+              background-color: var(--gv-error);
+            }
+          }
+
+          &.disabled {
+            opacity: 0.5;
+            cursor: default;
+          }
+
+          &.active {
+            pointer-events: none;
+            background-color: rgba(map-get($accent, "background"), 0.25);
+            & > .gv-indicator {
+              color: var(--gv-color-accent);
+              background-color: var(--gv-accent);
+            }
+          }
+
+          &:hover {
+            &:not(.disabled) {
+              @include box-shadow(inset 0 0 100px rgba(0, 0, 0, 0.1));
+            }
+          }
+
+          & > .gv-indicator {
+            z-index: 1;
+            width: 25px;
+            position: relative;
+            line-height: normal;
+            @include d-inline-flex;
+            @include align-items(center);
+            background-color: var(--gv-secondary);
+            @include border-radius($border-radius-circle);
+
+            &:before {
+              height: 0;
+              content: "";
+              width: 100%;
+              display: block;
+              padding-bottom: 100%;
+            }
+
+            &:after {
+              height: 0;
+              content: "";
+              width: 100%;
+              display: block;
+              padding-bottom: 100%;
+            }
+          }
+
+          & > .gv-label {
+            z-index: 1;
+            font-size: $font-size * 0.75;
+            font-weight: 500;
+            line-height: normal;
+            margin-left: $default-distance;
+
+            & > .gv-note {
+              display: block;
+              line-height: 1;
+              font-size: $font-size * 0.625;
+              text-transform: uppercase;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  & > .gv-content {
+    padding: 16px;
+    max-width: 100%;
+    // overflow: hidden;
+    position: relative;
+    border-style: solid;
+    border-width: 0 1px 1px;
+    @include flex(0 1 auto);
+    border-color: var(--gv-color-border);
+    @include border-radius(0 0 $border-radius $border-radius);
+    @include transition(300ms cubic-bezier(0.25, 0.8, 0.5, 1));
+
+    & > .gv-wrapper {
+      height: inherit;
+      overflow: hidden;
+      position: relative;
+
+      & > .gv-item {
+        height: 0;
+        opacity: 0;
+        @include d-flex;
+        @include transform(translateY(-100%));
+        @include transition(300ms cubic-bezier(0.25, 0.8, 0.5, 1));
+
+        &.active {
+          opacity: 1;
+          height: auto;
+          @include transform(translateY(0));
+        }
+      }
+    }
+  }
+}

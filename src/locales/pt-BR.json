@@ -1,0 +1,83 @@
+{
+    "alert": {
+        "dismiss": "Fechar"
+    },
+    "dropzone": {
+        "file_sent": "enviado",
+        "file_added": "adicionado",
+        "file_waiting": "aguardando",
+        "file_sending": "enviando",
+        "file_error": "um erro ocorreu",
+        "queue_sent": "finalizado",
+        "queue_sending": "em progresso",
+        "queue_waiting": "na fila",
+        "drop_here": "Arraste seus arquivos para cá",
+        "queue_error": "um erro ocorreu",
+        "click_here": "Clique para selecionar",
+        "single_exception": "Um arquivo por vez",
+        "size_exception": "Um arquivo excedeu o tamanho máximo",
+        "extension_exception": "Extensão não suportada",
+        "queue_try_again": "Gostaria de tentar reenviar o arquivo?",
+        "queue_remove": "Deseja continuar?"
+    },
+    "dual_list": {
+        "placeholder": "filtrar itens por texto",
+        "filtered": "mostrando {0} itens disponíveis e {1} selecionado(s)",
+        "note": "{0} itens, {1} disponíveis e {2} selecionado(s)",
+        "no_record": "a lista está vazia"
+    },
+    "lazyload": {
+        "click_load": "clique para carregar"
+    },
+    "picker": {
+        "am": "am",
+        "pm": "pm",
+        "day": "dia",
+        "month": "mês",
+        "year": "ano"
+    },
+    "poll": {
+        "footnote": "Total de votos: {0}"
+    },
+    "quiz": {
+        "next": "Próximo",
+        "prev": "Anterior",
+        "submit": "Enviar",
+        "required": "Está questão é obrigatória",
+        "confirmation": {
+            "no": "Não",
+            "yes": "Sim",
+            "title": "É necessária a confirmação de envio",
+            "description": "Esta ação requer a confirmação do usuário para prosseguir. Se confirmado, o questionário será enviado e a ação não poderá ser desfeita. Quer continuar com o envio?"
+        }
+    },
+    "snackbar": {
+        "dismiss": "Esconder"
+    },
+    "table": {
+        "no_value": "Chave Inválida"
+    },
+    "validation": {
+        "required": "é obrigatório",
+        "alpha": "deve ser alphanumérico",
+        "maxLength": "máximo de {0} caracteres",
+        "minLength": "minimo de {0} caracteres",
+        "range": "entre {0} e {1}",
+        "date": "data inválida",
+        "number": "somente números",
+        "pattern": "is invalid",
+        "email": "email inválido",
+        "url": "URL inválida",
+        "match": "devem ser igual",
+        "group": {
+            "min": "pelo menos {0} itens ser selectionado",
+            "max": "limite de {0} itens"
+        }
+    },
+    "video": {
+        "loop": "Repetir",
+        "speed": "Velocidade",
+        "undock": "Desencaixar",
+        "resolution": "Resolução"
+    }
+}

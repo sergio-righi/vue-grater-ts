@@ -1,0 +1,83 @@
+{
+    "alert": {
+        "dismiss": "Close"
+    },
+    "dropzone": {
+        "file_sent": "sent",
+        "file_added": "added",
+        "file_waiting": "waiting",
+        "file_sending": "sending",
+        "file_error": "error has occured",
+        "queue_sent": "all done",
+        "queue_sending": "in progress",
+        "queue_waiting": "in queue",
+        "drop_here": "Drop files here",
+        "queue_error": "error has occured",
+        "click_here": "Click here to upload",
+        "single_exception": "One file at a time",
+        "size_exception": "File is larger than the supported size.",
+        "extension_exception": "Extension is not supported.",
+        "queue_try_again": "Do you wanna try to send the file again?",
+        "queue_remove": "Are you sure?"
+    },
+    "dual_list": {
+        "placeholder": "filter items by text",
+        "filtered": "showing {0} item(s) available and {1} selected(s)",
+        "note": "{0} items, {1} available and {2} selected",
+        "no_record": "the list is empty"
+    },
+    "lazyload": {
+        "click_load": "click to load"
+    },
+    "picker": {
+        "am": "am",
+        "pm": "pm",
+        "day": "day",
+        "month": "month",
+        "year": "year"
+    },
+    "poll": {
+        "footnote": "Total votes: {0}"
+    },
+    "quiz": {
+        "next": "Next",
+        "prev": "Prev",
+        "submit": "Submit",
+        "required": "This question is required",
+        "confirmation": {
+            "no": "No",
+            "yes": "Yes",
+            "title": "Submission confirmation required",
+            "description": "This action requires user confirmation to proceed. If confirmed, the quiz is going to be submitted and the action cannot be undone. Do you want to continue with the submission?"
+        }
+    },
+    "snackbar": {
+        "dismiss": "Hide"
+    },
+    "table": {
+        "no_value": "Invalid Key"
+    },
+    "validation": {
+        "required": "is required",
+        "alpha": "must be alphanumeric",
+        "maxLength": "max of {0} characters long",
+        "minLength": "min of {0} characters long",
+        "range": "between {0} and {1}",
+        "date": "invalid date",
+        "number": "must be a number",
+        "pattern": "is invalid",
+        "email": "invalid email",
+        "url": "invalid URL",
+        "match": "must match",
+        "group": {
+            "min": "at least {0} must be selected",
+            "max": "max of {0} selections"
+        }
+    },
+    "video": {
+        "loop": "Loop",
+        "speed": "Speed",
+        "undock": "Undock",
+        "resolution": "Resolution"
+    }
+}

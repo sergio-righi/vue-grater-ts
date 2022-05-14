@@ -1,0 +1,156 @@
+@use '../utils/index' as *;
+@use '../vendors/material-design-icons/functions' as icon;
+
+.gv-input-box {
+  position: relative;
+  @include d-inline-flex;
+  margin: $default-distance * 0.25 0;
+  @include justify-content(flex-start);
+
+  input[type="radio"],
+  input[type="checkbox"] {
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    opacity: 0;
+    position: absolute;
+
+    &:focus {
+      & + label {
+        &:before {
+          outline-offset: 1px;
+          outline: 2px solid var(--gv-color-font);
+        }
+      }
+    }
+
+    &:disabled,
+    &:checked:disabled {
+      pointer-events: none;
+      & + label {
+        opacity: 0.4;
+        pointer-events: none;
+      }
+    }
+
+    &:checked + label {
+      font-weight: 500;
+      letter-spacing: -0.10px;
+
+      &:before {
+        border-color: var(--gv-accent);
+        outline-color: var(--gv-accent);
+      }
+
+      &:after {
+        opacity: 1;
+        font-weight: initial;
+      }
+    }
+  }
+
+  input[type="checkbox"] {
+    &:disabled + label:before,
+    &:checked:disabled + label:before {
+      border-color: var(--gv-color-disabled);
+      background-color: var(--gv-color-disabled);
+    }
+
+    &:checked + label {
+      &:before {
+        background-color: var(--gv-accent);
+      }
+
+      &:after {
+        color: var(--gv-color-accent);
+      }
+    }
+
+    & + label {
+      &:before {
+        @include border-radius(4px);
+      }
+
+      &:after {
+        left: 2px;
+        content: icon.mdi("check");
+        font-family: $font-family-icon;
+      }
+    }
+  }
+
+  input[type="radio"] {
+    &:disabled + label,
+    &:checked:disabled + label {
+      &:before {
+        border-color: var(--gv-color-disabled);
+      }
+    }
+
+    &:checked:disabled + label {
+      &:after {
+        background-color: var(--gv-color-disabled);
+      }
+    }
+
+    &:checked + label {
+      &:before {
+        border-color: var(--gv-accent);
+      }
+
+      &:after {
+        background-color: var(--gv-accent);
+      }
+    }
+
+    & + label {
+      &:before {
+        @include border-radius($border-radius-circle);
+      }
+
+      &:after {
+        left: 6px;
+        width: 6px;
+        height: 6px;
+        content: "";
+        position: absolute;
+        background-color: var(--gv-color-font);
+        @include border-radius($border-radius-circle);
+      }
+    }
+  }
+
+  label {
+    width: 100%;
+    outline: none;
+    line-height: 1;
+    display: block;
+    cursor: pointer;
+    position: relative;
+    @include block-selection;
+    @include align-items(center);
+    font-size: $font-size * 0.875;
+
+    &:before {
+      content: "";
+      width: 18px;
+      height: 18px;
+      vertical-align: sub;
+      display: inline-block;
+      margin-right: $default-distance * 0.5;
+      border: 1px solid var(--gv-color-font);
+    }
+
+    &:after {
+      top: 50%;
+      z-index: 1;
+      opacity: 0;
+      line-height: 1;
+      position: absolute;
+      color: var(--gv-color-font);
+      @include transform(translateY(-50%));
+      @include transition(transform, opacity 150ms ease-in-out);
+    }
+  }
+}

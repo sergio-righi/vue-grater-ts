@@ -1,0 +1,109 @@
+@use '../utils/index' as *;
+
+.gv-scroll {
+  z-index: 5;
+  width: 100%;
+  @include d-flex;
+  position: relative;
+  border-color: inherit;
+  // @include justify-content(center);
+
+  &:not(.hidden) {
+    &:not(.vertical) {
+      & > .gv-wrapper {
+        padding-top: $default-distance * 0.5;
+        padding-bottom: $default-distance * 0.5;
+      }
+    }
+  }
+
+  &.hidden {
+    & > .gv-wrapper {
+      -ms-overflow-style: none;
+      scrollbar-width: none;
+
+      &::-webkit-scrollbar {
+        display: none;
+      }
+    }
+  }
+
+  &.vertical {
+    & > .gv-control {
+      display: none;
+    }
+
+    & > .gv-wrapper {
+      width: 100%;
+      white-space: initial;
+      & > .gv-content {
+        display: block;
+      }
+
+      &::-webkit-scrollbar {
+        width: 5px;
+        height: initial;
+      }
+    }
+  }
+
+  &.stretch {
+    & > .gv-wrapper {
+      width: 100%;
+      & > .gv-content {
+        width: 100%;
+        @include d-inline-flex;
+        @include justify-content(space-evenly);
+      }
+    }
+  }
+
+  &:not(.vertical) {
+    & > .gv-control {
+      z-index: 2;
+      cursor: pointer;
+      @include d-flex;
+      @include vertical-absolute;
+      font-size: $font-size * 1.5;
+      @include flex-direction(row);
+      text-shadow: 0 0 10px var(--gv-color-overlay-dark);
+
+      &.hidden {
+        display: none;
+      }
+
+      &.prev {
+        left: $default-distance * 0.5;
+      }
+
+      &.next {
+        right: $default-distance * 0.5;
+      }
+    }
+  }
+
+  & > .gv-wrapper {
+    overflow: auto;
+    position: relative;
+    white-space: nowrap;
+
+    & > .gv-content {
+      white-space: inherit;
+      display: inline-block;
+      @include transition(transform 150ms cubic-bezier(0.05, 0, 0, 1));
+    }
+
+    &::-webkit-scrollbar {
+      height: 5px;
+    }
+
+    &::-webkit-scrollbar-track {
+      background-color: transparent;
+    }
+
+    &::-webkit-scrollbar-thumb {
+      @include border-radius($border-radius);
+      background-color: var(--gv-secondary);
+    }
+  }
+}

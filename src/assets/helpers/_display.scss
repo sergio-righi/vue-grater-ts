@@ -1,0 +1,21 @@
+﻿@use '../utils/index' as *;
+
+.d-none {
+  display: none !important;
+}
+
+.d-block {
+  display: block;
+}
+
+.d-flex {
+  @include d-flex;
+}
+
+.d-inline-block {
+  display: inline-block;
+}
+
+.d-inline-flex {
+  @include d-inline-flex;
+}

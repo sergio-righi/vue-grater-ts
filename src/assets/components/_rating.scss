@@ -1,0 +1,79 @@
+@use '../utils/index' as *;
+
+.gv-rating {
+  line-height: normal;
+  vertical-align: middle;
+  @include d-inline-flex;
+  @include flex-wrap(wrap);
+  @include align-self(center);
+  @include align-items(center);
+  font-size: $font-size * 1.125;
+  @include justify-content(flex-end);
+  @include flex-direction(row-reverse);
+
+  &.disabled {
+    & > .gv-item {
+      opacity: 0.6;
+      pointer-events: none;
+    }
+  }
+
+  &.readonly {
+    & > .gv-item {
+      pointer-events: none;
+    }
+  }
+
+  &.hidden {
+    & > .gv-item {
+      .item-color {
+        color: var(--gv-transparent);
+      }
+    }
+  }
+
+  & > .gv-item {
+    line-height: 1;
+    cursor: pointer;
+    position: relative;
+    @include d-inline-flex;
+    @include align-items(center);
+    @include justify-content(center);
+
+    &:before {
+      height: 0;
+      content: "";
+      width: 100%;
+      display: block;
+      padding-bottom: 100%;
+    }
+
+    &:after {
+      height: 0;
+      content: "";
+      width: 100%;
+      display: block;
+      padding-bottom: 100%;
+    }
+
+    &:hover {
+      &,
+      & ~ .gv-item {
+        .item-color {
+          opacity: 0.35;
+          color: inherit;
+        }
+      }
+    }
+
+    .item-icon {
+      z-index: 1;
+      color: inherit;
+      position: absolute;
+    }
+
+    .item-color {
+      color: var(--gv-secondary);
+    }
+  }
+}

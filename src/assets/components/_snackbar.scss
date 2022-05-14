@@ -1,0 +1,103 @@
+﻿@use '../utils/index' as *;
+
+.gv-snackbar {
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  z-index: 1000;
+  @include d-flex;
+  position: fixed;
+  pointer-events: none;
+  font-size: $font-size * 0.875;
+  @include align-items(flex-end);
+  @include justify-content(center);
+
+  &.right {
+    @include justify-content(flex-end);
+  }
+
+  &.left {
+    @include justify-content(flex-start);
+  }
+
+  & > .gv-wrapper {
+    padding: 0;
+    @include d-flex;
+    max-width: 100%;
+    min-height: 48px;
+    position: relative;
+    pointer-events: auto;
+    margin: $default-distance;
+    color: var(--gv-color-light);
+    @include align-items(center);
+    @include border-radius($border-radius);
+    background-color: var(--gv-color-dark);
+    @include transition(opacity 150ms ease, transform 150ms ease);
+    @include box-shadow(
+      map-get($box-shadow, 0) var(--gv-color-box-shadow-dark)
+    );
+
+    & > .gv-content {
+      flex-grow: 1;
+      line-height: 1;
+      font-size: $font-size * 0.8125;
+      margin-right: auto;
+      text-align: initial;
+      letter-spacing: 0.5px;
+      font-weight: $font-weight;
+      padding: $default-distance * 0.75 $default-distance;
+    }
+
+    & > .gv-control {
+      @include d-flex;
+      @include align-self(center);
+      @include align-items(center);
+
+      & > .gv-dismiss,
+      & > .gv-action {
+        cursor: pointer;
+        font-weight: 500;
+        letter-spacing: 0.3px;
+        text-transform: uppercase;
+        font-size: $font-size * 0.75;
+        padding: 0 $default-distance;
+      }
+
+      & > .gv-action {
+        color: var(--gv-primary);
+      }
+
+      & > .gv-dismiss {
+        color: var(--gv-color-pink);
+      }
+    }
+  }
+
+  .t-snackbar-enter-active {
+    @include transition(all 300ms ease);
+  }
+
+  .t-snackbar-leave-active {
+    @include transition(all 200ms cubic-bezier(1, 0.5, 0.8, 1));
+  }
+
+  .t-snackbar-enter {
+    opacity: 1;
+    @include transform(translateY(50px));
+  }
+
+  .t-snackbar-leave-to {
+    opacity: 0;
+    @include transform(translateY(150px));
+  }
+}
+
+@media (min-width: $media-sm) {
+  .gv-snackbar {
+    & > .gv-wrapper {
+      max-width: 672px;
+    }
+  }
+}

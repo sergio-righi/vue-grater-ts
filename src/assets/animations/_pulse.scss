@@ -1,0 +1,55 @@
+﻿@use '../utils/index' as *;
+
+@mixin a-pulse($duration: 500ms) {
+  @include animation(pulse $duration ease-in-out);
+}
+
+@include keyframes(pulse) {
+  0% {
+    @include box-shadow(0 3px 20px rgba(0, 0, 0, 0.14));
+    @include transform(translate(-50%, -50%) scale3d(0.1, 0.1, 1));
+  }
+
+  55% {
+    @include box-shadow(0 10px 20px rgba(0, 0, 0, 0.2));
+    @include transform(translate(-50%, -50%) scale3d(1.08, 1.08, 1));
+  }
+
+  75% {
+    @include box-shadow(0 0 20px rgba(0, 0, 0, 0.14));
+    @include transform(translate(-50%, -50%) scale3d(0.95, 0.95, 1));
+  }
+
+  100% {
+    @include box-shadow(0 3px 20px rgba(0, 0, 0, 0.14));
+    @include transform(translate(-50%, -50%) scale3d(1, 1, 1));
+  }
+}
+
+/*.a-pulse-button {
+    @include animation(pulse 1s cubic-bezier(0.24, 0, 0.38, 1) infinite);
+}
+
+@-webkit-keyframes pulse {
+    to {
+        box-shadow: 0 0 0 45px rgba(232, 76, 61, 0);
+    }
+}
+
+@-moz-keyframes pulse {
+    to {
+        box-shadow: 0 0 0 45px rgba(232, 76, 61, 0);
+    }
+}
+
+@-ms-keyframes pulse {
+    to {
+        box-shadow: 0 0 0 45px rgba(232, 76, 61, 0);
+    }
+}
+
+@keyframes pulse {
+    to {
+        box-shadow: 0 0 0 45px rgba(232, 76, 61, 0);
+    }
+}*/

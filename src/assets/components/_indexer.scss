@@ -1,0 +1,103 @@
+﻿@use '../utils/index' as *;
+
+.gv-indexer {
+  & > .gv-nav {
+    top: 58px;
+    left: 50%;
+    z-index: 99;
+    position: fixed;
+    @include d-flex;
+    overflow: hidden;
+    max-height: 100%;
+    width: fit-content;
+    @include flex-direction(row);
+    @include transform(translateX(-50%));
+    border: 1px solid var(--gv-color-border);
+    @include border-radius(0 0 $border-radius $border-radius);
+
+    & > .gv-item {
+      cursor: pointer;
+      font-size: $font-size * 0.8125;
+      text-align: center;
+      position: relative;
+      @include block-selection;
+      color: var(--gv-color-font);
+      font-weight: $font-weight;
+      text-transform: uppercase;
+      padding: $default-distance * 0.5;
+      background-color: var(--gv-color-theme);
+
+      &:not(:last-child) {
+        border-bottom: 1px solid var(--gv-color-border);
+      }
+
+      &.active {
+        z-index: 1;
+        font-weight: 600;
+        color: var(--gv-color-accent);
+        background-color: var(--gv-accent);
+
+        &:after {
+          top: 50%;
+          z-index: 1;
+          content: "";
+          right: -2.64px;
+          position: absolute;
+          border: 1.32px solid;
+          @include transform(translateY(-50%));
+          border-color: transparent transparent transparent var(--gv-accent);
+        }
+      }
+
+      &.pending {
+        color: var(--gv-color-warning);
+        background-color: var(--gv-warning);
+
+        &:after {
+          border-color: transparent transparent transparent var(--gv-warning);
+        }
+      }
+    }
+  }
+
+  & > .gv-content {
+    & > .gv-item {
+      & > .gv-header {
+        font-weight: 700;
+        font-size: $font-size * 1.5;
+        margin-left: $default-distance * 0.75;
+      }
+    }
+  }
+}
+
+@media (min-width: $media-sm) {
+  .gv-indexer {
+    &.top {
+      & > .gv-nav {
+        top: 0;
+        left: 50%;
+        @include transform(translateX(-50%));
+      }
+    }
+
+    &.right {
+      & > .gv-nav {
+        right: 0;
+        left: initial;
+        @include transform(translateY(-50%));
+        @include border-radius($border-radius 0 0 $border-radius);
+      }
+    }
+
+    & > .gv-nav {
+      top: 50%;
+      @include flex-direction(column);
+      @include transform(translateY(-50%));
+      @include border-radius(0 $border-radius $border-radius 0);
+      & > .gv-item {
+        font-size: $font-size * 0.875;
+      }
+    }
+  }
+}

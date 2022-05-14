@@ -1,0 +1,12 @@
+﻿@use '../utils/index' as *;
+@use '../animations/index' as animation;
+@use '../vendors/material-design-icons/functions' as icon;
+
+.mdi-process {
+  @include animation.a-rotate;
+
+  &:before {
+    content: icon.mdi("loading");
+    font-family: $font-family-icon;
+  }
+}

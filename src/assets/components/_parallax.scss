@@ -1,0 +1,54 @@
+@use '../utils/index' as *;
+
+.gv-parallax {
+  overflow: hidden;
+  position: relative;
+  pointer-events: none;
+
+  // img {
+  //   width: auto;
+  //   height: auto;
+  //   object-fit: none;
+  //   position: absolute;
+  // }
+
+  & > .gv-item {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    @include height-fill-available;
+  }
+
+  & > .gv-title {
+    z-index: 2;
+    color: #ffffff;
+    font-weight: 700;
+    text-align: center;
+    @include center-absolute;
+    text-transform: uppercase;
+    font-size: $font-size * 2.25;
+    text-shadow: 0 2px 0 #232323;
+
+    &:after {
+      content: "";
+      height: 3px;
+      width: 75px;
+      display: block;
+      margin: 0 auto;
+      background-color: #ffffff;
+      @include box-shadow(0 2px 0 #232323);
+    }
+  }
+
+  & > .gv-overlay {
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 1;
+    position: absolute;
+    background-color: rgba(35, 35, 35, 0.65);
+    // @include box-shadow(inset 0 0 50px 15px #232323a6);
+  }
+}

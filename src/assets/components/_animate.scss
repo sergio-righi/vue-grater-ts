@@ -1,0 +1,6 @@
+@use '../animations/index' as animation;
+
+.gv-animate-caret {
+  @include animation.a-caret;
+  border-right: 0.05em solid;
+}

@@ -1,0 +1,11 @@
+@use '../utils/index' as *;
+
+@mixin a-caret($duration: 1s) {
+  @include animation(caret $duration steps(1) infinite);
+}
+
+@include keyframes(caret) {
+  50% {
+    border-color: transparent;
+  }
+}

@@ -1,0 +1,86 @@
+@use '../utils/index' as *;
+
+.gv-discussion {
+  position: relative;
+
+  & > .gv-content {
+    // margin-bottom: #{$avatar-width * 0.5};
+
+    & > .gv-item {
+      &:first-child,
+      &:not(:last-child) {
+        & > .gv-control {
+          &:before {
+            top: 0;
+            bottom: 0;
+            content: "";
+            height: 100%;
+            opacity: 0.75;
+            position: absolute;
+            border-left: 2px dashed var(--gv-color-border);
+            left: calc(#{$default-distance} + #{$avatar-width * 0.5} - 1px);
+          }
+        }
+      }
+
+      & > .gv-header {
+        @include d-flex;
+        position: relative;
+        @include border-radius($border-radius);
+        border: 1px solid var(--gv-color-border);
+        background-color: var(--gv-secondary-light);
+        padding: $default-distance * 0.75 $default-distance * 0.75
+          $default-distance * 1.5;
+
+        & > .gv-leading {
+          z-index: 1;
+
+          & > .gv-avatar {
+            position: absolute;
+            left: $default-distance;
+            @include transform(scale(0.9));
+            bottom: -#{$avatar-width * 0.5};
+            box-shadow: 0 0 0 4px var(--gv-color-border);
+          }
+        }
+
+        & > .gv-content {
+          position: relative;
+        }
+      }
+
+      & > .gv-control {
+        text-align: right;
+        position: relative;
+        padding: 0 $default-distance;
+        min-height: calc(#{$avatar-width * 0.5} + #{$default-distance * 0.5});
+      }
+
+      & > .gv-content {
+        & > .gv-discussion {
+          margin-left: auto;
+          width: calc(100% - #{$default-distance});
+
+          // & > .gv-content {
+          //   & > .gv-item {
+          //     position: relative;
+          //     &:not(:last-child) {
+          //       &:before {
+          //         top: 0;
+          //         bottom: 0;
+          //         right: auto;
+          //         content: "";
+          //         height: 100%;
+          //         opacity: 0.3;
+          //         position: absolute;
+          //         left: $default-distance * 0.5;
+          //         border-left: 2px dashed var(--gv-color-border);
+          //       }
+          //     }
+          //   }
+          // }
+        }
+      }
+    }
+  }
+}

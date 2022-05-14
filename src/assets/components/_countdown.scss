@@ -1,0 +1,15 @@
+﻿@use '../utils/index' as *;
+
+.gv-countdown {
+  & > .gv-unit {
+    line-height: 1;
+    @include d-inline-flex;
+    @include align-items(center);
+
+    &:not(:last-child):after {
+      content: ":";
+      line-height: 1;
+      padding-left: $default-distance * 0.25;
+    }
+  }
+}

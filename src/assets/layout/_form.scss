@@ -1,0 +1,71 @@
+﻿@use '../utils/index' as *;
+
+form {
+  width: 100%;
+}
+
+textarea {
+  z-index: 2;
+  width: 100%;
+  display: block;
+  position: relative;
+  color: var(--gv-color-font);
+  line-height: $line-height;
+  padding: 0 $default-distance * 0.75;
+  @include border-radius($border-radius);
+  background-color: var(--gv-secondary-light);
+  border: 1px solid var(--gv-color-border);
+
+  &:not(:disabled) {
+    &:focus,
+    &.focused {
+      outline: none;
+      border-color: var(--gv-color-border-focus);
+    }
+  }
+
+  &::-moz-focus-inner {
+    border: 0;
+  }
+
+  &:-moz-placeholder {
+    color: var(--gv-secondary-dark);
+  }
+
+  &::-moz-placeholder {
+    color: var(--gv-secondary-dark);
+  }
+
+  &:-ms-input-placeholder {
+    color: var(--gv-secondary-dark);
+  }
+
+  &::-webkit-input-placeholder {
+    color: var(--gv-secondary-dark);
+  }
+
+  &[disabled] {
+    opacity: 0.6;
+    cursor: default;
+    @include box-shadow(none);
+    color: var(--gv-color-disabled) !important;
+    background-color: var(--gv-disabled) !important;
+
+    &:after {
+      background-color: var(--gv-disabled) !important;
+    }
+  }
+
+  &[readonly] {
+    cursor: default;
+    @include box-shadow(none);
+    color: var(--gv-color-readonly) !important;
+    background-color: var(--gv-readonly) !important;
+  }
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  margin: 0;
+  @include appearance(none);
+}

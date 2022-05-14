@@ -1,0 +1,19 @@
+@use '../utils/index' as *;
+
+.gv-highlight {
+  background-size: 200%;
+  background-position: 0;
+  color: var(--gv-color-primary);
+  padding-left: $default-distance * 0.25;
+  padding-right: $default-distance * 0.25;
+  @include transition(background-position 800ms);
+  background-image: linear-gradient(
+    90deg,
+    rgba(255, 255, 255, 0) 50%,
+    var(--gv-primary) 0
+  );
+
+  &.highlighted {
+    background-position: -100%;
+  }
+}

@@ -1,0 +1,99 @@
+﻿@use '../utils/index' as *;
+@use '../vendors/material-design-icons/functions' as icon;
+
+.gv-booth {
+  width: 100%;
+  display: grid;
+  overflow: hidden;
+  position: relative;
+  grid-template-columns: 1fr 1fr;
+  @include border-radius($border-radius);
+
+  & > * {
+    overflow: hidden;
+    position: relative;
+
+    img {
+      width: 100%;
+      height: 100%;
+      @include border-radius($border-radius);
+    }
+
+    & > .gv-info {
+      left: 0;
+      right: 0;
+      bottom: 0;
+      width: 100%;
+      @include d-flex;
+      font-weight: 500;
+      position: absolute;
+      align-items: center;
+      color: var(--gv-color-font);
+      padding: $default-distance;
+      font-size: $font-size * 0.875;
+
+      & > .gv-title {
+        width: 100%;
+        font-weight: 400;
+        font-size: $font-size * 0.8125;
+      }
+
+      & > .gv-control {
+        margin-left: $default-distance * 0.5;
+
+        i {
+          &:before {
+            font-size: $font-size * 1.125;
+          }
+        }
+      }
+    }
+
+    & > .gv-wrap {
+      @include user-select(none);
+
+      &:hover {
+        & > .gv-overlay {
+          opacity: 1;
+        }
+      }
+
+      & > .gv-overlay {
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        opacity: 0;
+        cursor: pointer;
+        position: absolute;
+        pointer-events: none;
+        background-color: var(--gv-color-overlay-dark);
+        @include transition(
+          opacity 200ms linear,
+          background-color 300ms linear
+        );
+
+        &:after {
+          line-height: 1;
+          color: #ffffff;
+          @include center-absolute;
+          font-size: $font-size * 2;
+          content: icon.mdi("arrow-expand");
+          font-family: $font-family-icon;
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: $media-md) {
+  .gv-booth {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+
+@media (min-width: $media-xl) {
+  .gv-booth {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
+}

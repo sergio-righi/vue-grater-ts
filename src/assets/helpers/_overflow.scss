@@ -1,0 +1,9 @@
+﻿@use '../utils/index' as *;
+
+.o-hidden {
+  overflow: hidden !important;
+}
+
+.o-ellipsis {
+  @include o-ellipsis;
+}

@@ -1,0 +1,64 @@
+@use '../utils/index' as *;
+
+.gv-off-canvas {
+  &.left,
+  &.right {
+    & > .gv-content > .gv-drawer {
+      top: 0;
+      width: 256px;
+      max-height: initial;
+    }
+  }
+
+  &.left {
+    & > .gv-content > .gv-drawer {
+      right: initial;
+      @include transform(translateX(-100%));
+    }
+  }
+
+  &.right {
+    & > .gv-content > .gv-drawer {
+      left: initial;
+      @include transform(translateX(100%));
+    }
+  }
+
+  &.active > .gv-content {
+    opacity: 1;
+    z-index: 21;
+
+    & > .gv-drawer {
+      @include transform(translate(0));
+    }
+  }
+
+  & > .gv-trigger {
+    position: relative;
+  }
+
+  & > .gv-content {
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    opacity: 0;
+    z-index: -1;
+    position: fixed;
+    @include transform(translateZ(0));
+    background-color: var(--gv-color-overlay-dark);
+
+    & > .gv-drawer {
+      left: 0;
+      right: 0;
+      bottom: 0;
+      max-height: 256px;
+      position: absolute;
+      padding: $default-distance;
+      color: var(--gv-color-font);
+      @include transform(translateY(100%));
+      background-color: var(--gv-color-theme);
+      @include transition(transform 200ms ease);
+    }
+  }
+}

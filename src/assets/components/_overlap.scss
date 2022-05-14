@@ -1,0 +1,78 @@
+@use '../utils/index' as *;
+@use '../vendors/material-design-icons/functions' as icon;
+
+.gv-overlap {
+  bottom: 0;
+  z-index: 101;
+  position: fixed;
+  max-width: 400px;
+  overflow: hidden;
+  left: $default-distance;
+  right: $default-distance;
+  @include box-shadow-default;
+  @include transition(transform 300ms ease-in-out);
+  @include transform(translateY(calc(100% - 50px)));
+  @include border-radius($border-radius $border-radius 0 0);
+
+  &.hidden {
+    display: none;
+  }
+
+  &.active {
+    @include transform(translateY(0));
+
+    & > .gv-header {
+      .header-icon.icon-arrow:before {
+        content: icon.mdi("chevron-down");
+      }
+    }
+  }
+
+  & > .gv-header {
+    height: 50px;
+    cursor: pointer;
+    @include d-flex;
+    font-size: $font-size * 0.875;
+    color: var(--gv-color-accent);
+    @include align-items(center);
+    background-color: var(--gv-accent);
+    padding: 0 $default-distance * 0.75;
+
+    .header-label {
+      overflow: hidden;
+      margin-right: auto;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+    }
+
+    .header-icon {
+      &:before {
+        font-size: $font-size * 1.5;
+        font-family: $font-family-icon;
+        padding: $default-distance * 0.25;
+      }
+
+      &.icon-close:before {
+        content: icon.mdi("close");
+      }
+
+      &.icon-arrow:before {
+        content: icon.mdi("chevron-up");
+      }
+    }
+  }
+
+  & > .gv-content {
+    width: 100%;
+    overflow-y: auto;
+    max-height: 256px;
+    color: var(--gv-color-font);
+    background-color: var(--gv-color-theme);
+  }
+}
+
+@media (min-width: $media-xs) {
+  .gv-overlap {
+    left: initial;
+  }
+}

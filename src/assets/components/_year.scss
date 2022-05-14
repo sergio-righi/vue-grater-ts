@@ -1,0 +1,88 @@
+@use '../utils/index' as *;
+@use '../vendors/material-design-icons/functions' as icon;
+
+.gv-year-picker {
+  width: 280px;
+
+  & > .gv-header {
+    width: 100%;
+    height: 100px;
+    @include d-flex;
+    padding: $default-distance;
+    color: var(--gv-color-accent);
+    @include align-items(flex-end);
+    @include justify-content(flex-end);
+    background-color: var(--gv-accent);
+
+    & > .gv-year {
+      color: inherit;
+      line-height: 1;
+      font-size: $font-size * 4;
+    }
+  }
+
+  & > .gv-content {
+    z-index: 0;
+    height: 300px;
+    margin: 0 auto;
+    @include d-flex;
+    overflow: hidden;
+    position: relative;
+    @include flex(1 0 auto);
+    color: var(--gv-color-font);
+    @include align-items(center);
+    @include flex-direction(column);
+    background-color: var(--gv-color-theme);
+
+    & > .gv-items {
+      width: 100%;
+      height: 100%;
+      overflow: auto;
+      color: inherit;
+      text-align: center;
+
+      & > .gv-item {
+        font-size: $font-size * 1.125;
+        cursor: pointer;
+        padding-top: $default-distance * 0.75;
+        padding-bottom: $default-distance * 0.75;
+        @include transition(background-color 300ms ease);
+
+        &:hover {
+          color: var(--gv-color-font);
+          background-color: var(--gv-secondary);
+        }
+
+        &.active {
+          font-weight: 700;
+          color: var(--gv-accent);
+          font-size: $font-size * 1.5;
+        }
+
+        &.current {
+          &:before {
+            content: icon.mdi("chevron-right");
+          }
+
+          &:after {
+            content: icon.mdi("chevron-left");
+          }
+
+          &:before,
+          &:after {
+            font-family: $font-family-icon;
+          }
+        }
+
+        &.disabled {
+          opacity: 0.3;
+        }
+
+        &.active,
+        &.disabled {
+          pointer-events: none;
+        }
+      }
+    }
+  }
+}

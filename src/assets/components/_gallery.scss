@@ -1,0 +1,126 @@
+﻿@use '../utils/index' as *;
+@use '../vendors/material-design-icons/functions' as icon;
+
+.gv-gallery {
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 99;
+  height: 100%;
+  display: none;
+  position: fixed;
+  overflow: hidden;
+  touch-action: none;
+  -ms-touch-action: none;
+  -webkit-text-size-adjust: 100%;
+
+  &.active {
+    display: block;
+  }
+
+  & > .gv-overlay {
+    top: 0;
+    left: 0;
+    z-index: 10;
+    width: 100%;
+    opacity: 0.7;
+    height: 100%;
+    position: absolute;
+    will-change: opacity;
+    background-color: black;
+    @include transform(translateZ(0));
+    @include transition(opacity 500ms cubic-bezier(0.4, 0, 0.22, 1));
+  }
+
+  & > .gv-wrapper {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    z-index: 11;
+    height: 100%;
+    overflow: hidden;
+    position: relative;
+    @include d-inline-flex;
+    @include align-items(center);
+
+    & > .gv-carousel {
+      & > .gv-content {
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        display: block;
+        position: relative;
+
+        & > .gv-items {
+          height: 100%;
+          @include d-flex;
+          @include align-items(center);
+
+          & > .gv-item,
+          & > .gv-item.item-clone {
+            float: left;
+            height: 100%;
+            @include d-flex;
+            min-height: 1px;
+            position: relative;
+            background-color: initial;
+            @include user-select(none);
+            @include justify-content(center);
+
+            img {
+              z-index: 1;
+              margin: 0 auto;
+              object-fit: contain;
+            }
+          }
+
+          & > .gv-item:active,
+          & > .gv-item.item-clone:active {
+            @include c-grabbing;
+          }
+        }
+
+        & > .gv-control {
+          & > .gv-nav,
+          & > .gv-arrow {
+            position: fixed;
+          }
+
+          & > .gv-arrow {
+            &:before {
+              font-size: $font-size * 2.25;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  & > .gv-control {
+    opacity: 1;
+    z-index: 12;
+    visibility: visible;
+    @include block-selection;
+
+    & > .gv-dismiss {
+      z-index: 12;
+      line-height: 1;
+      cursor: pointer;
+      position: absolute;
+      top: $default-distance;
+      right: $default-distance;
+      color: var(--gv-color-font);
+      @include box-shadow-default;
+      padding: $default-distance * 0.25;
+      background-color: var(--gv-color-theme);
+      @include border-radius($border-radius);
+
+      &:before {
+        font-size: $font-size * 1.5;
+        content: icon.mdi("close");
+        font-family: $font-family-icon;
+      }
+    }
+  }
+}

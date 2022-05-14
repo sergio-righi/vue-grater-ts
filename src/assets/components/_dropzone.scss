@@ -1,0 +1,318 @@
+﻿@use '../utils/index' as *;
+@use '../animations/index' as animation;
+@use '../vendors/material-design-icons/functions' as icon;
+
+.gv-dropzone-file-uploader {
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 0;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+
+  input {
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    opacity: 0;
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+    position: absolute;
+  }
+}
+
+.gv-dropzone-overlay {
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 9999;
+  position: fixed;
+  @include box-shadow-default;
+  border: 4px dashed var(--gv-color-font);
+
+  &.hover {
+    border-style: solid;
+    color: var(--gv-accent);
+    border-color: var(--gv-accent);
+
+    &:before,
+    &:after {
+      color: inherit;
+    }
+
+    & > .gv-dropzone-file-uploader {
+      &:after {
+        color: inherit;
+      }
+    }
+  }
+
+  &.error {
+    color: var(--gv-error);
+    border-color: var(--gv-error) !important;
+
+    &:before {
+      content: icon.mdi("alert");
+      @include animation(initial);
+    }
+  }
+
+  &:before {
+    top: 55%;
+    left: 50%;
+    position: absolute;
+    font-size: $font-size * 3;
+    --current-translate-x: -50%;
+    @include animation.a-bounce;
+    font-family: $font-family-icon;
+    content: icon.mdi("cloud-upload");
+  }
+
+  &:after {
+    top: 45%;
+    line-height: 1.3;
+    text-align: center;
+    font-weight: $font-weight;
+    content: attr(data-message);
+    @include horizontal-absolute;
+    font-size: $font-size * 0.875;
+  }
+
+  & > .gv-dropzone-file-uploader {
+    width: initial;
+    height: initial;
+    @include center-absolute;
+
+    &:after {
+      top: 60%;
+      width: 100%;
+      font-weight: 300;
+      text-align: center;
+      pointer-events: none;
+      text-decoration: underline;
+      content: attr(data-message);
+      @include horizontal-absolute;
+      font-size: $font-size * 0.875;
+    }
+  }
+}
+
+.gv-dropzone {
+  width: 100%;
+  z-index: 101;
+  height: 200px;
+  @include d-flex;
+  position: relative;
+  color: var(--gv-color-white);
+  margin: $default-distance * 0.5 0;
+  background-color: var(--gv-color-overlay-dark);
+
+  &:not(.window) {
+    z-index: 9;
+    color: var(--gv-color-font);
+    background-color: var(--gv-color-theme);
+    @include border-radius($border-radius);
+
+    & > .gv-dropzone-overlay {
+      @include border-radius($border-radius);
+    }
+  }
+
+  &.window {
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: 0;
+    display: none;
+    height: initial;
+    position: fixed;
+
+    &.active {
+      z-index: 999;
+      display: block;
+    }
+
+    & > .gv-dropzone-overlay {
+      &:before {
+        top: 30%;
+        font-size: $font-size * 4;
+      }
+
+      &:after {
+        top: 50%;
+        font-size: $font-size * 1.5;
+      }
+    }
+  }
+
+  & > .gv-dropzone-overlay {
+    position: initial;
+
+    &:before {
+      top: 15%;
+    }
+
+    &:after {
+      top: 75%;
+    }
+
+    &.error {
+      &:before {
+        top: 15%;
+      }
+    }
+  }
+}
+
+.gv-dropzone-upload {
+  bottom: 0;
+  z-index: 101;
+  position: fixed;
+  max-width: 400px;
+  overflow: hidden;
+  left: $default-distance;
+  right: $default-distance;
+  @include box-shadow-default;
+  @include transition(transform 300ms ease-in-out);
+  @include transform(translateY(calc(100% - 50px)));
+  @include border-radius($border-radius $border-radius 0 0);
+
+  &.active {
+    @include transform(translateY(0));
+
+    & > .gv-header {
+      .header-icon.icon-arrow:before {
+        content: icon.mdi("chevron-down");
+      }
+    }
+  }
+
+  & > .gv-header {
+    height: 50px;
+    cursor: pointer;
+    @include d-flex;
+    font-size: $font-size * 0.875;
+    color: var(--gv-color-accent);
+    @include align-items(center);
+    background-color: var(--gv-accent);
+    padding: 0 $default-distance * 0.75;
+
+    .header-label {
+      overflow: hidden;
+      margin-right: auto;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+      line-height: $line-height;
+    }
+
+    .header-icon {
+      &:before {
+        font-size: $font-size * 1.5;
+        font-family: $font-family-icon;
+        padding: $default-distance * 0.25;
+      }
+
+      &.icon-close:before {
+        content: icon.mdi("close");
+      }
+
+      &.icon-arrow:before {
+        content: icon.mdi("chevron-up");
+      }
+    }
+  }
+
+  & > .gv-content {
+    width: 100%;
+    overflow-y: auto;
+    max-height: 256px;
+    background-color: var(--gv-color-theme);
+
+    & > .gv-item {
+      width: 100%;
+      height: 48px;
+      position: relative;
+      color: var(--gv-color-font);
+      margin: $default-distance * 0.5 0;
+      padding: 0 $default-distance * 0.75;
+      background-color: var(--gv-color-theme);
+
+      &.error .item-control {
+        &:before {
+          content: icon.mdi("alert-circle");
+        }
+      }
+
+      &.success .item-control {
+        &:before {
+          content: icon.mdi("check-circle");
+        }
+
+        &:hover:before {
+          content: icon.mdi("magnify");
+        }
+      }
+
+      .item-info {
+        @include d-flex;
+        position: relative;
+        @include align-items(center);
+
+        i {
+          margin-right: $default-distance * 0.5;
+        }
+
+        .item-description {
+          width: 100%;
+          @include d-flex;
+          overflow: hidden;
+          position: relative;
+          @include flex-direction(column);
+
+          .item-name {
+            @include o-ellipsis;
+          }
+
+          .item-status {
+            font-size: $font-size * 0.75;
+            line-height: normal;
+
+            &:before {
+              vertical-align: bottom;
+              content: icon.mdi("chevron-right");
+              font-family: $font-family-icon;
+            }
+          }
+        }
+
+        .item-size {
+          font-size: $font-size * 0.875;
+          margin: 0 $default-distance * 0.5;
+        }
+      }
+
+      .item-control {
+        &:before {
+          cursor: pointer;
+          font-size: $font-size * 1.125;
+          content: icon.mdi("close");
+          font-family: $font-family-icon;
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: $media-xs) {
+  .gv-dropzone-upload {
+    left: initial;
+  }
+}

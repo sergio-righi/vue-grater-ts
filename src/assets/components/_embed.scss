@@ -1,0 +1,71 @@
+﻿@use '../utils/index' as *;
+
+.gv-embed-responsive {
+  padding: 0;
+  width: 100%;
+  display: block;
+  overflow: hidden;
+  position: relative;
+  @include border-radius($border-radius);
+  @include box-shadow(map-get($box-shadow, 0) var(--gv-color-box-shadow));
+
+  &:before {
+    content: '';
+    display: block;
+  }
+
+  &.theater {
+    background-color: #252525;
+
+    embed,
+    video,
+    object,
+    iframe {
+      @include center-absolute;
+      @include box-shadow-default;
+    }
+  }
+
+  embed,
+  video,
+  object,
+  iframe {
+    top: 0;
+    left: 0;
+    bottom: 0;
+    border: 0;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+  }
+
+  &.ultrawide::before {
+    padding-top: 42.857143%;
+  }
+
+  &.widescreen::before {
+    padding-top: 56.25%;
+  }
+
+  &.standard::before {
+    padding-top: 75%;
+  }
+
+  &.square::before {
+    padding-top: 100%;
+  }
+}
+
+@media (min-width: $media-sm) {
+  .gv-embed-responsive {
+    &.theater {
+      embed,
+      video,
+      object,
+      iframe {
+        width: 75%;
+        height: 75%;
+      }
+    }
+  }
+}

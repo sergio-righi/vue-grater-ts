@@ -1,0 +1,24 @@
+@use '../utils/index' as *;
+
+.row {
+  @include d-flex;
+  // @include flex(1 1 100%);
+  @include flex-wrap(wrap);
+  margin-left: -$default-distance * 0.5;
+  margin-right: -$default-distance * 0.5;
+
+  &.condensed {
+    margin-left: 0;
+    margin-right: 0;
+
+    & > .col,
+    & > [class*="col-"] {
+      padding-left: 0;
+      padding-right: 0;
+    }
+  }
+
+  &.inherit {
+    height: inherit;
+  }
+}

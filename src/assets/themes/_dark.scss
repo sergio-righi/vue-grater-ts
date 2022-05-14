@@ -1,0 +1,24 @@
+@use "../utils/colors" as *;
+
+[theme="dark"] {
+  --gv-color-background: #{map-get($dark, "background")};
+  --gv-color-box-shadow: #{map-get($dark, "box-shadow")};
+  --gv-color-box-shadow-dark: #{$color-box-shadow-dark};
+
+  --gv-secondary: #{map-get($dark, "secondary")};
+  --gv-secondary-dark: #{map-get($dark, "secondary-dark")};
+  --gv-secondary-light: #{map-get($dark, "secondary-light")};
+
+  --gv-color-border: #{map-get($dark, "border")};
+
+  --gv-color-font: #{map-get($dark, "font")};
+  --gv-color-link: #{map-get($dark, "font")};
+
+  --gv-disabled: var(--gv-secondary);
+  --gv-color-disabled: #{map-get($dark, "disabled")};
+  --gv-readonly: var(--gv-secondary-light);
+  --gv-color-readonly: #{map-get($dark, "readonly")};
+
+  --gv-color-theme: #{map-get($dark, "theme")};
+  --gv-color-constrast: #{map-get($dark, "constrast")};
+}

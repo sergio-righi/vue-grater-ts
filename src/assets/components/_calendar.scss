@@ -1,0 +1,247 @@
+﻿@use '../utils/index' as *;
+@use '../vendors/material-design-icons/functions' as icon;
+
+.gv-calendar {
+  @include d-flex;
+  overflow: hidden;
+  position: relative;
+  @include flex-wrap(wrap);
+  color: var(--gv-color-font);
+  @include flex-direction(column);
+  @include border-radius($border-radius);
+  background-color: var(--gv-color-theme);
+
+  & > .gv-header {
+    width: 100%;
+    height: 50px;
+    @include d-flex;
+    text-align: center;
+    @include block-selection;
+    color: var(--gv-color-font);
+    @include align-items(center);
+
+    .header-left,
+    .header-right {
+      width: 20%;
+      height: 100%;
+      cursor: pointer;
+      cursor: pointer;
+      @include d-flex;
+      color: var(--gv-color-font);
+      @include align-items(center);
+      @include justify-content(center);
+
+      &:before {
+        font-size: $font-size * 2;
+        font-family: $font-family-icon;
+      }
+
+      &.disabled {
+        color: var(--gv-color-disabled);
+      }
+    }
+
+    .header-left {
+      &:before {
+        content: icon.mdi("chevron-left");
+      }
+    }
+
+    .header-right {
+      &:before {
+        content: icon.mdi("chevron-right");
+      }
+    }
+
+    .header-label {
+      width: 100%;
+      font-weight: 500;
+      letter-spacing: 0.4px;
+      text-transform: capitalize;
+      font-size: $font-size * 0.875;
+    }
+  }
+
+  & > .gv-content {
+    width: 100%;
+    @include d-flex;
+    @include flex-wrap(wrap);
+    font-size: $font-size * 0.875;
+
+    & > .gv-weekday {
+      width: 100%;
+      @include d-flex;
+      @include align-items(center);
+      padding-top: $default-distance * 0.75;
+      @include justify-content(space-around);
+
+      & > .gv-item {
+        @include d-flex;
+        font-weight: 400;
+        text-transform: uppercase;
+        color: var(--gv-color-font);
+        font-size: $font-size * 0.75;
+        @include align-items(center);
+        @include justify-content(center);
+      }
+    }
+
+    & > .gv-month {
+      width: 100%;
+
+      & > .gv-week {
+        @include d-flex;
+        padding: $default-distance * 0.25 0;
+        @include justify-content(space-around);
+
+        & > .gv-item {
+          @include d-flex;
+          position: relative;
+          @include flex-wrap(wrap);
+          line-height: $line-height;
+          color: var(--gv-color-font);
+          @include align-items(center);
+          @include justify-content(center);
+          @include border-radius($border-radius);
+
+          & > .gv-group {
+            left: 0;
+            right: 0;
+            bottom: 3px;
+            width: 100%;
+            @include d-flex;
+            position: absolute;
+            @include justify-content(center);
+
+            & > .gv-category {
+              width: 4px;
+              height: 4px;
+              @include border-radius($border-radius-circle);
+              background-color: var(--current-background-color);
+
+              &:before {
+                content: "";
+                background: inherit;
+              }
+
+              &:not(:last-child) {
+                margin-right: 0.268px;
+              }
+            }
+          }
+
+          &.out {
+            opacity: 0.4;
+          }
+
+          &.highlight {
+            font-weight: 500;
+            color: var(--gv-color-font);
+          }
+
+          &.today {
+            font-weight: 600;
+            color: var(--gv-color-primary);
+            border-color: var(--gv-primary);
+            background-color: var(--gv-primary);
+          }
+
+          &.selected {
+            color: var(--gv-color-accent);
+            border-color: var(--gv-accent);
+            background-color: var(--gv-accent);
+          }
+
+          &.disabled {
+            opacity: 0.2;
+          }
+
+          &.active,
+          &:not(.disabled):hover {
+            color: var(--gv-color-font);
+            border-color: var(--gv-secondary);
+            background-color: var(--gv-secondary);
+          }
+
+          &.pointer {
+            cursor: pointer;
+          }
+        }
+      }
+    }
+
+    & > .gv-day > .gv-item,
+    & > .gv-month > .gv-week > .gv-item {
+      width: 35px;
+      height: 35px;
+      position: relative;
+      text-align: center;
+    }
+  }
+
+  & > .gv-footer {
+    width: 100%;
+    height: 100%;
+    @include d-flex;
+    position: absolute;
+    @include flex-wrap(wrap);
+    @include transform(translateY(100%));
+    @include transition(transform 300ms);
+    @include border-radius($border-radius);
+    background-color: var(--gv-color-theme);
+    border: 1px solid var(--gv-color-border);
+
+    &.active {
+      @include transform(translateY(0));
+    }
+
+    & > .gv-dismiss {
+      line-height: 1;
+      cursor: pointer;
+      position: absolute;
+      top: $default-distance;
+      right: $default-distance;
+      color: var(--gv-color-font);
+
+      &:before {
+        font-size: $font-size * 2;
+        font-family: $font-family-icon;
+        content: icon.mdi("chevron-down");
+      }
+    }
+
+    & > .gv-header {
+      width: 100%;
+      font-weight: 500;
+      border-bottom: 1px solid;
+      padding: $default-distance;
+      border-color: var(--gv-color-border);
+    }
+
+    & > .gv-content {
+      width: 100%;
+      height: 80%;
+      display: inherit;
+      overflow-y: auto;
+      padding: 0 $default-distance;
+
+      & > .gv-list {
+        li {
+          &::marker {
+            color: var(--current-background-color);
+          }
+          // @include d-flex;
+          // list-style: none;
+          // @include align-items(center);
+
+          // div {
+          //   width: 5px;
+          //   height: 5px;
+          //   margin-right: $default-distance * 0.5;
+          //   @include border-radius($border-radius-circle);
+          // }
+        }
+      }
+    }
+  }
+}

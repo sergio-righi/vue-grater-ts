@@ -1,0 +1,12 @@
+@use 'constants' as *;
+
+@each $key, $value in $mdi-icons {
+    .#{$mdi-css-prefix}-#{$key}::before {
+        content: #{'"\\' + $value + '"'};
+    }
+}
+
+.#{$mdi-css-prefix}-blank::before {
+    content: "\F68C";
+    visibility: hidden;
+}

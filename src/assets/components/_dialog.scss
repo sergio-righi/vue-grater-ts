@@ -1,0 +1,198 @@
+﻿@use '../utils/index' as *;
+@use '../animations/index' as animation;
+@use '../vendors/material-design-icons/functions' as icon;
+
+.gv-dialog {
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 99;
+  width: 100%;
+  height: 100%;
+  display: none;
+  position: fixed;
+  overflow-y: auto;
+  @include block-selection;
+  background-color: var(--gv-color-overlay-dark);
+
+  &.active {
+    @include d-flex;
+    @include align-items(center);
+    @include justify-content(center);
+
+    & > .gv-popup {
+      display: initial;
+
+      &.animation-open {
+        @include animation.a-scale-in-up;
+      }
+
+      &.animation-close {
+        @include animation.a-scale-out;
+      }
+
+      &.animation-block {
+        @include animation.a-shake;
+      }
+    }
+  }
+
+  & > .gv-popup {
+    width: 90%;
+    position: relative;
+    color: var(--gv-color-font);
+    padding: $default-distance;
+    background-color: var(--gv-color-theme);
+    @include border-radius($border-radius);
+    @include box-shadow(map-get($box-shadow, 0) var(--gv-color-box-shadow));
+
+    & > .gv-prev {
+      left: -$default-distance;
+      @include vertical-absolute;
+
+      &:before {
+        content: icon.mdi("chevron-left");
+      }
+    }
+
+    & > .gv-next {
+      right: -$default-distance;
+      @include vertical-absolute;
+
+      &:before {
+        content: icon.mdi("chevron-right");
+      }
+    }
+
+    & > .gv-dismiss {
+      top: -5px;
+      right: -5px;
+      position: absolute;
+
+      &:before {
+        content: icon.mdi("close");
+      }
+    }
+
+    & > .gv-prev,
+    & > .gv-next,
+    & > .gv-dismiss {
+      z-index: 2;
+      line-height: 1;
+      cursor: pointer;
+      @include box-shadow-default;
+      font-size: $font-size * 1.125;
+      padding: $default-distance * 0.25;
+      @include border-radius($border-radius);
+      background-color: var(--gv-secondary-light);
+      
+      &:before {
+        font-family: $font-family-icon;
+      }
+    }
+
+    & > .gv-item {
+      display: none;
+
+      &.active {
+        display: initial;
+      }
+
+      &.embed {
+        & > .gv-content {
+          padding: 0;
+        }
+      }
+
+      & > .gv-header {
+        line-height: 1;
+        font-weight: 500;
+        font-size: $font-size * 1.125;
+
+        &:after {
+          float: right;
+          content: attr(data-text);
+          font-weight: $font-weight;
+          color: var(--gv-secondary);
+          font-size: $font-size * 0.75;
+        }
+
+        & + .gv-content {
+          margin-top: $default-distance;
+        }
+      }
+
+      & > .gv-content {
+        width: 100%;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        color: var(--gv-color-font);
+        font-size: $font-size * 0.875;
+
+        & + .gv-footer {
+          margin-top: $default-distance * 0.5;
+        }
+
+        p {
+          margin-top: 0;
+          margin-bottom: 0;
+
+          & + * {
+            margin-bottom: $default-distance * 0.5;
+          }
+        }
+
+        img {
+          width: 100%;
+          vertical-align: middle;
+        }
+      }
+
+      & > .gv-footer {
+        @include d-flex;
+        @include align-items(center);
+        @include justify-content(flex-end);
+
+        & > .gv-control {
+          & > .gv-counter {
+            margin-right: auto;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: $media-sm) {
+  .gv-dialog {
+    & > .gv-popup {
+      width: 70%;
+    }
+  }
+}
+
+@media (min-width: $media-md) {
+  .gv-dialog {
+    & > .gv-popup {
+      width: 40%;
+      & > .gv-item {
+        & > .gv-header {
+          font-size: $font-size * 1.5;
+        }
+        & > .gv-content {
+          font-size: $font-size * 0.875;
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: $media-xl) {
+  .gv-dialog {
+    & > .gv-popup {
+      width: 30%;
+    }
+  }
+}

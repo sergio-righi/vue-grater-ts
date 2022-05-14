@@ -1,0 +1,62 @@
+@use '../utils/index' as *;
+
+.gv-btn-group {
+  @include d-flex;
+  height: $button-height;
+
+  &.fluid {
+    width: 100%;
+    & > .gv-btn {
+      width: 100%;
+    }
+  }
+
+  &.sm {
+    height: $button-height - $size-variation;
+
+    & > .gv-btn {
+      font-size: $font-size * 0.75;
+      padding: 0 $default-distance * 0.5;
+    }
+  }
+
+  &.lg {
+    height: $button-height + $size-variation;
+
+    & > .gv-btn {
+      padding: 0 $default-distance;
+      font-size: $font-size * 0.875;
+    }
+  }
+
+  & > .gv-btn {
+    width: 100%;
+    height: inherit;
+    margin: 0 !important;
+    @include d-inline-flex;
+    text-overflow: ellipsis;
+    @include border-radius(0);
+    padding: 0 $default-distance;
+
+    &:focus {
+      outline: none !important;
+      @include box-shadow(inset 0 0 0 100px rgba(0, 0, 0, 0.15));
+    }
+
+    &:first-child {
+      @include border-radius($border-radius 0 0 $border-radius);
+    }
+
+    &:last-child {
+      @include border-radius(0 $border-radius $border-radius 0);
+    }
+  }
+}
+
+@media (min-width: $media-sm) {
+  .gv-btn-group {
+    & > .gv-btn {
+      width: auto;
+    }
+  }
+}

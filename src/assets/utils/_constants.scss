@@ -1,0 +1,57 @@
+﻿$font-path: "~font";
+$font-family-icon: "Material Design Icons";
+
+$font-archivo: 'Archivo'; // has a chance
+$font-chakra-petch: "Chakra Petch"; // previous one
+$font-dosis: "Dosis"; // not bad
+$font-encode-sans: 'Encode Sans'; // might be
+$font-inter: "Inter"; // maybe
+$font-lato: 'Lato'; // candidate
+$font-manrope: "Manrope"; // not discaded
+$font-sora: 'Sora'; // nope
+$font-family: $font-lato, sans-serif;
+
+$font-weight: 300;
+$font-size: 1rem;
+
+$font-size-h: (
+  1: 3rem,
+  2: 2.5rem,
+  3: 2rem,
+  4: 1.75rem,
+  5: 1.5rem,
+  6: 1rem,
+  7: 0.875rem,
+);
+
+$line-height: 1.8;
+
+$media-xs: 576px;
+$media-sm: 768px;
+$media-md: 992px;
+$media-lg: 1200px;
+$media-xl: 1400px;
+
+$border-radius: 8px;
+$border-radius-circle: 50%;
+$border-radius-round: 30px;
+
+$field-height: 48px;
+$nav-navbar-height: 60px;
+
+$chip-height: 32px;
+$button-height: 40px;
+
+$size-variation: 8px;
+$default-distance: 16px;
+
+$box-shadow: (
+  0: 0 0 0 0,
+  3: 3px 3px 0 0,
+  5: 0 0 5px 0,
+  6: 6px 6px 0 0,
+  9: 9px 9px 0 0,
+  10: 0 0 10px 0,
+);
+
+$avatar-width: 45px;

@@ -1,0 +1,28 @@
+﻿@use '../utils/index' as *;
+
+@mixin a-shake($duration: 300ms) {
+  @include animation(shake $duration ease-in-out);
+}
+
+@include keyframes(shake) {
+  10%,
+  90% {
+    @include transform(translate3d(-10px, 0, 0));
+  }
+
+  20%,
+  80% {
+    @include transform(translate3d(-15px, 0, 0));
+  }
+
+  30%,
+  50%,
+  70% {
+    @include transform(translate3d(0, -10px, 0));
+  }
+
+  40%,
+  60% {
+    @include transform(translate3d(0, -15px, 0));
+  }
+}

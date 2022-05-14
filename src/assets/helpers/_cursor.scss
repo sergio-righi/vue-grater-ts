@@ -1,0 +1,29 @@
+﻿@use '../utils/index' as *;
+
+.c-none {
+  cursor: none !important;
+}
+
+.c-default {
+  cursor: default !important;
+}
+
+.c-pointer {
+  cursor: pointer !important;
+}
+
+.c-move {
+  cursor: move !important;
+}
+
+.c-grabbing {
+  @include c-grabbing;
+}
+
+.c-grab {
+  @include c-grab;
+
+  &:active {
+    @include c-grabbing;
+  }
+}

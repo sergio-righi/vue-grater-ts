@@ -1,0 +1,79 @@
+@use '../utils/index' as *;
+
+.gv-divider {
+  @include align-self(center);
+
+  &:before {
+    content: "";
+  }
+
+  &.sm {
+    &.horizontal {
+      margin-top: $default-distance * 0.25;
+      padding-bottom: $default-distance * 0.25;
+    }
+    &.vertical {
+      margin-left: $default-distance * 0.25;
+      padding-right: $default-distance * 0.25;
+    }
+  }
+
+  &.md {
+    &.horizontal {
+      margin-top: $default-distance * 0.5;
+      padding-bottom: $default-distance * 0.5;
+    }
+    &.vertical {
+      margin-left: $default-distance * 0.5;
+      padding-right: $default-distance * 0.5;
+    }
+  }
+
+  &.lg {
+    &.horizontal {
+      margin-top: $default-distance * 0.75;
+      padding-bottom: $default-distance * 0.75;
+    }
+    &.vertical {
+      margin-left: $default-distance * 0.75;
+      padding-right: $default-distance * 0.75;
+    }
+  }
+
+  &.gap {
+    &.horizontal {
+      width: calc(100% - #{$default-distance * 0.25});
+      &.sm {
+        width: calc(100% - #{$default-distance * 0.5});
+      }
+      &.md {
+        width: calc(100% - #{$default-distance * 0.75});
+      }
+    }
+    &.vertical {
+      height: calc(100% - #{$default-distance * 0.25});
+      &.sm {
+        height: calc(100% - #{$default-distance * 0.5});
+      }
+      &.md {
+        height: calc(100% - #{$default-distance * 0.75});
+      }
+    }
+  }
+
+  &.horizontal {
+    width: 100%;
+    @include d-flex;
+    border-top-width: 1px;
+    border-top-style: solid;
+    border-top-color: inherit;
+  }
+
+  &.vertical {
+    height: 100%;
+    @include d-inline-flex;
+    border-left-width: 1px;
+    border-left-style: solid;
+    border-left-color: inherit;
+  }
+}

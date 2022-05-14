@@ -1,0 +1,135 @@
+@use '../utils/index' as *;
+
+.gv-clock {
+  width: 100%;
+  position: relative;
+  @include d-inline-flex;
+  @include align-items(center);
+
+  &.center {
+    @include justify-content(center);
+  }
+
+  & > .gv-analog {
+    width: 100%;
+    padding-top: 100%;
+    @include flex(1 0 auto);
+    color: var(--gv-color-font);
+    @include block-selection;
+    background-color: var(--gv-color-theme);
+    @include border-radius($border-radius-circle);
+    @include transition(300ms cubic-bezier(0.25, 0.8, 0.5, 1));
+
+    & > .gv-inner {
+      top: 20px;
+      left: 20px;
+      right: 20px;
+      bottom: 20px;
+      position: absolute;
+      pointer-events: none;
+
+      &:after {
+        top: 50%;
+        left: 50%;
+        width: 8px;
+        z-index: 3;
+        height: 8px;
+        content: "";
+        position: absolute;
+        box-sizing: inherit;
+        border-color: currentColor;
+        background-color: currentColor;
+        @include transform(translate(-50%, -50%));
+        @include border-radius($border-radius-circle);
+      }
+
+      & > .gv-hand {
+        & > .gv-pointer {
+          z-index: 2;
+          bottom: 50%;
+          position: absolute;
+          will-change: transform;
+          background-color: currentColor;
+          transform-origin: center bottom;
+          @include border-radius(
+            $border-radius-circle $border-radius-circle 0 0
+          );
+
+          &.analog-hour {
+            width: 4px;
+            height: 40%;
+            left: calc(50% - 2px);
+          }
+
+          &.analog-minute {
+            width: 3px;
+            height: 50%;
+            left: calc(50% - 1.5px);
+          }
+
+          &.analog-second {
+            width: 2px;
+            height: 55%;
+            left: calc(50% - 1px);
+            background-color: var(--gv-color-red);
+          }
+        }
+      }
+
+      & > .gv-item {
+        z-index: 5;
+        line-height: 1;
+        font-weight: 700;
+        position: absolute;
+        text-align: center;
+        pointer-events: none;
+        @include block-selection;
+        font-size: $font-size * 0.875;
+        @include transform(translate(-50%, -50%));
+      }
+    }
+  }
+
+  & > .gv-digital {
+    gap: 4px;
+    position: relative;
+    @include d-inline-flex;
+    color: var(--font-color);
+
+    & > .gv-unit {
+      z-index: 1;
+      line-height: 1;
+      font-size: inherit;
+      position: relative;
+      font-family: inherit;
+      font-stretch: expanded;
+      @include d-inline-flex;
+      @include justify-content(flex-end);
+    }
+
+    & > .gv-separator {
+      color: inherit;
+      line-height: 1;
+      font-size: inherit;
+      @include align-self(center);
+    }
+
+    & > .gv-ampm {
+      margin-top: auto;
+      text-transform: uppercase;
+      margin-bottom: $default-distance * 0.25;
+
+      & > .gv-period {
+        display: none;
+        color: inherit;
+        line-height: 1;
+
+        &.active {
+          display: block;
+          line-height: normal;
+          font-size: $font-size * 1;
+        }
+      }
+    }
+  }
+}

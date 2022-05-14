@@ -1,0 +1,51 @@
+@use '../utils/index' as *;
+
+.gv-sortable {
+  & > .gv-item {
+    @include d-flex;
+    @include user-select(none);
+    @include align-items(center);
+    @include border-radius($border-radius);
+    background-color: var(--gv-secondary-light);
+    padding: $default-distance * 0.25 $default-distance * 0.5;
+
+    &[draggable="false"] {
+      opacity: 0.6;
+    }
+
+    &:not(:last-child) {
+      margin-bottom: $default-distance * 0.25;
+    }
+
+    &.over:not(.disabled, .dragging) {
+      opacity: 0.3;
+    }
+
+    & > .gv-leading {
+      & > input {
+        border: 0;
+        width: 40px;
+        text-align: center;
+        @include border-radius($border-radius);
+        // border: 1px solid var(--gv-color-border);
+      }
+    }
+
+    & > .gv-content {
+      margin-right: auto;
+      pointer-events: none;
+      margin-left: $default-distance * 0.5;
+    }
+
+    & > .gv-trailing {
+      @include d-flex;
+      @include align-items(center);
+      @include border-radius($border-radius);
+
+      & > i {
+        cursor: pointer;
+        font-size: $font-size * 1.25;
+      }
+    }
+  }
+}

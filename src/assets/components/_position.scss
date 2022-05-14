@@ -1,0 +1,73 @@
+@use '../utils/index' as *;
+
+.gv-position {
+  left: 0;
+  bottom: 0;
+  line-height: 1;
+  color: inherit;
+  position: absolute;
+  padding: $default-distance * 0.5;
+
+  &.top {
+    top: 0;
+    bottom: auto;
+  }
+
+  &.right {
+    right: 0;
+    left: auto;
+  }
+
+  &.center {
+    top: 50%;
+    left: 50%;
+    right: auto;
+    bottom: auto;
+    @include transform(translate(-50%, -50%));
+  }
+
+  &.horizontal {
+    left: 50%;
+    right: auto;
+    @include transform(translateX(-50%));
+  }
+
+  &.vertical {
+    top: 50%;
+    bottom: auto;
+    @include transform(translateY(-50%));
+  }
+
+  &.overlay {
+    width: 100%;
+    color: var(--gv-color-white);
+    background-color: var(--gv-color-overlay-dark);
+  }
+
+  &:not(.overlay) {
+    @include border-radius($border-radius);
+  }
+
+  &.gap {
+    & > .gv-content {
+      gap: $default-distance * 0.5;
+    }
+  }
+
+  &.sm {
+    padding: $default-distance * 0.25;
+  }
+
+  &.md {
+    padding: $default-distance * 0.75;
+  }
+
+  &.lg {
+    padding: $default-distance;
+  }
+
+  & > .gv-content {
+    color: inherit;
+    @include d-inline-flex;
+  }
+}

@@ -1,0 +1,59 @@
+﻿@use '../utils/index' as *;
+
+.gv-avatar {
+  font-weight: 400;
+  overflow: hidden;
+  position: relative;
+  line-height: normal;
+  width: $avatar-width;
+  @include d-inline-flex;
+  color: var(--gv-color-primary);
+  background-clip: content-box;
+  background-color: var(--gv-primary);
+  @include border-radius($border-radius-circle);
+  
+  &:after,
+  &:before {
+    height: 0;
+    content: "";
+    width: 100%;
+    display: block;
+    padding-bottom: 100%;
+  }
+
+  &.round {
+    @include border-radius($border-radius);
+  }
+
+  &.square {
+    @include border-radius(0);
+  }
+
+  &.outline {
+    color: var(--gv-color-font);
+    background-color: transparent;
+    border: 1px solid currentColor;
+  }
+
+  &.sm {
+    width: $avatar-width * 0.66;
+    font-size: $font-size * 0.75;
+  }
+
+  &.lg {
+    width: $avatar-width * 1.33;
+    font-size: $font-size * 0.875;
+  }
+
+  & > .gv-content {
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    line-height: 1; 
+    @include d-flex;
+    position: absolute;
+    @include align-items(center);
+    @include justify-content(center);
+  }
+}

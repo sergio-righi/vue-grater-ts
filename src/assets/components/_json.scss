@@ -1,0 +1,90 @@
+@use '../utils/index' as *;
+
+.gv-json {
+  width: 100%;
+  & > .gv-content {
+    & > .gv-item {
+      width: 100%;
+      @include d-flex;
+      @include flex-wrap(wrap);
+      margin-bottom: $default-distance * 0.5;
+
+      .gv-key {
+        width: 49%;
+        margin-right: 1%;
+        @include flex-order(1);
+
+        .error {
+          border-color: var(--gv-color-red) !important;
+        }
+      }
+
+      .gv-value {
+        width: 100%;
+        margin-top: 1%;
+        @include flex-order(3);
+
+        .gv-array {
+          & > * {
+            margin-bottom: $default-distance * 0.25;
+          }
+        }
+
+        i {
+          display: block;
+          cursor: pointer;
+        }
+      }
+
+      .gv-type {
+        width: 49%;
+        margin-left: 1%;
+        @include flex-order(2);
+      }
+
+      .gv-key,
+      .gv-value {
+        .gv-input-group {
+          i {
+            cursor: pointer;
+            @include align-self(center);
+            padding-left: $default-distance * 0.75;
+            padding-right: $default-distance * 0.75;
+          }
+        }
+      }
+
+      .gv-input + button {
+        width: 50px;
+      }
+    }
+  }
+}
+
+@media (min-width: $media-md) {
+  .gv-json {
+    .gv-content {
+      & > .gv-item {
+        @include flex-wrap(nowrap);
+
+        .gv-key {
+          width: 30%;
+          @include flex-order(1);
+          margin-right: $default-distance * 1.25;
+        }
+
+        .gv-value {
+          width: 50%;
+          margin-top: 0;
+          @include flex-order(2);
+          margin-right: $default-distance * 1.25;
+        }
+
+        .gv-type {
+          width: 20%;
+          @include flex-order(3);
+        }
+      }
+    }
+  }
+}

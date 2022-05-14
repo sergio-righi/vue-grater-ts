@@ -1,0 +1,160 @@
+﻿@use '../utils/index' as *;
+
+.gv-table {
+  width: 100%;
+  max-width: 100%;
+  @include d-flex;
+  overflow-x: auto;
+  position: relative;
+  color: var(--gv-color-font);
+  border-collapse: collapse;
+  @include flex-direction(column);
+  background-color: var(--gv-color-theme);
+  border: 1px solid var(--gv-color-border);
+  @include border-radius($border-radius);
+  -ms-overflow-style: -ms-autohiding-scrollbar;
+  @include box-shadow(map-get($box-shadow, 0) var(--gv-color-box-shadow));
+
+  table {
+    margin: 0;
+    border: 0;
+    width: 100%;
+    display: table;
+    white-space: nowrap;
+    border-collapse: collapse;
+
+    thead {
+      white-space: nowrap;
+      border-color: inherit;
+      vertical-align: middle;
+      color: var(--gv-color-font);
+      border-collapse: collapse;
+
+      tr {
+        border: 0;
+        height: 52px;
+        display: table-row;
+        white-space: nowrap;
+        border-collapse: collapse;
+
+        th {
+          &:first-child {
+            text-align: left;
+            padding-left: $default-distance;
+
+            &.fit + th {
+              text-align: left;
+              padding-left: $default-distance;
+            }
+          }
+
+          &.fit {
+            width: 1px;
+            white-space: nowrap;
+          }
+        }
+      }
+    }
+
+    tbody {
+      white-space: nowrap;
+      border-color: inherit;
+      vertical-align: middle;
+      border-collapse: collapse;
+
+      tr {
+        height: 52px;
+        font-weight: 400;
+        position: relative;
+        letter-spacing: 0.3px;
+        border-color: inherit;
+        vertical-align: inherit;
+        border-collapse: collapse;
+        background-color: var(--gv-color-theme);
+        border-top: 1px solid var(--gv-color-border);
+        @include transition(
+          background-color 200ms cubic-bezier(0.4, 0, 0.2, 1)
+        );
+
+        th,
+        td {
+          border: 0;
+          text-align: right;
+          position: relative;
+          white-space: nowrap;
+          vertical-align: middle;
+          font-size: $font-size * 0.75;
+          padding: 0 $default-distance;
+
+          &:first-child {
+            text-align: left;
+
+            &.fit + td {
+              text-align: left;
+            }
+          }
+
+          & > .gv-input-box {
+            vertical-align: middle;
+            label {
+              margin: 0;
+            }
+          }
+        }
+
+        &:hover {
+          color: var(--gv-color-font);
+          background-color: var(--gv-secondary-light);
+        }
+
+        &.active {
+          td {
+            color: var(--gv-color-font);
+            background-color: var(--gv-secondary-light);
+          }
+        }
+
+        &.selected {
+          td {
+            color: var(--gv-color-primary);
+            background-color: var(--gv-primary);
+          }
+        }
+      }
+    }
+
+    thead,
+    tbody {
+      tr {
+        th {
+          border: 0;
+          font-size: $font-size * 0.875;
+          font-weight: 600;
+          text-align: right;
+          letter-spacing: 0.3px;
+          vertical-align: middle;
+          padding: 0 $default-distance;
+        }
+
+        th,
+        td {
+          i {
+            font-size: $font-size * 1.125;
+          }
+        }
+      }
+    }
+
+    thead,
+    tbody,
+    tfoot {
+      td,
+      th {
+        &.active {
+          color: var(--gv-color-accent);
+          background-color: var(--gv-accent);
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,110 @@
+@use '../utils/index' as *;
+
+.gv-space {
+  flex: inherit;
+  color: inherit;
+  display: inherit;
+  position: inherit;
+
+  &.no-padding {
+    padding: initial !important;
+  }
+
+  &.x {
+    padding-left: $default-distance;
+    padding-right: $default-distance;
+    &.margin {
+      margin-left: $default-distance;
+      margin-right: $default-distance;
+    }
+
+    &.left {
+      margin-right: 0 !important;
+      padding-right: 0 !important;
+    }
+
+    &.right {
+      margin-left: 0 !important;
+      padding-left: 0 !important;
+    }
+  }
+
+  &.y {
+    padding-top: $default-distance;
+    padding-bottom: $default-distance;
+    &.margin {
+      margin-top: $default-distance;
+      margin-bottom: $default-distance;
+    }
+
+    &.top {
+      margin-bottom: 0 !important;
+      padding-bottom: 0 !important;
+    }
+
+    &.bottom {
+      margin-top: 0 !important;
+      padding-top: 0 !important;
+    }
+  }
+
+  &.sm {
+    &.x {
+      padding-left: $default-distance * 0.25;
+      padding-right: $default-distance * 0.25;
+      &.margin {
+        margin-left: $default-distance * 0.25;
+        margin-right: $default-distance * 0.25;
+      }
+    }
+
+    &.y {
+      padding-top: $default-distance * 0.25;
+      padding-bottom: $default-distance * 0.25;
+      &.margin {
+        margin-top: $default-distance * 0.25;
+        margin-bottom: $default-distance * 0.25;
+      }
+    }
+  }
+
+  &.md {
+    &.x {
+      padding-left: $default-distance * 0.5;
+      padding-right: $default-distance * 0.5;
+      &.margin {
+        margin-left: $default-distance * 0.5;
+        margin-right: $default-distance * 0.5;
+      }
+    }
+
+    &.y {
+      padding-top: $default-distance * 0.5;
+      padding-bottom: $default-distance * 0.5;
+      &.margin {
+        margin-top: $default-distance * 0.5;
+        margin-bottom: $default-distance * 0.5;
+      }
+    }
+  }
+
+  &.lg {
+    &.x {
+      padding-left: $default-distance * 0.75;
+      padding-right: $default-distance * 0.75;
+      &.margin {
+        margin-left: $default-distance * 0.75;
+        margin-right: $default-distance * 0.75;
+      }
+    }
+
+    &.y {
+      padding-top: $default-distance * 0.75;
+      padding-bottom: $default-distance * 0.75;
+      &.margin {
+        margin-top: $default-distance * 0.75;
+        margin-bottom: $default-distance * 0.75;
+      }
+    }
+  }
+}

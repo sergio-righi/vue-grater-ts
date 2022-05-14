@@ -1,0 +1,117 @@
+$color-black: #000000;
+$color-white: #ffffff;
+
+$colors: (
+  amber: #ffbf00,
+  blue: #2196f3,
+  blue-gray: #607d8b,
+  brown: #795548,
+  cyan: #00bcd4,
+  deep-orange: #ff5722,
+  deep-purple: #673ab7,
+  gray: #6b6b6b,
+  green: #4caf50,
+  indigo: #3f51b5,
+  light-blue: #03a9f4,
+  light-green: #8bc34a,
+  lime: #cddc39,
+  orange: #ff9800,
+  pink: #e91e63,
+  purple: #9c27b0,
+  red: #f44336,
+  teal: #1ea094,
+  yellow: #ffeb3b,
+);
+
+$palette: ();
+
+@function color_shade($color) {
+  @return (
+    100: lighten($color, 30),
+    200: lighten($color, 22.5),
+    300: lighten($color, 15),
+    400: lighten($color, 7.5),
+    500: $color,
+    600: darken($color, 7.5),
+    700: darken($color, 15),
+    800: darken($color, 22.5),
+    900: darken($color, 30)
+  );
+}
+
+@each $key, $value in $colors {
+  $map: ();
+  $map: map-merge(
+    $map,
+    (
+      $key: color_shade($value),
+    )
+  );
+  $palette: map-merge($palette, $map);
+}
+
+$primary: (
+  background: #6f82e7,
+  color: $color-white,
+);
+
+$accent: (
+  background: #536eff,
+  color: $color-white,
+);
+
+$success: (
+  color: $color-white,
+  background: #409444,
+);
+
+$error: (
+  color: $color-white,
+  background: #ff4f42,
+);
+
+$warning: (
+  color: $color-black,
+  background: #ffe715,
+);
+
+$info: (
+  color: $color-white,
+  background: #506974,
+);
+
+$color-dark: rgb(48, 48, 48);
+$color-light: rgb(232, 232, 232);
+
+$color-overlay-dark: rgba(60, 60, 60, 0.3);
+$color-overlay-light: rgba(200, 200, 200, 0.3);
+
+$color-box-shadow-dark: rgb(80, 80, 80);
+
+$root: (
+  "background": initial,
+  "secondary": rgb(202, 202, 202),
+  "secondary-dark": rgb(168, 168, 168),
+  "secondary-light": rgb(232, 232, 232),
+  "border": rgb(213, 213, 213),
+  "font": rgb(64, 64, 64),
+  "disabled": rgb(170, 170, 170),
+  "readonly": rgb(96, 96, 96),
+  "theme": rgb(255, 255, 255),
+  "box-shadow": rgb(204, 204, 204),
+  "contrast": rgb(64, 64, 64),
+);
+
+$dark: (
+  "background": rgb(48, 48, 48),
+  "secondary": rgb(64, 64, 64),
+  "secondary-dark": rgb(32, 32, 32),
+  "secondary-light": rgb(96, 96, 96),
+  "border": rgb(80, 80, 80),
+  "font": rgb(232, 232, 232),
+  "disabled": rgb(170, 170, 170),
+  "readonly": rgb(96, 96, 96),
+  "theme": rgb(48, 48, 48),
+  "box-shadow": rgb(119, 119, 119),
+  "contrast": rgb(232, 232, 232),
+);

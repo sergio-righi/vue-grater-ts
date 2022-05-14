@@ -1,0 +1,24 @@
+@use '../utils/index' as *;
+
+* {
+  font-family: $font-family;
+  border-color: var(--gv-color-border);
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+}
+
+html {
+  height: 100%;
+}
+
+body {
+  min-height: 100%;
+  position: relative;
+  background-color: inherit;
+}

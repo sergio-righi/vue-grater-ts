@@ -1,0 +1,15 @@
+﻿@use '../utils/index' as *;
+
+@mixin a-shimmer($duration: 1s) {
+  @include animation(shimmer $duration linear infinite forwards);
+}
+
+@include keyframes(shimmer) {
+  0% {
+    background-position: -468px 0;
+  }
+
+  100% {
+    background-position: 468px 0;
+  }
+}

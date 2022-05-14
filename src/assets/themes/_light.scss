@@ -1,0 +1,25 @@
+@use "../utils/colors" as *;
+
+:root {
+  --gv-color-background: #{map-get($root, "background")};
+  --gv-color-box-shadow: #{map-get($root, "box-shadow")};
+  --gv-color-box-shadow-dark: #{$color-box-shadow-dark};
+
+  --gv-secondary: #{map-get($root, "secondary")};
+  --gv-secondary-dark: #{map-get($root, "secondary-dark")};
+  --gv-secondary-light: #{map-get($root, "secondary-light")};
+
+  --gv-color-border: #{map-get($root, "border")};
+
+  --gv-color-font: #{map-get($root, "font")};
+  --gv-color-link: #{map-get($root, "font")};
+
+  --gv-disabled: var(--gv-secondary);
+  --gv-color-disabled: #{map-get($root, "disabled")};
+  
+  --gv-readonly: var(--gv-secondary-light);
+  --gv-color-readonly: #{map-get($root, "readonly")};
+
+  --gv-color-theme: #{map-get($root, "theme")};
+  --gv-color-contrast: #{map-get($root, "contrast")};
+}

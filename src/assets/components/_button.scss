@@ -1,0 +1,246 @@
+﻿@use '../utils/index' as *;
+@use '../animations/index' as animation;
+@use '../vendors/material-design-icons/functions' as icon;
+
+.gv-btn {
+  top: 0;
+  width: auto;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  font-weight: 400;
+  text-align: center;
+  position: relative;
+  white-space: nowrap;
+  text-decoration: none;
+  height: $button-height;
+  @include d-inline-flex;
+  @include block-selection;
+  color: var(--current-color);
+  gap: $default-distance * 0.5;
+  @include align-items(center);
+  padding: 0 $default-distance;
+  font-size: $font-size * 0.875;
+  @include justify-content(center);
+  --current-color: var(--gv-color-font);
+  @include border-radius($border-radius);
+  @include transition(box-shadow 150ms linear);
+  background-color: var(--current-background-color);
+  --current-background-color: var(--gv-secondary-light);
+
+  &::-moz-focus-inner {
+    border: 0;
+  }
+
+  &:hover,
+  &:focus {
+    text-decoration: none !important;
+  }
+
+  &:not(.outline):hover {
+    @include box-shadow(inset 0 0 0 100px rgba(0, 0, 0, 0.1));
+  }
+
+  &:focus {
+    outline-offset: 1px;
+    outline: 2px solid var(--current-background-color);
+  }
+
+  &:active {
+    @include box-shadow(inset 0 0 0 100px rgba(0, 0, 0, 0.15));
+  }
+
+  &:disabled {
+    opacity: 0.7;
+    pointer-events: none;
+    // color: var(--gv-color-disabled) !important;
+    // background-color: var(--gv-secondary) !important;
+  }
+
+  &.sm {
+    font-size: $font-size * 0.75;
+    padding: 0 $default-distance * 0.75;
+    height: $button-height - $size-variation;
+  }
+
+  &.lg {
+    font-size: $font-size;
+    padding: 0 $default-distance * 1.25;
+    height: $button-height + $size-variation;
+  }
+
+  &.square {
+    @include border-radius(0);
+  }
+
+  &.round {
+    @include border-radius($border-radius-round);
+  }
+
+  &.stretch {
+    width: 100%;
+  }
+
+  &.muted {
+    pointer-events: none;
+  }
+
+  &.inline {
+    height: initial;
+    padding: initial;
+  }
+
+  &:not(.outline) {
+    &.primary {
+      --current-color: var(--gv-color-primary);
+      --current-background-color: var(--gv-primary);
+    }
+
+    &.success {
+      --current-color: var(--gv-color-success);
+      --current-background-color: var(--gv-success);
+    }
+
+    &.error {
+      --current-color: var(--gv-color-error);
+      --current-background-color: var(--gv-error);
+    }
+
+    &.warning {
+      --current-color: var(--gv-color-warning);
+      --current-background-color: var(--gv-warning);
+    }
+
+    &.info {
+      --current-color: var(--gv-color-info);
+      --current-background-color: var(--gv-info);
+    }
+
+    &.active {
+      --current-color: var(--gv-color-accent);
+      --current-background-color: var(--gv-accent);
+    }
+  }
+
+  &.outline {
+    color: var(--current-color);
+    --current-background-color: transparent;
+    border: 1px solid var(--current-border-color);
+    --current-border-color: var(--gv-secondary-light);
+
+    &:hover,
+    &:focus,
+    &.checked {
+      --current-color: var(--current-color-focus) !important;
+      --current-background-color: var(--current-border-color);
+    }
+
+    &.primary {
+      --current-color: var(--gv-primary);
+      --current-border-color: var(--gv-primary);
+      &:hover,
+      &:focus {
+        --current-color: var(--gv-color-primary);
+        --current-background-color: var(--gv-primary);
+      }
+    }
+
+    &.success {
+      --current-color: var(--gv-success);
+      --current-border-color: var(--gv-success);
+      &:hover,
+      &:focus {
+        --current-color: var(--gv-color-success);
+        --current-background-color: var(--gv-success);
+      }
+    }
+
+    &.error {
+      --current-color: var(--gv-error);
+      --current-border-color: var(--gv-error);
+      &:hover,
+      &:focus {
+        --current-color: var(--gv-color-error);
+        --current-background-color: var(--gv-error);
+      }
+    }
+
+    &.warning {
+      --current-color: var(--gv-warning);
+      --current-border-color: var(--gv-warning);
+      &:hover,
+      &:focus {
+        --current-color: var(--gv-color-warning);
+        --current-background-color: var(--gv-warning);
+      }
+    }
+
+    &.info {
+      --current-color: var(--gv-info);
+      --current-border-color: var(--gv-info);
+      &:hover,
+      &:focus {
+        --current-color: var(--gv-color-info);
+        --current-background-color: var(--gv-info);
+      }
+    }
+
+    &.active {
+      --current-color: var(--gv-accent);
+      --current-border-color: var(--gv-accent);
+      &:hover,
+      &:focus {
+        --current-color: var(--gv-color-accent);
+        --current-background-color: var(--gv-accent);
+      }
+    }
+  }
+
+  &.flat {
+    --current-color: var(--gv-color-font);
+    --current-background-color: transparent !important;
+
+    &:focus {
+      @include box-shadow(inset 0 0 0 100px rgba(0, 0, 0, 0.15));
+    }
+
+    &:hover {
+      @include box-shadow(none);
+    }
+  }
+
+  &.plain {
+    height: auto;
+    padding: $default-distance * 0.25;
+    --current-background-color: transparent;
+
+    &:hover {
+      @include box-shadow(none);
+    }
+
+    &:focus {
+      outline-offset: 1px;
+      outline: 2px solid currentColor;
+    }
+
+    & + .gv-btn.plain {
+      margin: 0;
+    }
+  }
+
+  &.process {
+    pointer-events: none;
+
+    &:after {
+      color: inherit;
+      @include d-inline-flex;
+      content: icon.mdi("loading");
+      @include animation.a-rotate;
+      font-family: $font-family-icon;
+    }
+  }
+}
+
+.gv-btn + .gv-btn {
+  margin-left: $default-distance * 0.5;
+}

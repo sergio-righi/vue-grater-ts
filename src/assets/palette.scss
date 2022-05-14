@@ -1,0 +1,133 @@
+﻿@use './utils/colors' as *;
+@use './themes/palette' as p;
+
+.bg-transparent {
+  background-color: transparent !important;
+}
+
+.bg-white {
+  background-color: var(--gv-color-white) !important;
+}
+
+.bg-black {
+  background-color: var(--gv-color-black) !important;
+}
+
+.color-white {
+  color: var(--gv-color-white) !important;
+}
+
+.color-black {
+  color: var(--gv-color-black) !important;
+}
+
+.border-white {
+  border-color: var(--gv-color-white) !important;
+}
+
+.border-black {
+  border-color: var(--gv-color-black) !important;
+}
+
+.bg-primary {
+  background-color: var(--gv-primary);
+}
+
+.bg-accent {
+  background-color: var(--gv-accent);
+}
+
+.color-primary {
+  color: var(--gv-primary);
+}
+
+.color-accent {
+  color: var(--gv-accent);
+}
+
+.border-primary {
+  border-color: var(--gv-primary);
+}
+
+.border-accent {
+  border-color: var(--gv-accent);
+}
+
+.bg-success {
+  background-color: var(--gv-success);
+}
+
+.bg-error {
+  background-color: var(--gv-error);
+}
+
+.color-success {
+  color: var(--gv-success);
+}
+
+.color-error {
+  color: var(--gv-error);
+}
+
+.border-success {
+  border-color: var(--gv-success);
+}
+
+.border-error {
+  border-color: var(--gv-error);
+}
+
+.bg-warning {
+  background-color: var(--gv-warning);
+}
+
+.bg-info {
+  background-color: var(--gv-info);
+}
+
+.color-warning {
+  color: var(--gv-warning);
+}
+
+.color-info {
+  color: var(--gv-info);
+}
+
+.border-warning {
+  border-color: var(--gv-warning);
+}
+
+.border-info {
+  border-color: var(--gv-info);
+}
+
+@each $name, $shades in $palette {
+  $colorname: "#{$name}";
+  @each $key, $value in $shades {
+    @if $key == 500 {
+      .bg-#{$colorname} {
+        background-color: $value !important;
+      }
+
+      .color-#{$colorname} {
+        color: $value !important;
+      }
+
+      .border-#{$colorname} {
+        border-color: $value !important;
+      }
+    } @else {
+      .bg-#{$colorname}-#{$key} {
+        background-color: $value !important;
+      }
+
+      .color-#{$colorname}-#{$key} {
+        color: $value !important;
+      }
+
+      .border-#{$colorname}-#{$key} {
+        border-color: $value !important;
+      }
+    }
+  }
+}

@@ -1,0 +1,193 @@
+@use '../utils/index' as *;
+
+.gv-slider {
+  left: 0;
+  width: 100%;
+  z-index: 11;
+  display: block;
+  min-width: 300px;
+  position: relative;
+  @include block-selection;
+  margin: $default-distance 0;
+
+  &.disabled {
+    opacity: 0.4;
+
+    & > .gv-track {
+      cursor: default;
+    }
+
+    button {
+      cursor: default;
+      pointer-events: none;
+    }
+
+    & > .gv-pointer {
+      &.slider-circle {
+        display: none;
+      }
+    }
+  }
+
+  & > .gv-track {
+    border: 0;
+    margin: 0;
+    width: 100%;
+    height: 4px;
+    display: block;
+    cursor: pointer;
+    overflow: hidden;
+    position: relative;
+    background-color: var(--gv-color-light);
+    @include border-radius($border-radius);
+
+    & > .gv-line {
+      top: 0;
+      left: 0;
+      width: 0;
+      z-index: 1;
+      height: 100%;
+      position: absolute;
+      background-color: var(--gv-primary);
+
+      &.animation-transition {
+        @include transition(all 200ms ease);
+      }
+    }
+
+    & > .gv-line-animation {
+      top: 0;
+      left: 0;
+      width: 0;
+      height: 100%;
+      position: absolute;
+      @include transform(translate(-50%));
+      @include transition(opacity 300ms ease, width 300ms ease);
+
+      &:not(.run-animation) {
+        width: 0 !important;
+        opacity: 0 !important;
+      }
+
+      &.run-animation {
+        width: 100%;
+        @include animation(opacity 300ms ease);
+        animation-iteration-count: 1;
+      }
+    }
+
+    & > .gv-tick {
+      top: 0;
+      width: 4px;
+      left: 100px;
+      height: 100%;
+      position: absolute;
+      @include border-radius($border-radius);
+      background-color: var(--gv-secondary-dark);
+
+      &.last {
+        @include transform(translate(-100%));
+      }
+    }
+  }
+
+  & > .gv-pointer {
+    display: block;
+    @include transform(translate(-50%));
+    background-color: var(--gv-primary);
+    @include transition(
+      box-shadow 200ms ease,
+      transform 200ms ease,
+      border-radius 200ms ease
+    );
+
+    &.equal {
+      &.slider-circle {
+        @include transform(translate(-50%, 6px) scale(0.9) !important);
+        @include border-radius(0 0 $border-radius-circle $border-radius-circle);
+
+        &.line-two {
+          @include transform(translate(-50%, -7px) scale(0.9) !important);
+          @include border-radius(
+            $border-radius-circle $border-radius-circle 0 0
+          );
+        }
+      }
+    }
+
+    &:active {
+      &.slider-circle {
+        & > .gv-text {
+          opacity: 1;
+          visibility: visible;
+          @include transform(
+            translate(-50%, calc(-100% + -8px)) scale(1) rotate(0deg)
+          );
+        }
+      }
+    }
+
+    &.slider-circle {
+      margin: 0;
+      top: -6px;
+      width: 16px;
+      z-index: 11;
+      height: 16px;
+      cursor: pointer;
+      position: absolute;
+      @include border-radius($border-radius-circle);
+      @include box-shadow(inset 0 0 0 2px var(--gv-primary));
+
+      &.animation-transition {
+        @include transition(all 200ms ease);
+      }
+
+      &.line-two {
+        z-index: 10;
+      }
+
+      & > .gv-text {
+        top: 0;
+        left: 50%;
+        opacity: 0;
+        z-index: 12;
+        display: block;
+        @include d-flex;
+        visibility: hidden;
+        position: absolute;
+        pointer-events: none;
+        font-size: $font-size * 0.75;
+        @include align-items(center);
+        color: var(--gv-color-primary);
+        @include justify-content(center);
+        @include transition(all 200ms ease);
+        background-color: var(--gv-primary);
+        @include border-radius($border-radius);
+        @include transform(translate(-50%, -20%) scale(0.3));
+        padding: $default-distance * 0.5 $default-distance * 0.75;
+
+        & > span {
+          margin-left: $default-distance * 0.25;
+        }
+
+        & > i {
+          margin-left: $default-distance * 0.25;
+
+          &:before {
+            font-size: $font-size * 1.125;
+          }
+        }
+      }
+    }
+  }
+}
+
+@keyframes opacity {
+  0% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}

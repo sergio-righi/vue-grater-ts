@@ -1,0 +1,519 @@
+﻿@use '../utils/index' as *;
+@use '../vendors/material-design-icons/functions' as icon;
+
+.gv-video {
+  overflow: hidden;
+  background-color: #000000;
+  @include border-radius($border-radius);
+  @include box-shadow(map-get($box-shadow, 0) var(--gv-color-box-shadow));
+
+  & > .gv-content {
+    height: 100%;
+    position: relative;
+
+    &.undocked {
+      width: 90%;
+      z-index: 8;
+      height: auto;
+      cursor: pointer;
+      position: fixed;
+      right: $default-distance * 0.75;
+      bottom: $default-distance * 0.75;
+      @include box-shadow(map-get($box-shadow, 0) var(--gv-color-box-shadow));
+
+      & > .gv-dismiss {
+        top: $default-distance * 0.5;
+        right: $default-distance * 0.5;
+      }
+
+      &:hover {
+        & > .gv-dismiss {
+          opacity: 1;
+          z-index: 4;
+          visibility: visible;
+        }
+      }
+
+      & > .gv-control {
+        &.configuration {
+          display: none;
+        }
+
+        &.fullscreen {
+          margin-left: auto;
+        }
+      }
+    }
+
+    video {
+      z-index: 1;
+      width: 100%;
+      height: 100%;
+      @include d-flex;
+      position: relative;
+
+      &::-webkit-media-controls-enclosure {
+        display: none !important;
+      }
+
+      &::-webkit-media-controls {
+        display: none !important;
+      }
+    }
+
+    & > .gv-dismiss {
+      opacity: 0;
+      z-index: -1;
+      line-height: 1;
+      position: absolute;
+      top: $default-distance;
+      right: $default-distance;
+
+      &:before {
+        color: #dddddd;
+        content: icon.mdi("close");
+        font-size: $font-size * 1.5;
+        font-family: $font-family-icon;
+      }
+    }
+
+    & > .gv-pip {
+      cursor: pointer;
+
+      &.active {
+        z-index: 6;
+      }
+
+      &:after {
+        line-height: 1;
+        color: #ffffff;
+        @include center-absolute;
+        font-size: $font-size * 5;
+        font-family: $font-family-icon;
+        @include transition(font-size 150ms ease);
+        content: icon.mdi("picture-in-picture-bottom-right");
+      }
+    }
+
+    & > .gv-poster {
+      &.active {
+        z-index: 8;
+        cursor: pointer;
+        background-size: cover;
+        background-repeat: no-repeat;
+
+        &:after {
+          line-height: 1;
+          color: #ffffff;
+          @include center-absolute;
+          content: icon.mdi("play");
+          font-size: $font-size * 5;
+          font-family: $font-family-icon;
+          @include transition(font-size 150ms ease);
+        }
+
+        &:hover {
+          &:after {
+            font-size: $font-size * 6.5;
+          }
+        }
+      }
+    }
+
+    & > .gv-process {
+      background-color: var(--gv-color-overlay);
+
+      &.active {
+        z-index: 7;
+      }
+
+      & > div {
+        @include center-absolute;
+      }
+    }
+
+    & > .gv-configuration {
+      &.active {
+        z-index: 3;
+      }
+
+      & > .gv-menu {
+        bottom: 60px;
+        position: absolute;
+        right: $default-distance * 0.5;
+        padding: $default-distance * 0.5 0;
+        @include border-radius($border-radius);
+        background-color: rgba(28, 28, 28, 0.9);
+        text-shadow: 0 0 2px rgba(0, 0, 0, 0.5);
+
+        & > .gv-header {
+          width: 100%;
+          cursor: pointer;
+          color: #eeeeee;
+          min-height: 35px;
+          line-height: 25px;
+          padding: 0 $default-distance;
+          border-bottom: 1px solid #383838;
+
+          &:before {
+            vertical-align: bottom;
+            font-family: $font-family-icon;
+            content: icon.mdi("chevron-left");
+            margin-right: $default-distance * 0.75;
+          }
+
+          & > .gv-label {
+            font-size: $font-size * 0.75;
+            font-weight: 500;
+            display: inline-block;
+          }
+        }
+
+        & > .gv-content {
+          overflow: auto;
+          @include d-flex;
+          max-height: 300px;
+          @include flex-direction(row);
+        }
+
+        & > .gv-item,
+        & > .gv-content > .gv-item {
+          cursor: pointer;
+          @include d-flex;
+          min-height: 35px;
+          line-height: 1.5;
+          color: #eeeeee;
+          @include align-items(center);
+
+          &.selected {
+            &:before {
+              float: right;
+              content: icon.mdi("check");
+              padding: 0 $default-distance;
+              font-family: $font-family-icon;
+            }
+          }
+
+          & > .gv-property {
+            font-size: $font-size * 0.75;
+            font-weight: 500;
+            @include block-selection;
+            padding: 0 $default-distance * 2 0 $default-distance * 1.25;
+          }
+
+          & > .gv-control {
+            margin-left: auto;
+            pointer-events: none;
+            padding: 0 $default-distance 0 $default-distance * 1.25;
+
+            span {
+              font-size: $font-size * 0.75;
+              text-align: right;
+            }
+          }
+
+          &:hover {
+            background-color: rgba(255, 255, 255, 0.1);
+          }
+        }
+      }
+    }
+
+    & > .gv-toolbar {
+      @include d-flex;
+      top: initial !important;
+      @include flex-wrap(wrap);
+      @include box-shadow(inset 0 -85px 60px -30px rgba(8, 8, 8, 0.6));
+
+      &.active {
+        z-index: 6;
+      }
+
+      & > .gv-progress {
+        width: 100%;
+        height: 5px;
+        cursor: pointer;
+        position: relative;
+        @include transform(scaleY(0.6));
+        margin: 0 $default-distance * 0.5;
+        @include border-radius($border-radius);
+        background-color: rgba(100, 100, 100, 0.5);
+
+        &:hover,
+        &.active {
+          @include transform(scaleY(1));
+
+          & > .gv-bar {
+            & > .gv-pointer {
+              visibility: visible;
+            }
+          }
+        }
+
+        & > .gv-padding {
+          width: 100%;
+          z-index: 28;
+          height: 35px;
+          bottom: -15px;
+          position: absolute;
+        }
+
+        & > .gv-frame {
+          opacity: 0;
+          z-index: -1;
+          bottom: 25px;
+          visibility: hidden;
+          position: absolute;
+
+          &:before {
+            color: white;
+            font-size: $font-size * 0.8125;
+            content: attr(aria-value);
+            background-color: #383838;
+            @include border-radius($border-radius);
+            padding: $default-distance * 0.25 $default-distance * 0.75;
+          }
+
+          &.active {
+            opacity: 1;
+            z-index: 1;
+            visibility: visible;
+          }
+        }
+
+        & > .gv-buffer {
+          z-index: 1;
+          background-color: rgba(255, 255, 255, 0.5);
+        }
+
+        & > .gv-bar {
+          z-index: 2;
+          background-color: #ffffff;
+
+          & > .gv-pointer {
+            top: 50%;
+            width: 12px;
+            height: 12px;
+            visibility: hidden;
+            position: absolute;
+            pointer-events: none;
+            left: calc(100% - 6px);
+            background-color: #ffffff;
+            @include transform(translateY(-50%));
+            @include border-radius($border-radius-circle);
+          }
+        }
+
+        & > .gv-buffer,
+        & > .gv-bar {
+          top: 0;
+          left: 0;
+          bottom: 0;
+          height: 100%;
+          position: absolute;
+          pointer-events: none;
+        }
+      }
+
+      
+      & > .gv-volume {
+        @include d-inline-flex;
+        @include align-items(center);
+
+        &.active {
+          & > .gv-progress {
+            display: block;
+          }
+        }
+
+        & > .gv-progress {
+          width: 50px;
+          height: 4px;
+          display: none;
+          cursor: pointer;
+          margin: 0 $default-distance * 0.5;
+          @include border-radius($border-radius);
+          background-color: rgba(150, 150, 150, 0.5);
+
+          & > .gv-bar {
+            height: 100%;
+            position: relative;
+            background-color: #ffffff;
+            @include border-radius($border-radius);
+
+            & > .gv-pointer {
+              top: 50%;
+              width: 12px;
+              height: 12px;
+              position: absolute;
+              left: calc(100% - 6px);
+              background-color: #ffffff;
+              @include transform(translateY(-50%));
+              @include border-radius($border-radius-circle);
+            }
+          }
+        }
+      }
+
+      & > .gv-control,
+      & > .gv-volume > .gv-control {
+        padding: 0;
+        opacity: 0.8;
+        line-height: 1;
+        cursor: pointer;
+        color: #ffffff;
+        position: relative;
+        @include block-selection;
+        @include box-shadow(initial);
+        background-color: transparent;
+        margin: 0 $default-distance * 0.5;
+
+        &:focus {
+          outline: none;
+        }
+
+        &.configuration {
+          margin-left: auto;
+          @include transition(transform 150ms ease-out);
+
+          &.active {
+            @include transform(rotate(30deg));
+          }
+        }
+
+        &.play,
+        &.pause,
+        &.popup,
+        &.replay,
+        &.volume-low,
+        &.volume-off,
+        &.fullscreen,
+        &.volume-high,
+        &.configuration,
+        &.volume-medium,
+        &.fullscreen-exit {
+          font-size: $font-size * 1.5;
+
+          &:before {
+            font-family: $font-family-icon;
+          }
+
+          &:hover:before {
+            opacity: 1;
+            @include transition(opacity 300ms ease-out);
+          }
+        }
+
+        &.play:before {
+          content: icon.mdi("play");
+        }
+
+        &.pause:before {
+          content: icon.mdi("pause");
+        }
+
+        &.replay:before {
+          content: icon.mdi("replay");
+        }
+
+        &.configuration:before {
+          content: icon.mdi("cog");
+        }
+
+        &.popup:before {
+          content: icon.mdi("picture-in-picture-bottom-right");
+        }
+
+        &.fullscreen:before {
+          content: icon.mdi("fullscreen");
+        }
+
+        &.fullscreen-exit:before {
+          content: icon.mdi("fullscreen-exit");
+        }
+
+        &.volume-low:before {
+          content: icon.mdi("volume-low");
+        }
+
+        &.volume-medium:before {
+          content: icon.mdi("volume-medium");
+        }
+
+        &.volume-high:before {
+          content: icon.mdi("volume-high");
+        }
+
+        &.volume-off:before {
+          content: icon.mdi("volume-off");
+        }
+      }
+
+      & > .gv-time {
+        @include d-inline-flex;
+        @include align-items(center);
+        margin: 0 $default-distance * 0.5;
+
+        & > .gv-current,
+        & > .gv-duration {
+          color: #dddddd;
+          font-size: $font-size * 0.75;
+          font-weight: 400;
+        }
+
+        & > .gv-separator {
+          &:before {
+            content: "/";
+            color: #dddddd;
+            margin: 0 $default-distance * 0.25;
+          }
+        }
+      }
+    }
+
+    & > .gv-pip,
+    & > .gv-poster,
+    & > .gv-toolbar,
+    & > .gv-process,
+    & > .gv-configuration {
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      opacity: 0;
+      z-index: -1;
+      visibility: hidden;
+      position: absolute;
+      @include block-selection;
+      @include transition(opacity 200ms linear);
+
+      &.active {
+        opacity: 1;
+        visibility: visible;
+      }
+    }
+  }
+}
+
+@media (min-width: $media-sm) {
+  .gv-video {
+    & > .gv-content {
+      &.undocked {
+        width: 30%;
+      }
+
+      & > .gv-configuration {
+        & > .gv-menu {
+          bottom: 60px;
+          right: $default-distance * 0.5;
+        }
+      }
+
+      & > .gv-toolbar {
+        & > .gv-control {
+          font-size: $font-size * 0.875;
+        }
+      }
+    }
+  }
+}

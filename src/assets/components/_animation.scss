@@ -1,0 +1,95 @@
+@use '../utils/index' as *;
+
+.gv-animation {
+  all: inherit;
+  margin: 0;
+  padding: 0;
+
+  &.animatable {
+    visibility: hidden;
+    @include animation-play-state(paused);
+  }
+  
+  &.animated {
+    visibility: visible;
+    @include animation-duration(1s);
+    @include animation-fill-mode(both);
+    @include animation-play-state(running);
+  }
+}
+
+.bounce-in {
+  @include animation-name(bounce-in);
+}
+
+.bounce-in-left {
+  @include animation-name(bounce-in-left);
+}
+
+.bounce-in-right {
+  @include animation-name(bounce-in-right);
+}
+
+.fade-in {
+  @include animation-name(fade-in);
+}
+
+.fade-in-up {
+  @include animation-name(fade-in-up);
+}
+
+.fade-in-down {
+  @include animation-name(fade-in-down);
+}
+
+.fade-in-right {
+  @include animation-name(fade-in-right);
+}
+
+.fade-in-left {
+  @include animation-name(fade-in-left);
+}
+
+.fade-out {
+  @include animation-name(fade-out);
+}
+
+.scale-in {
+  @include animation-name(scale-in);
+}
+
+.scale-in-up {
+  @include animation-name(scale-in-up);
+}
+
+.scale-in-down {
+  @include animation-name(scale-in-down);
+}
+
+.scale-out {
+  @include animation-name(scale-out);
+}
+
+.slide-in-up {
+  @include animation-name(slide-in-up);
+}
+
+.slide-in-down {
+  @include animation-name(slide-in-down);
+}
+
+.slide-in-left {
+  @include animation-name(slide-in-left);
+}
+
+.slide-in-right {
+  @include animation-name(slide-in-right);
+}
+
+.slide-out-up {
+  @include animation-name(slide-out-up);
+}
+
+.slide-out-down {
+  @include animation-name(slide-out-down);
+}

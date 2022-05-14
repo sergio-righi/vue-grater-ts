@@ -1,0 +1,11 @@
+@function family($file, $weight: normal, $style: normal) {
+  @return ("filename": $file, "weight": $weight, "style": $style);
+}
+
+@function map-get-strict($map, $key) {
+  @if map-has-key($map, $key) {
+    @return map-get($map, $key);
+  } @else {
+    @error "ERROR: Specified index does not exist in the mapping";
+  }
+}

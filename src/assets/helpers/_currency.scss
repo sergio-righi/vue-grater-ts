@@ -1,0 +1,44 @@
+﻿.currency {
+
+  &.real:before {
+    content: "R$";
+  }
+
+  &.euro:before {
+    content: "€";
+  }
+
+  &.dolar:before {
+    content: "US$";
+  }
+
+  &.cad:before {
+    content: "C$";
+  }
+
+  &.aud:before {
+    content: "A$";
+  }
+
+  &.yen:before {
+    content: "¥";
+  }
+
+  &.won:before {
+    content: "₩";
+  }
+
+  &.pound:before {
+    content: "£";
+  }
+
+  &.rupee:before {
+    content: "₹";
+  }
+  
+  &:before {
+    margin-left: 6px;
+    margin-right: 4px;
+    content: attr(data-currency);
+  }
+}

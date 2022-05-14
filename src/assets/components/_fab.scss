@@ -1,0 +1,246 @@
+@use '../utils/index' as *;
+
+.gv-fab {
+  z-index: 50;
+  width: 50px;
+  position: fixed;
+  @include d-flex;
+  right: $default-distance;
+  bottom: $default-distance;
+  @include align-items(center);
+  @include flex-direction(column);
+
+  &.active {
+    height: auto;
+
+    & > .gv-trigger {
+      .fab-on {
+        @include animation(open_in 150ms forwards linear);
+      }
+
+      .fab-off {
+        @include animation(close_in 200ms forwards);
+      }
+    }
+
+    & > .gv-item {
+      @include animation(item_in 100ms forwards linear);
+
+      &:nth-child(1) {
+        @include animation-delay(200ms);
+      }
+
+      &:nth-child(2) {
+        @include animation-delay(150ms);
+      }
+
+      &:nth-child(3) {
+        @include animation-delay(75ms);
+      }
+
+      &:nth-child(4) {
+        @include animation-delay(50ms);
+      }
+
+      &:nth-child(4) {
+        @include animation-delay(25ms);
+      }
+
+      &:nth-child(5) {
+        @include animation-delay(0ms);
+      }
+    }
+  }
+
+  &.horizontal {
+    width: auto;
+    height: 50px;
+    @include flex-direction(unset);
+    @include justify-content(flex-end);
+
+    & > .gv-item {
+      margin-bottom: 0;
+      margin-right: $default-distance;
+    }
+  }
+
+  &.sm {
+    & > .gv-trigger {
+      width: 40px;
+    }
+
+    & > .gv-item {
+      width: 30px;
+      height: 30px;
+    }
+  }
+
+  &.lg {
+    & > .gv-trigger {
+      width: 60px;
+    }
+
+    & > .gv-item {
+      width: 50px;
+      height: 60px;
+    }
+  }
+
+  & > .gv-item {
+    width: 40px;
+    height: 40px;
+    z-index: 300;
+    cursor: pointer;
+    overflow: hidden;
+    text-align: center;
+    position: relative;
+    @include d-inline-flex;
+    @include block-selection;
+    @include box-shadow-default;
+    @include transform(scale(0));
+    margin-bottom: $default-distance;
+    background-color: var(--gv-secondary-light);
+    @include animation(item_out forwards linear);
+    @include border-radius($border-radius-circle);
+
+    & > * {
+      width: inherit;
+      display: inherit;
+    }
+
+    & > i {
+      @include align-items(center);
+      @include justify-content(center);
+    }
+  }
+
+  & > .gv-trigger {
+    width: 50px;
+    cursor: pointer;
+    position: relative;
+    @include d-inline-flex;
+    @include box-shadow-default;
+    color: var(--gv-color-accent);
+    background-color: var(--gv-accent);
+    @include border-radius($border-radius-circle);
+
+    &:before {
+      height: 0;
+      content: "";
+      width: 100%;
+      display: block;
+      padding-bottom: 100%;
+    }
+
+    &:after {
+      height: 0;
+      content: "";
+      width: 100%;
+      display: block;
+      padding-bottom: 100%;
+    }
+
+    .fab-on {
+      @include transition(all 300ms);
+      @include animation(open_out 300ms);
+    }
+
+    .fab-off {
+      opacity: 0;
+      @include transition(all 300ms);
+      @include transform(rotateZ(-70deg));
+      @include animation(close_out 300ms);
+    }
+
+    .fab-on,
+    .fab-off,
+    .fab-icon {
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      @include d-flex;
+      position: absolute;
+      @include align-items(center);
+      @include justify-content(center);
+      i {
+        &:before {
+          font-size: $font-size * 1.5;
+        }
+      }
+    }
+  }
+}
+
+@keyframes close_in {
+  from {
+    opacity: 0;
+    @include transform(rotateZ(-70deg));
+  }
+
+  to {
+    opacity: 1;
+    @include transform(rotateZ(0deg));
+  }
+}
+
+@keyframes close_out {
+  from {
+    opacity: 1;
+    @include transform(rotateZ(0deg));
+  }
+
+  to {
+    opacity: 0;
+    @include transform(rotateZ(-70deg));
+  }
+}
+
+@keyframes open_in {
+  from {
+    opacity: 1;
+    @include transform(rotateZ(0deg));
+  }
+
+  to {
+    opacity: 0;
+    @include transform(rotateZ(180deg));
+  }
+}
+
+@keyframes open_out {
+  from {
+    opacity: 0;
+    @include transform(rotateZ(180deg));
+  }
+
+  to {
+    opacity: 1;
+    @include transform(rotateZ(0deg));
+  }
+}
+
+@keyframes item_in {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+    @include transform(scale(1));
+  }
+}
+
+@keyframes item_out {
+  from {
+    opacity: 1;
+    @include transform(scale(1));
+  }
+
+  to {
+    width: 0;
+    margin: 0;
+    opacity: 0;
+    @include transform(scale(0));
+  }
+}

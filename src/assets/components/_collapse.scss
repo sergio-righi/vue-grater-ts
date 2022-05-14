@@ -1,0 +1,152 @@
+﻿@use '../utils/index' as *;
+
+.gv-collapse {
+  width: 100%;
+
+  & > .gv-item {
+    margin-bottom: $default-distance * 0.25;
+  }
+
+  &:not(.hidden) {
+    & > .gv-item.active {
+      & > .gv-header {
+        & > .gv-leading {
+          @include transform(rotate(-180deg));
+        }
+      }
+    }
+  }
+
+  &.outline {
+    & > .gv-item {
+      & > .gv-header {
+        background-color: transparent;
+        &:hover {
+          background-color: var(--gv-secondary-light);
+        }
+      }
+
+      & > .gv-item:not(.active) {
+        & > .gv-header {
+          background-color: transparent;
+        }
+      }
+    }
+  }
+
+  & > .gv-item {
+    & > .gv-header {
+      width: 100%;
+      cursor: pointer;
+      @include d-flex;
+      @include block-selection;
+      color: var(--current-color);
+      @include align-items(center);
+      --current-color: var(--gv-color-font);
+      @include border-radius($border-radius);
+      @include transition(background-color 300ms ease);
+      background-color: var(--current-background-color);
+      padding: $default-distance * 0.75 $default-distance;
+      --current-background-color: var(--gv-secondary-light);
+
+      &:hover,
+      &:focus {
+        z-index: 5;
+        position: relative;
+      }
+
+      &:hover {
+        --current-background-color: var(--gv-secondary);
+      }
+
+      &:focus {
+        outline-offset: 1px;
+        outline: 2px solid var(--current-background-color);
+      }
+
+      & > .gv-title {
+        margin-right: auto;
+        pointer-events: none;
+        line-height: $line-height;
+        font-size: $font-size * 0.875;
+
+        small {
+          opacity: 0.7;
+          display: block;
+          line-height: 1;
+          font-size: $font-size * 0.75;
+        }
+      }
+
+      & > .gv-leading {
+        line-height: 1;
+        position: relative;
+        pointer-events: none;
+        margin-right: $default-distance * 0.5;
+
+        i {
+          @include transform(rotate(0deg));
+          @include transition(all 300ms ease);
+        }
+      }
+
+      & > .gv-trailing {
+        @include d-inline-flex;
+      }
+    }
+
+    & > .gv-content {
+      max-height: 0;
+      overflow: hidden;
+      position: relative;
+      line-height: $line-height;
+      color: var(--gv-color-font);
+      background-color: var(--gv-color-theme);
+      @include transition(max-height 300ms ease);
+      @include border-radius(0 0 $border-radius $border-radius);
+      @include box-shadow(inset 0 0 0 1px var(--gv-color-border));
+
+      p {
+        padding-left: $default-distance;
+        padding-right: $default-distance;
+
+        &:first-child {
+          margin-top: $default-distance * 0.75;
+        }
+      }
+
+      & > .gv-collapse > .gv-item {
+        margin-bottom: 0;
+        @include border-radius(0);
+
+        & .gv-header {
+          border: 0;
+          color: var(--gv-color-font);
+          @include border-radius(0);
+          background-color: var(--gv-secondary-light);
+
+          &:focus {
+            outline: none;
+            background-color: var(--gv-secondary);
+          }
+        }
+
+        &:not(:last-child) {
+          border-bottom: 1px solid var(--gv-color-border);
+        }
+      }
+    }
+
+    &.active {
+      & > .gv-header {
+        --current-color: var(--gv-color-primary);
+        --current-background-color: var(--gv-primary);
+        @include border-radius($border-radius $border-radius 0 0);
+      }
+
+      & > .gv-content {
+        max-height: 1000px;
+      }
+    }
+  }
+}

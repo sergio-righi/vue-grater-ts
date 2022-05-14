@@ -1,0 +1,19 @@
+﻿.fit-contain {
+  -o-object-fit: contain;
+  object-fit: contain;
+}
+
+.fit-cover {
+  -o-object-fit: cover;
+  object-fit: cover;
+}
+
+.fit-top {
+  -o-object-position: top;
+  object-position: top;
+}
+
+.fit-center {
+  -o-object-position: center;
+  object-position: center;
+}

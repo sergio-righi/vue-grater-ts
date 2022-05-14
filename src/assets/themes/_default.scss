@@ -1,0 +1,27 @@
+@use "../utils/colors" as *;
+
+:root {
+  --gv-primary: #{map-get($primary, "background")};
+  --gv-color-primary: #{map-get($primary, "color")};
+
+  --gv-accent: #{map-get($accent, "background")};
+  --gv-color-accent: #{map-get($accent, "color")};
+
+  --gv-color-dark: #{$color-dark};
+  --gv-color-light: #{$color-light};
+
+  --gv-color-overlay-dark: #{$color-overlay-dark};
+  --gv-color-overlay: #{$color-overlay-light};
+
+  --gv-success: #{map-get($success, "background")};
+  --gv-color-success: #{map-get($success, "color")};
+
+  --gv-error: #{map-get($error, "background")};
+  --gv-color-error: #{map-get($error, "color")};
+
+  --gv-warning: #{map-get($warning, "background")};
+  --gv-color-warning: #{map-get($warning, "color")};
+
+  --gv-info: #{map-get($info, "background")};
+  --gv-color-info: #{map-get($info, "color")};
+}

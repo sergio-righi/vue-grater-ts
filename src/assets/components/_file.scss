@@ -1,0 +1,84 @@
+﻿@use '../utils/index' as *;
+@use '../vendors/material-design-icons/functions' as icon;
+
+[class^="gv-file-icon-"] {
+  &:before {
+    font-style: normal;
+    vertical-align: sub;
+    font-size: $font-size * 1.5;
+    font-family: $font-family-icon;
+  }
+}
+
+.gv-file-icon-7z,
+.gv-file-icon-pkg,
+.gv-file-icon-zip,
+.gv-file-icon-rar {
+  &:before {
+    color: #ffe590;
+    content: icon.mdi("zip-box");
+  }
+}
+
+.gv-file-icon-pdf {
+  &:before {
+    color: #e41e00;
+    content: icon.mdi("file-pdf-box");
+  }
+}
+
+.gv-file-icon-odt,
+.gv-file-icon-doc,
+.gv-file-icon-word,
+.gv-file-icon-docx {
+  &:before {
+    color: #295598;
+    content: icon.mdi("file-word-box");
+  }
+}
+
+.gv-file-icon-rtf,
+.gv-file-icon-txt {
+  &:before {
+    content: icon.mdi("file-document");
+  }
+}
+
+.gv-file-icon-ppt,
+.gv-file-icon-pps,
+.gv-file-icon-key,
+.gv-file-icon-odp,
+.gv-file-icon-pptx,
+.gv-file-icon-ppsx,
+.gv-file-icon-powerpoint {
+  &:before {
+    color: #d04626;
+    content: icon.mdi("file-powerpoint-box");
+  }
+}
+
+.gv-file-icon-xlr,
+.gv-file-icon-ods,
+.gv-file-icon-csv,
+.gv-file-icon-xls,
+.gv-file-icon-xlsx,
+.gv-file-icon-excel {
+  &:before {
+    color: #1f7246;
+    content: icon.mdi("file-excel-box");
+  }
+}
+
+.gv-file-icon-svg,
+.gv-file-icon-ico,
+.gv-file-icon-bmp,
+.gv-file-icon-gif,
+.gv-file-icon-jpg,
+.gv-file-icon-png,
+.gv-file-icon-img,
+.gv-file-icon-jpeg {
+  &:before {
+    color: #0094ff;
+    content: icon.mdi("image");
+  }
+}

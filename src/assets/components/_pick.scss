@@ -1,0 +1,159 @@
+@use '../utils/index' as *;
+
+.gv-pick {
+  width: 100%;
+  margin: 0 auto;
+  @include d-flex;
+  overflow: hidden;
+  position: relative;
+  padding: $default-distance;
+  @include flex-direction(column);
+
+  &.loading {
+    height: 100%;
+    max-width: 100%;
+    display: inline-block;
+
+    & > .gv-content > .gv-process {
+      opacity: 1;
+    }
+  }
+
+  & > .gv-content {
+    width: 100%;
+    height: 350px;
+    max-height: 100%;
+    position: relative;
+    @include block-selection;
+
+    & > .gv-process {
+      top: 0;
+      left: 0;
+      z-index: 0;
+      opacity: 0;
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      @include transition(opacity 150ms ease-in-out);
+
+      & > * {
+        @include center-absolute;
+      }
+    }
+
+    & > .gv-wrap {
+      z-index: 1;
+      width: 100%;
+      height: 100%;
+      @include d-flex;
+      max-width: 100%;
+      position: relative;
+      gap: $default-distance;
+
+      & > .gv-list {
+        width: 50%;
+        height: 100%;
+        max-width: 100%;
+        position: relative;
+
+        &:first-child {
+          & > .gv-item {
+            &.animate-dismiss {
+              @include transform(translateX(-50rem));
+            }
+          }
+        }
+
+        &:last-child {
+          & > .gv-item {
+            &.animate-dismiss {
+              @include transform(translateX(50rem));
+            }
+          }
+        }
+
+        & > .gv-item {
+          top: 0;
+          left: 0;
+          z-index: 2;
+          width: 100%;
+          height: 100%;
+          cursor: pointer;
+          overflow: hidden;
+          position: absolute;
+          @include border-radius($border-radius);
+
+          &.animate-dismiss {
+            @include transition(transform 200ms);
+          }
+
+          & > .gv-image {
+            height: 100%;
+            color: white;
+            pointer-events: none;
+
+            & > img {
+              width: 100%;
+              object-fit: cover;
+            }
+          }
+
+          & > .gv-choice {
+            top: 0;
+            left: 0;
+            opacity: 0;
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            pointer-events: none;
+            @include transition(opacity 150ms ease-in-out);
+
+            &.nope {
+              background: var(--gv-color-red);
+              & > i {
+                color: var(--gv-color-white);
+              }
+            }
+
+            &.yep {
+              background: var(--gv-color-green);
+              & > i {
+                color: var(--gv-color-white);
+              }
+            }
+
+            &.yep,
+            &.nope {
+              opacity: 0.7;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  & > .gv-footer {
+    z-index: 3;
+    width: 50%;
+    gap: $default-distance;
+    @include d-inline-flex;
+    @include horizontal-absolute;
+    bottom: $default-distance * 2;
+    padding: $default-distance * 0.75;
+    margin-top: $default-distance * 0.75;
+    @include justify-content(space-evenly);
+    @include border-radius($border-radius);
+
+    & > i {
+      width: 50px;
+      height: 50px;
+      cursor: pointer;
+      line-height: 50px;
+      text-align: center;
+      font-size: $font-size * 2;
+      color: var(--gv-color-font);
+      @include border-radius($border-radius);
+      background-color: var(--gv-secondary-light);
+    }
+  }
+}

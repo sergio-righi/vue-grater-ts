@@ -1,0 +1,87 @@
+@use '../utils/index' as *;
+
+@mixin a-fade-out($duration: 500ms) {
+  @include animation(fade-out $duration ease-in forwards);
+}
+
+@mixin a-fade-in($duration: 500ms) {
+  @include animation(fade-in $duration ease-in forwards);
+}
+
+@mixin a-fade-in-up($duration: 500ms) {
+  @include animation(fade-in-up $duration ease-in forwards);
+}
+
+@mixin a-fade-in-down($duration: 500ms) {
+  @include animation(fade-in-down $duration ease-in forwards);
+}
+
+@include keyframes(fade-out) {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+@include keyframes(fade-in) {
+  0% {
+    opacity: 0;
+  }
+  60% {
+    opacity: 0;
+  }
+  20% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@include keyframes(fade-in-up) {
+  0% {
+    opacity: 0;
+    transform: translateY(100px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@include keyframes(fade-in-down) {
+  0% {
+    opacity: 0;
+    transform: translateY(-100px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@include keyframes(fade-in-right) {
+  0% {
+    opacity: 0;
+    transform: translateX(-100px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@include keyframes(fade-in-left) {
+  0% {
+    opacity: 0;
+    transform: translateX(100px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
