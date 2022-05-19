@@ -3,9 +3,9 @@
 </template>
 
 <script>
-import { color } from "@/utils";
+import {color} from '@/utils';
 export default {
-  name: "gv-icon",
+  name: 'gv-icon',
   props: {
     value: {
       type: String,
@@ -13,10 +13,11 @@ export default {
     },
     size: String,
     color: String,
+    disabled: Boolean,
   },
   data() {
     return {
-      prefix: "mdi mdi",
+      prefix: 'mdi mdi',
     };
   },
   computed: {
@@ -27,12 +28,12 @@ export default {
       return color.getFontColor(this.color);
     },
     style() {
-      return this.size ? { "font-size": this.size } : null;
+      return this.size ? {'font-size': this.size} : null;
     },
   },
   methods: {
     onClick: function (event) {
-      this.$emit("onclick", event);
+      this.disabled ? null : this.$emit('onclick', event);
     },
   },
 };
