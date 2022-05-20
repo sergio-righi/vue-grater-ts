@@ -1,3 +1,5 @@
+import "./assets/default.scss";
+
 // src/index.ts
 import * as components from "./components"
 import * as directives from "./directives"

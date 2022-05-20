@@ -1,6 +1,6 @@
 {
-  "name": "grater-vue-ts",
-  "version": "0.0.1-alpha",
+  "name": "grater-vue-ts1",
+  "version": "0.0.4-alpha",
   "files": [
     "dist"
   ],
@@ -17,7 +17,7 @@
     "docs:dev": "vuepress dev docs",
     "docs:build": "vuepress build docs",
     "serve": "vue-cli-service serve",
-    "build": "vue-cli-service build --target lib --name grater-vue-ts src/index.ts "
+    "build": "vue-cli-service build --target lib --name grater-vue-ts src/index.ts"
   },
   "peerDependencies": {
     "vue": "^2.6.14"
@@ -27,10 +27,13 @@
     "module-alias": "^2.2.2"
   },
   "devDependencies": {
+    "@babel/core": "^7.18.0",
     "@types/node": "^16.11.9",
+    "@vue/cli-plugin-babel": "^5.0.4",
     "@vue/cli-plugin-router": "~5.0.0",
     "@vue/cli-plugin-typescript": "~5.0.0",
     "@vue/cli-service": "^5.0.4",
+    "babel-loader": "^8.2.5",
     "copy-webpack-plugin": "^10.2.4",
     "eslint": "^8.15.0",
     "eslint-plugin-vue": "^8.7.1",
@@ -43,7 +46,9 @@
     "vue-tsc": "^0.29.5",
     "vuepress": "^1.9.7",
     "vuepress-plugin-typescript": "^0.3.1",
-    "vuepress-types": "^0.9.4"
+    "vuepress-types": "^0.9.4",
+    "webpack": "^4.46.0",
+    "webpack-cli": "^4.9.2"
   },
   "_moduleAliases": {
     "@": "src",

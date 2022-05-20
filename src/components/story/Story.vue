@@ -68,11 +68,9 @@ export default {
     };
   },
   mounted() {
+    this.bind();
     this.calculateHeight();
     this.run();
-  },
-  created() {
-    this.bind();
   },
   beforeDestroy() {
     this.unbind();

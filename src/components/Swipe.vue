@@ -102,7 +102,7 @@ export default {
       return this.remain - 1;
     },
   },
-  created() {
+  mounted() {
     this.bind();
   },
   beforeDestroy() {

@@ -19,6 +19,7 @@ export { default as GraterDropdownItem } from "./dropdown/DropdownItem.vue";
 export { default as GraterDropzone } from "./dropzone/Dropzone.vue";
 export { default as GraterDropzoneItem } from "./dropzone/DropzoneItem.vue";
 export { default as GraterDropzoneUpload } from "./dropzone/Upload.vue";
+// export { default as GraterEditor } from "./editor/Editor.vue";
 export { default as GraterFab } from "./fab/Fab.vue";
 export { default as GraterFabItem } from "./fab/FabItem.vue";
 export { default as GraterFile } from "./form/File.vue";
