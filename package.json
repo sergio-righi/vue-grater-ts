@@ -1,6 +1,6 @@
 {
-  "name": "grater-vue-ts1",
-  "version": "0.0.5-alpha",
+  "name": "grater-vue-ts",
+  "version": "0.0.1-alpha",
   "files": [
     "dist"
   ],
