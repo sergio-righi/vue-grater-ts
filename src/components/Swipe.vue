@@ -140,8 +140,8 @@ export default {
       }
     },
     release: function () {
+      let to = 'right';
       let swiped = false;
-      let direction = 'right';
       const elementTarget =
         this.elementTarget ?? this.$refs.items[this.current];
       const direction = Math.abs(this.distanceX) > Math.abs(this.distanceY);
@@ -155,17 +155,17 @@ export default {
       } else if (distance <= -this.decisionVal) {
         if (direction) {
           elementTarget.classList.add('to-left');
-          direction = 'left';
+          to = 'left';
         } else if (this.upward) {
           elementTarget.classList.add('to-top');
-          direction = 'up';
+          to = 'up';
         }
         swiped = true;
       }
 
       if (swiped) {
         elementTarget.classList.add('inactive');
-        this.$emit('onswipe', this.items[this.current], direction);
+        this.$emit('onswipe', this.items[this.current], to);
 
         setTimeout(() => {
           elementTarget.classList.remove(
