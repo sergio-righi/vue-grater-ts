@@ -1,5 +1,5 @@
 <template>
-  <gv-pick :items="items" :duration="1000" @onpick="onPick" />
+  <gv-pick :items="items" :duration="5000" @onpick="onPick" />
 </template>
 
 <script>
