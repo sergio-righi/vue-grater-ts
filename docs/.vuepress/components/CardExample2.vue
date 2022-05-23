@@ -3,8 +3,8 @@
     <gv-col :sm="6">
       <gv-card overflow color="white">
         <template #content>
-          <gv-image src="/img/landscape/img_2.jpg">
-            <gv-position lg overlay>imagem_bg.jpg</gv-position>
+          <gv-image src="/img/landscape/img_2.jpg" top>
+            imagem_bg.jpg
           </gv-image>
         </template>
       </gv-card>

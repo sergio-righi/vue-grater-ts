@@ -5,7 +5,6 @@
   margin: 0 auto;
   max-height: 100%;
   position: relative;
-  padding: $default-distance;
 
   & > .gv-content {
     width: 100%;
@@ -71,11 +70,13 @@
           & > .gv-image {
             @include flex(1);
             overflow: hidden;
-          }
 
-          & > .gv-description {
-            text-align: center;
-            font-size: $font-size * 1.5;
+            & > .gv-inner > .gv-content > .gv-description {
+              font-weight: 300;
+              letter-spacing: 0.035rem;
+              font-size: $font-size * 1.5;
+              color: var(--gv-color-white);
+            }
           }
         }
 

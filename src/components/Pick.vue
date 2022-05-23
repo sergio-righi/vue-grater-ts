@@ -1,6 +1,6 @@
 <template>
   <div class="gv-pick" :class="{loading: isLoading}">
-    <div class="gv-content">
+    <div class="gv-content" :style="{height: `${height}px`}">
       <div v-if="hasValue" class="gv-wrap">
         <div class="gv-list">
           <div
@@ -13,9 +13,9 @@
               :src="itemL.src"
               @onerror="swipeSkip"
             >
-              <gv-inset v-if="'name' in itemL" lg overlay>
-                {{ itemL.name }}
-              </gv-inset>
+              <template v-if="'description' in itemL">
+                {{ itemL.description }}
+              </template>
             </gv-image>
             <div
               class="gv-choice"
@@ -37,9 +37,9 @@
               :src="itemR.src"
               @onerror="swipeSkip"
             >
-              <gv-inset v-if="'name' in itemR" lg overlay>
-                {{ itemR.name }}
-              </gv-inset>
+              <template v-if="'description' in itemR">
+                {{ itemR.description }}
+              </template>
             </gv-image>
             <div
               class="gv-choice"
@@ -71,15 +71,21 @@ export default {
       default: 5,
       type: Number,
     },
+    height: {
+      default: null,
+      type: [Number, String],
+    },
     items: Array,
     shuffle: {
       default: true,
       type: Boolean,
     },
     contest: Boolean,
+    validation: Function,
   },
   data() {
     return {
+      count: 0,
       itemL: {},
       itemR: {},
       indexL: -1,
@@ -110,8 +116,17 @@ export default {
       this.indexR = -1;
 
       if (length > 1) {
-        this.indexL = this.random(length);
-        this.indexR = this.random(length, this.indexL);
+        const indexL = this.random(length);
+        const indexR = this.random(length, this.indexL);
+        const isValid =
+          this.validation !== undefined
+            ? ++this.count > 100
+              ? true
+              : this.validation(indexL, indexR)
+            : true;
+        isValid
+          ? ((this.indexL = indexL), (this.indexR = indexR), (this.count = 0))
+          : this.sort();
       }
     },
     move: function (direction) {
@@ -119,12 +134,12 @@ export default {
         this.elms.left.choice = true;
         this.elms.right.choice = false;
 
-        this.$emit('onpick', this.itemL);
+        this.$emit('onpick', this.itemL, this.itemR);
       } else {
         this.elms.left.choice = false;
         this.elms.right.choice = true;
 
-        this.$emit('onpick', this.itemR);
+        this.$emit('onpick', this.itemR, this.itemL);
       }
 
       setTimeout(() => {
@@ -169,8 +184,8 @@ export default {
     },
   },
   watch: {
-    items() {
-      this.items.length === 0 ? this.sort() : null;
+    items(val, oldVal) {
+      oldVal.length === 0 ? this.sort() : null;
     },
     indexL(val) {
       this.itemL = val >= 0 ? {...this.items[val]} : {};

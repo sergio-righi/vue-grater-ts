@@ -6,7 +6,6 @@
   @include d-flex;
   overflow: hidden;
   position: relative;
-  padding: $default-distance;
   @include flex-direction(column);
 
   &.loading {

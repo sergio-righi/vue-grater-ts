@@ -15,8 +15,11 @@
           @mousedown="handleMouseStart"
         >
           <div class="gv-content">
-            <gv-image v-if="'src' in item" :src="item.src" />
-            <div class="gv-description">{{ item.description }}</div>
+            <gv-image v-if="'src' in item" :src="item.src" top>
+              <div v-if="'description' in item" class="gv-description">
+                {{ item.description }}
+              </div>
+            </gv-image>
           </div>
           <div class="gv-choice up">
             <gv-icon :value="upIcon" />
@@ -138,6 +141,7 @@ export default {
     },
     release: function () {
       let swiped = false;
+      let direction = 'right';
       const elementTarget =
         this.elementTarget ?? this.$refs.items[this.current];
       const direction = Math.abs(this.distanceX) > Math.abs(this.distanceY);
@@ -151,15 +155,17 @@ export default {
       } else if (distance <= -this.decisionVal) {
         if (direction) {
           elementTarget.classList.add('to-left');
+          direction = 'left';
         } else if (this.upward) {
           elementTarget.classList.add('to-top');
+          direction = 'up';
         }
         swiped = true;
       }
 
       if (swiped) {
         elementTarget.classList.add('inactive');
-        this.$emit('onswipe', this.items[this.current]);
+        this.$emit('onswipe', this.items[this.current], direction);
 
         setTimeout(() => {
           elementTarget.classList.remove(

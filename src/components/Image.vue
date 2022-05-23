@@ -24,7 +24,11 @@
       @load="onLoad"
       @error="onError"
     />
-    <slot />
+    <div v-if="hasInner" class="gv-inner" :class="{top: top}">
+      <div class="gv-content">
+        <slot />
+      </div>
+    </div>
   </gv-link>
   <gv-flexbox
     flex
@@ -53,6 +57,7 @@ export default {
       default: '_self',
     },
     alt: String,
+    top: Boolean,
     zoom: Boolean,
     hover: Boolean,
     square: Boolean,
@@ -69,6 +74,9 @@ export default {
     };
   },
   computed: {
+    hasInner() {
+      return !!this.$slots.default;
+    },
     imageSource() {
       return this.noCache ? `${this.src}?${new Date().getTime()}` : this.src;
     },
