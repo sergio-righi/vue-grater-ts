@@ -32,7 +32,7 @@
   &:not(.indeterminate) {
     circle {
       @include transform(rotate(-90deg));
-      @include transition(stroke, stroke-dashoffset 350ms ease-in-out);
+      // @include transition(stroke, stroke-dashoffset 350ms ease-in-out);
     }
   }
 

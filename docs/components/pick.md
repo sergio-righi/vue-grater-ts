@@ -14,14 +14,15 @@ The default example of the component
 
 ### `gv-swipe`
 
-| Name       |     Type     | Description                             | Default | Required |
-| ---------- | :----------: | --------------------------------------- | ------- | -------- |
-| shown      |    number    | current active tab                      | `5`     | false    |
-| height     |    number    | height of the container (in pixels)     | `450`   | false    |
-| items      |   object\*   | items to be displayed                   | `[]`    | false    |
-| shuffle    |   boolean    | shuffles the items                      | `true`  | false    |
-| contest    |   boolean    | removes after competing                 | `false` | false    |
-| validation | function\*\* | function to be run on picking the items | -       | false    |
+| Name       |     Type     | Description                                            | Default | Required |
+| ---------- | :----------: | ------------------------------------------------------ | ------- | -------- |
+| shown      |    number    | current active tab                                     | `5`     | false    |
+| height     |    number    | height of the container (in pixels)                    | `450`   | false    |
+| items      |   object\*   | items to be displayed                                  | `[]`    | false    |
+| shuffle    |   boolean    | enable/disable shuffle control button                  | `true`  | false    |
+| contest    |   boolean    | removes after competing                                | `false` | false    |
+| validation | function\*\* | function to be run on picking the items                | -       | false    |
+| duration   |    number    | enable/disable timer to pick (in milliseconds) >= 1000 | `0`     | false    |
 
 \* the object must contain a property called `src`. A property called `description` is also expected but not required. Other properties such as `id` are not used by the component but useful for further actions.
 

@@ -39,7 +39,7 @@
     </div>
     <div v-if="hasValue && control" class="gv-footer">
       <gv-icon class="nope" :value="rightIcon" @onclick="swipeLeft" />
-      <gv-icon v-if="upward" class="up" :value="upIcon" @onclick="swipeTop" />
+      <gv-icon v-if="upward" class="up" :value="upIcon" @onclick="swipeUp" />
       <gv-icon class="yep" :value="leftIcon" @onclick="swipeRight" />
     </div>
   </div>
@@ -246,6 +246,8 @@ export default {
         this.swipeLeft();
       } else if (key === keycode.right) {
         this.swipeRight();
+      } else if (key === keycode.up) {
+        this.swipeUp();
       }
     },
     swipeLeft: function () {
@@ -256,7 +258,7 @@ export default {
       this.distanceX = this.decisionVal;
       this.swipe();
     },
-    swipeTop: function () {
+    swipeUp: function () {
       this.distanceY = -this.decisionVal;
       this.swipe();
     },

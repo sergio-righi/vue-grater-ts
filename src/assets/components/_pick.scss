@@ -25,21 +25,6 @@
     position: relative;
     @include block-selection;
 
-    & > .gv-process {
-      top: 0;
-      left: 0;
-      z-index: 0;
-      opacity: 0;
-      width: 100%;
-      height: 100%;
-      position: absolute;
-      @include transition(opacity 150ms ease-in-out);
-
-      & > * {
-        @include center-absolute;
-      }
-    }
-
     & > .gv-wrap {
       z-index: 1;
       width: 100%;
@@ -88,8 +73,8 @@
 
           & > .gv-image {
             height: 100%;
-            color: white;
             pointer-events: none;
+            color: var(--gv-color-white);
 
             & > img {
               width: 100%;
@@ -127,6 +112,30 @@
             }
           }
         }
+      }
+    }
+
+    & > .gv-progress {
+      z-index: 6;
+      display: block;
+      position: absolute;
+      color: var(--gv-color-white);
+      top: $default-distance * 0.75;
+      right: $default-distance * 0.75;
+    }
+
+    & > .gv-process {
+      top: 0;
+      left: 0;
+      z-index: 0;
+      opacity: 0;
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      @include transition(opacity 150ms ease-in-out);
+
+      & > * {
+        @include center-absolute;
       }
     }
   }
