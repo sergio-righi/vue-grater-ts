@@ -1,7 +1,7 @@
-import * as GraterVueTS from "grater-vue-ts";
-import "@/assets/light.scss";
-import "@/assets/palette.scss";
-import "@/assets/default.scss";
+import * as GraterVue from 'grater-vue';
+import '@/assets/light.scss';
+import '@/assets/palette.scss';
+import '@/assets/default.scss';
 
 export default ({
   Vue, // the version of Vue being used in the VuePress app
@@ -9,5 +9,5 @@ export default ({
   router, // the router instance for the app
   siteData, // site metadata
 }) => {
-  Vue.use(GraterVueTS);
+  Vue.use(GraterVue);
 };

@@ -2,7 +2,7 @@ const {resolve} = require('path');
 
 module.exports = {
   base: '/',
-  title: 'Grater Vue TS',
+  title: 'Grater Vue',
   description: 'Just playing around',
   markdown: {
     lineNumbers: true,
@@ -125,7 +125,7 @@ module.exports = {
         '@': resolve(__dirname, '../../src'),
         font: resolve(__dirname, '../../public/font'),
         emoji: resolve(__dirname, '../../public/emoji'),
-        'grater-vue-ts': resolve(__dirname, '../../src'),
+        'grater-vue': resolve(__dirname, '../../src'),
       },
     },
   },

@@ -1,15 +1,15 @@
 {
-  "name": "grater-vue-ts",
-  "version": "0.0.5-alpha",
+  "name": "grater-vue",
+  "version": "0.0.7-alpha",
   "files": [
     "dist"
   ],
-  "main": "./dist/grater-vue-ts.umd.js",
-  "module": "./dist/grater-vue-ts.es.js",
+  "main": "./dist/grater-vue.umd.js",
+  "module": "./dist/grater-vue.es.js",
   "exports": {
     ".": {
-      "import": "./dist/grater-vue-ts.es.js",
-      "require": "./dist/grater-vue-ts.umd.js"
+      "import": "./dist/grater-vue.es.js",
+      "require": "./dist/grater-vue.umd.js"
     }
   },
   "types": "./dist/types/index.d.ts",
@@ -17,7 +17,7 @@
     "docs:dev": "vuepress dev docs",
     "docs:build": "vuepress build docs",
     "serve": "vue-cli-service serve",
-    "build": "vue-cli-service build --target lib --name grater-vue-ts src/index.ts"
+    "build": "vue-cli-service build --target lib --name grater-vue src/index.ts"
   },
   "devDependencies": {
     "@babel/core": "^7.18.0",
@@ -30,6 +30,7 @@
     "copy-webpack-plugin": "^10.2.4",
     "eslint": "^8.15.0",
     "eslint-plugin-vue": "^8.7.1",
+    "module-alias": "^2.2.2",
     "node-sass": "^7.0.1",
     "sass": "^1.51.0",
     "sass-loader": "^10.1.1",
@@ -47,7 +48,6 @@
     "vue": "^2.6.14"
   },
   "dependencies": {
-    "grater-utils-ts": "^0.0.4-alpha",
-    "module-alias": "^2.2.2"
+    "grater-utils-ts": "^0.0.4-alpha"
   }
 }
