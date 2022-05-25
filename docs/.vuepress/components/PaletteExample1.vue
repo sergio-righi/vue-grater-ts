@@ -65,31 +65,30 @@
 </template>
 
 <script>
-import { color } from "@/utils";
 export default {
   data() {
     return {
-      message: "",
+      message: '',
       items: [
-        "amber",
-        "blue",
-        "blue-gray",
-        "brown",
-        "cyan",
-        "deep-orange",
-        "deep-purple",
-        "gray",
-        "green",
-        "indigo",
-        "light-blue",
-        "light-green",
-        "lime",
-        "orange",
-        "pink",
-        "purple",
-        "red",
-        "teal",
-        "yellow",
+        'amber',
+        'blue',
+        'blue-gray',
+        'brown',
+        'cyan',
+        'deep-orange',
+        'deep-purple',
+        'gray',
+        'green',
+        'indigo',
+        'light-blue',
+        'light-green',
+        'lime',
+        'orange',
+        'pink',
+        'purple',
+        'red',
+        'teal',
+        'yellow',
       ],
     };
   },
@@ -110,23 +109,23 @@ export default {
       return this.get(value)?.text;
     },
     fontColor(value) {
-      return /f/.test(this.get(value)?.color) ? "white" : "black";
+      return /f/.test(this.get(value)?.color) ? 'white' : 'black';
     },
     get(value) {
       const color = window
         .getComputedStyle(document.documentElement)
         .getPropertyValue(value);
       if (color) {
-        const hexColor = string.toHex(String(color).trim());
+        const hexColor = this.$utils.string.toHex(String(color).trim());
         return {
           text: hexColor,
-          color: string.getContrast(hexColor),
+          color: this.$utils.string.getContrast(hexColor),
         };
       }
       return {};
     },
     copyCallback(value) {
-      this.message = value + " was copied to the clipboard";
+      this.message = value + ' was copied to the clipboard';
       this.snackbar.show();
     },
   },

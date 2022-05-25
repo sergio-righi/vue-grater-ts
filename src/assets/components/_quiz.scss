@@ -16,7 +16,6 @@
       }
 
       & > .gv-header {
-        font-weight: 500;
         text-align: justify;
       }
 
@@ -24,7 +23,7 @@
         margin: $default-distance * 0.5 0;
 
         & > .gv-wrapper {
-          padding: 0 $default-distance * 1;
+          // padding: 0 $default-distance * 1;
         }
       }
 
@@ -36,7 +35,7 @@
           font-weight: 600;
           color: var(--gv-error);
           &:before {
-            content: "*";
+            content: '*';
             margin-right: $default-distance * 0.25;
           }
         }

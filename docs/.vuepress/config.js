@@ -8,10 +8,15 @@ module.exports = {
     lineNumbers: true,
   },
   themeConfig: {
+    search: false,
     nav: [
       {text: 'Home', link: '/'},
       {text: 'Components', link: '/components/'},
       {text: 'Directives', link: '/directives/'},
+      {
+        text: 'Made by',
+        link: 'https://www.sergiorighi.com',
+      },
       {
         text: 'Github',
         link: 'https://github.com/sergio-righi/vue-grater-ts',

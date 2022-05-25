@@ -17,7 +17,7 @@ export default {
         {src: '/img/portrait/img_3.jpg'},
         {
           src: '/img/portrait/img_4.jpg',
-          description: 'Sergio Rafael Hautrive Righi, 28',
+          description: 'Lorem ipsum dolor sit amet',
         },
         {src: '/img/portrait/img_5.jpg'},
         {src: '/img/portrait/img_6.jpg'},

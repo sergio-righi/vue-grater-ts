@@ -12,6 +12,7 @@
             active: index === current,
             below: index > current,
           }"
+          @touchstart="handleMouseStart"
           @mousedown="handleMouseStart"
         >
           <div class="gv-content">
@@ -207,35 +208,38 @@ export default {
 
       this.elementTarget = this.$refs.items[this.current];
       this.pull();
-      setTimeout(() => {
-        this.release();
-      }, 30);
+      setTimeout(() => this.release(), 100);
     },
-    handleMouseStart: function (event) {
+    handleMouseStart: function (e) {
       if (this.animating) return;
+      const event = e.touches ? e.touches[0] : e;
 
-      this.startX = event.pageX || event.originalEvent.touches[0].pageX;
+      this.startX = event.pageX;
       if (this.upward) {
-        this.startY = event.pageY || event.originalEvent.touches[0].pageY;
+        this.startY = event.pageY;
       }
       this.elementTarget = event.target.parentNode;
 
       document.addEventListener('mousemove', this.handleMouseMove);
+      document.addEventListener('touchmove', this.handleMousemove);
       document.addEventListener('mouseup', this.handleMouseUp);
+      document.addEventListener('touchend', this.handleMouseup);
     },
-    handleMouseMove: function (event) {
-      this.distanceX =
-        (event.pageX || event.originalEvent.touches[0].pageX) - this.startX;
+    handleMouseMove: function (e) {
+      const event = e.touches ? e.touches[0] : e;
+      this.distanceX = event.pageX - this.startX;
       if (this.upward) {
-        this.distanceY =
-          (event.pageY || event.originalEvent.touches[0].pageY) - this.startY;
+        this.distanceY = event.pageY - this.startY;
       }
       if (!this.distanceX && !this.distanceY) return;
       this.pull();
     },
     handleMouseUp: function () {
       document.removeEventListener('mousemove', this.handleMouseMove);
+      document.removeEventListener('touchmove', this.handleMousemove);
       document.removeEventListener('mouseup', this.handleMouseUp);
+      document.removeEventListener('touchend', this.handleMouseup);
+
       if (!this.distanceX && !this.distanceY) return;
       this.release();
     },

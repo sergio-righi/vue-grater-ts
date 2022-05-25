@@ -10,7 +10,7 @@
     <div
       ref="wrapper"
       class="gv-wrapper"
-      :style="{ height: height }"
+      :style="{height: height}"
       @mousewheel="handleMousewheel"
     >
       <div ref="content" class="gv-content">
@@ -18,10 +18,10 @@
       </div>
     </div>
     <template v-if="hasArrow">
-      <div class="gv-control prev" @click="prev" :class="{ hidden: b.start }">
+      <div class="gv-control prev" @click="prev" :class="{hidden: b.start}">
         <gv-icon value="chevron-left" />
       </div>
-      <div class="gv-control next" @click="next" :class="{ hidden: b.end }">
+      <div class="gv-control next" @click="next" :class="{hidden: b.end}">
         <gv-icon value="chevron-right" />
       </div>
     </template>
@@ -30,7 +30,7 @@
 
 <script>
 export default {
-  name: "gv-scroll",
+  name: 'gv-scroll',
   props: {
     height: String,
     stretch: Boolean,
@@ -55,7 +55,7 @@ export default {
   },
   beforeDestroy() {
     this.unbind();
-    window.removeEventListener("resize", this.handleWindowResize);
+    window.removeEventListener('resize', this.handleWindowResize);
   },
   computed: {
     hasArrow() {
@@ -71,17 +71,17 @@ export default {
     },
     bind: function () {
       if (!this.vertical) {
-        window.addEventListener("resize", this.handleWindowResize);
-        this.wrapper.addEventListener("scroll", this.handleWindowScroll);
-        this.wrapper.addEventListener("mousedown", this.handleDragstart);
-        this.wrapper.addEventListener("touchstart", this.handleDragstart);
+        window.addEventListener('resize', this.handleWindowResize);
+        this.wrapper.addEventListener('scroll', this.handleWindowScroll);
+        this.wrapper.addEventListener('mousedown', this.handleDragstart);
+        this.wrapper.addEventListener('touchstart', this.handleDragstart);
       }
     },
     unbind: function () {
       if (!this.vertical) {
-        this.wrapper.removeEventListener("scroll", this.handleWindowScroll);
-        this.wrapper.removeEventListener("mousedown", this.handleDragstart);
-        this.wrapper.removeEventListener("touchstart", this.handleDragstart);
+        this.wrapper.removeEventListener('scroll', this.handleWindowScroll);
+        this.wrapper.removeEventListener('mousedown', this.handleDragstart);
+        this.wrapper.removeEventListener('touchstart', this.handleDragstart);
       }
     },
     prev: function () {
@@ -100,14 +100,14 @@ export default {
         event.target.scrollLeft + event.target.clientWidth;
     },
     handleDragmove: function (event) {
-      document.addEventListener("mouseup", () => {
+      document.addEventListener('mouseup', () => {
         this.b.dragging = false;
-        document.removeEventListener("mousemove", this.handleDragmove, false);
+        document.removeEventListener('mousemove', this.handleDragmove, false);
       });
 
-      document.addEventListener("touchend", () => {
+      document.addEventListener('touchend', () => {
         this.b.dragging = false;
-        document.removeEventListener("touchmove", this.handleDragmove, false);
+        document.removeEventListener('touchmove', this.handleDragmove, false);
       });
 
       if (!this.b.dragging) return;
@@ -139,8 +139,8 @@ export default {
         ? this.wrapper.scrollTop
         : this.wrapper.scrollLeft;
 
-      document.addEventListener("mousemove", this.handleDragmove, false);
-      document.addEventListener("touchmove", this.handleDragmove, false);
+      document.addEventListener('mousemove', this.handleDragmove, false);
+      document.addEventListener('touchmove', this.handleDragmove, false);
 
       return false;
     },
@@ -154,7 +154,7 @@ export default {
     },
   },
   watch: {
-    "b.overflow": {
+    'b.overflow': {
       handler: function (val) {
         val ? this.bind() : this.unbind();
       },

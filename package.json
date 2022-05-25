@@ -1,6 +1,22 @@
 {
   "name": "grater-vue",
-  "version": "0.0.7-alpha",
+  "version": "0.3.7-alpha",
+  "author": "Sérgio Righi",
+  "email": "sergiohrighi@gmail.com",
+  "description": "Just playing around",
+  "homepage": "https://gratervue.sergiorighi.com",
+  "license": "MIT",
+  "keywords": [
+    "ui",
+    "ux",
+    "vue",
+    "vuejs"
+  ],
+  "private": false,
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/sergio-righi/vue-grater-ts"
+  },
   "files": [
     "dist"
   ],

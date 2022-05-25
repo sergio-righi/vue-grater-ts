@@ -12,7 +12,7 @@ The default example of the component
 
 ## Props
 
-### `gv-swipe`
+### `gv-pick`
 
 | Name       |     Type     | Description                                            | Default | Required |
 | ---------- | :----------: | ------------------------------------------------------ | ------- | -------- |
