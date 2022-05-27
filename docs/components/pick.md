@@ -4,7 +4,7 @@ The `gv-pick` is an interactive way for users to pick the item they prefer consi
 
 ## Standard
 
-The default example of the component
+The default example of the component,
 
 <pick-example-1 />
 

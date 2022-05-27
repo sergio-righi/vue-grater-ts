@@ -4,7 +4,7 @@ The `gv-tile` is used to display information that can be used within lists, card
 
 ## Standard
 
-The default example of the component
+The default example of the component.
 
 <tile-example-1 />
 

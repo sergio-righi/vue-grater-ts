@@ -4,7 +4,7 @@ The `gv-video` provides a full featured video player. Learn more about the compo
 
 ## Usage
 
-The default example of the component
+The default example of the component.
 
 <video-example-1 />
 

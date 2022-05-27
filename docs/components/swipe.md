@@ -4,7 +4,7 @@ The `gv-swipe` is an interactive way to display yes/no situations to users plus 
 
 ## Standard
 
-The default example of the component
+The default example of the component.
 
 <swipe-example-1 />
 

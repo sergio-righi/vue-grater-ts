@@ -4,7 +4,7 @@ The `gv-story` is used to display images and videos in a stories-like way. Learn
 
 ## Standard
 
-The default example of the component
+The default example of the component.
 
 <story-example-1 />
 

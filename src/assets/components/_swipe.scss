@@ -71,6 +71,10 @@
             @include flex(1);
             overflow: hidden;
 
+            img {
+              width: 100%;
+            }
+
             & > .gv-inner > .gv-content > .gv-description {
               font-weight: 300;
               letter-spacing: 0.035rem;
