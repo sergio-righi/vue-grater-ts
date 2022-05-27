@@ -1,0 +1,3 @@
+<template>
+  <gv-editor />
+</template>

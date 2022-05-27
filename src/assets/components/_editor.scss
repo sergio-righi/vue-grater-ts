@@ -1,0 +1,121 @@
+@use '../utils/index' as *;
+// @use '../vendors/material-design-icons/functions' as icon;
+
+.gv-editor {
+  @include d-flex;
+  @include border-radius($border-radius);
+  background-color: var(--gv-secondary-light);
+
+  & > .gv-header {
+    width: 50px;
+    overflow: hidden;
+    @include border-radius($border-radius 0 0 $border-radius);
+
+    & > .gv-wrapper {
+      display: unset;
+      width: inherit;
+      overflow-y: auto;
+      overflow-x: hidden;
+      &.disabled {
+        & > i:not(:first-child) {
+          opacity: 0.3;
+          pointer-events: none;
+        }
+      }
+
+      & > i {
+        width: 100%;
+        height: 50px;
+        display: block;
+        cursor: pointer;
+        line-height: 50px;
+        text-align: center;
+        font-size: $font-size * 1.25;
+        background-color: var(--gv-secondary);
+        border-bottom: 1px solid var(--gv-color-border);
+      }
+    }
+  }
+
+  & > .gv-content {
+    width: 100%;
+    padding: $default-distance * 0.75;
+
+    & > .gv-block,
+    & > .gv-block > .gv-content > .gv-block {
+      @include d-flex;
+      overflow: hidden;
+      @include flex-direction(column);
+      background-color: var(--gv-secondary);
+      @include border-radius($border-radius);
+      border: 1px solid var(--gv-color-border);
+
+      & + .gv-block {
+        margin-top: $default-distance * 0.5;
+      }
+
+      & > .gv-header {
+        width: 100%;
+        height: 35px;
+        @include d-flex;
+        background-color: var(--gv-secondary-dark);
+
+        & > .gv-wrapper {
+          width: 100%;
+
+          & > i {
+            border-right: 1px solid var(--gv-color-border);
+          }
+        }
+
+        & > .gv-control {
+          & > i {
+            border-left: 1px solid var(--gv-color-border);
+          }
+        }
+
+        & > .gv-wrapper,
+        & > .gv-control {
+          height: inherit;
+          @include d-inline-flex;
+          @include flex-direction(row);
+
+          & > i {
+            width: 35px;
+            height: 35px;
+            display: block;
+            cursor: pointer;
+            line-height: 35px;
+            text-align: center;
+            font-size: $font-size * 1.15;
+          }
+        }
+      }
+
+      & > .gv-content {
+        min-height: 100px;
+        padding: $default-distance * 0.5;
+
+        & > [contenteditable] {
+          margin: 0;
+
+          &:focus {
+            outline: none;
+          }
+        }
+      }
+    }
+
+    & > .gv-block {
+      opacity: 0.3;
+
+      &.selected {
+        opacity: 1;
+      }
+    }
+
+    & > .gv-block > .gv-content > .gv-block > .gv-content {
+      background-color: var(--gv-color-white);
+    }
+  }
+}
