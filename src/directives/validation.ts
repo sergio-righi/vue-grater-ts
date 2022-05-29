@@ -126,8 +126,8 @@ class Validation {
       validate: this._validate.bind(this),
     };
 
-    this.form?.addEventListener("submit", this.events.submit, true);
-    this.form?.addEventListener("invalid", this.events.submit, true);
+    this.form?.addEventListener("submit", this.events.submit, false);
+    this.form?.addEventListener("invalid", this.events.submit, false);
 
     for (const element of this.elements) {
       element.addEventListener("blur", this.events.validate);
@@ -150,6 +150,7 @@ class Validation {
     this.message = null;
     const value = this.elements[0].value;
     const exist = Vue.prototype.$utils.boolean.hasValue(value);
+
     for (const key of Object.keys(this.configuration)) {
       const rule = this._value(key);
       switch (key) {

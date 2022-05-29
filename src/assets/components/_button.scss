@@ -7,6 +7,7 @@
   width: auto;
   border: none;
   outline: none;
+  max-width: 100%;
   cursor: pointer;
   font-weight: 400;
   text-align: center;
@@ -234,7 +235,7 @@
     &:after {
       color: inherit;
       @include d-inline-flex;
-      content: icon.mdi("loading");
+      content: icon.mdi('loading');
       @include animation.a-rotate;
       font-family: $font-family-icon;
     }
