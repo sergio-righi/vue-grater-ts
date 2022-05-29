@@ -50,10 +50,18 @@ Validação dentro do formulário.
 
 <<< @/docs/.vuepress/components/ValidationExample6.vue
 
-## Personalizada
+## Formulário aninhado
 
-Erro de validação personalizada.
+Um formulário dentro de outro (não recomendado).
 
 <validation-example-7 />
 
 <<< @/docs/.vuepress/components/ValidationExample7.vue
+
+## Personalizada
+
+Erro de validação personalizada.
+
+<validation-example-8 />
+
+<<< @/docs/.vuepress/components/ValidationExample8.vue

@@ -1,6 +1,6 @@
 {
   "name": "grater-vue",
-  "version": "0.3.8-alpha",
+  "version": "0.3.9-alpha",
   "author": "Sérgio Righi",
   "email": "sergiohrighi@gmail.com",
   "description": "Just playing around",
@@ -64,6 +64,6 @@
     "vue": "^2.6.14"
   },
   "dependencies": {
-    "grater-utils-ts": "^0.0.4-alpha"
+    "grater-utils-ts": "^0.0.5-alpha"
   }
 }

@@ -50,11 +50,18 @@ Validation inside form.
 
 <<< @/docs/.vuepress/components/ValidationExample6.vue
 
-## Custom
+## Nested Form
 
-Custom validation error.
+A form inside another (not recommended).
 
 <validation-example-7 />
 
 <<< @/docs/.vuepress/components/ValidationExample7.vue
 
+## Custom
+
+Custom validation error.
+
+<validation-example-8 />
+
+<<< @/docs/.vuepress/components/ValidationExample8.vue
