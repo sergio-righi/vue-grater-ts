@@ -29,6 +29,7 @@
     color: inherit;
     @include d-flex;
     border-color: inherit;
+    @include border-radius(inherit);
     @include flex-direction(column);
 
     & .gv-image {
