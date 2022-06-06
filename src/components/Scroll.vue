@@ -67,7 +67,7 @@ export default {
   },
   methods: {
     check: function () {
-      this.b.overflow = this.$utisl.boolean.hasOverflow(this.wrapper);
+      this.b.overflow = this.$utils.boolean.hasOverflow(this.wrapper);
     },
     bind: function () {
       if (!this.vertical) {

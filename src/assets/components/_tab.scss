@@ -131,7 +131,6 @@
           position: relative;
           @include flex(0 1 auto);
           @include block-selection;
-          text-transform: uppercase;
           @include transition(none);
           gap: $default-distance * 0.5;
           padding: 0 $default-distance;

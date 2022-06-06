@@ -5,7 +5,7 @@ import * as components from "./components"
 import * as directives from "./directives"
 
 // external plugins
-import * as utils from "grater-utils-ts/dist/src";
+import * as utils from "grater-utils-ts/src";
 
 const install = (instance: any) => {
   // global prototype

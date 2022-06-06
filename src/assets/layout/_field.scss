@@ -4,7 +4,7 @@
   @include d-flex;
   @include flex(1);
   @include flex-direction(column);
-  margin-bottom: $default-distance * 0.5;
+  margin-bottom: $default-distance * 0.75;
 
   &.disabled {
     pointer-events: none;
@@ -38,7 +38,7 @@
     & > .gv-inline {
       & > .gv-label {
         &:after {
-          content: "*";
+          content: '*';
           margin-left: 1px;
         }
       }
@@ -66,6 +66,14 @@
       & > .gv-inline {
         & > .gv-line {
           background-color: var(--gv-error) !important;
+        }
+
+        & > .gv-outline {
+          & > .gv-notch {
+            & > .gv-label {
+              color: var(--gv-error) !important;
+            }
+          }
         }
       }
     }
@@ -130,6 +138,10 @@
         & > .gv-trailing {
           border-width: 2px;
           border-color: var(--gv-primary);
+
+          & > .gv-label {
+            color: var(--gv-primary);
+          }
         }
       }
     }
@@ -161,13 +173,16 @@
 
         & > .gv-label,
         & > .gv-outline > .gv-notch > .gv-label {
+          left: $default-distance * 0.25;
           @include transform(translateY(-33px) scale(0.75));
         }
       }
     }
 
     & > .gv-inline {
-      & > .gv-element:not([type="file"], [type="hidden"], [type="image"]) + .gv-label {
+      &
+        > .gv-element:not([type='file'], [type='hidden'], [type='image'])
+        + .gv-label {
         cursor: auto;
         @include transform(translateY(-80%) scale(0.75));
       }
@@ -186,9 +201,10 @@
 
   &.multiline {
     & > .gv-inline {
-      & > .gv-label {
-        top: $default-distance;
+      & > .gv-label,
+      & > .gv-outline > .gv-notch > .gv-label {
         @include transform(initial);
+        top: $default-distance * 0.75;
       }
     }
   }
@@ -214,6 +230,10 @@
 
       & > .gv-element {
         padding-left: $default-distance * 3;
+      }
+
+      & > .gv-outline > .gv-notch > .gv-label {
+        left: 36px;
       }
     }
 
@@ -330,7 +350,7 @@
       & > .gv-trailing {
         height: 100%;
         border-top: 1px solid;
-        border-bottom: 1px solid;
+        border-bottom: 2px solid;
         border-color: var(--gv-color-border);
       }
     }
@@ -359,6 +379,7 @@
       transform-origin: left top;
       @include transform(translateY(-50%));
       @include transition(
+        left 300ms cubic-bezier(0.4, 0, 0.2, 1),
         transform 150ms cubic-bezier(0.4, 0, 0.2, 1),
         color 150ms cubic-bezier(0.4, 0, 0.2, 1)
       );
@@ -394,9 +415,9 @@
       border-bottom: 1px solid var(--gv-color-border);
       @include transition(opacity 150ms cubic-bezier(0.4, 0, 0.2, 1));
 
-      &[type="file"],
-      &[type="image"],
-      &[type="hidden"] {
+      &[type='file'],
+      &[type='image'],
+      &[type='hidden'] {
         top: 0;
         left: 0;
         right: 0;
@@ -455,7 +476,7 @@
 
       &:before {
         width: 0;
-        content: "";
+        content: '';
         vertical-align: 0;
         display: inline-block;
         height: $default-distance;

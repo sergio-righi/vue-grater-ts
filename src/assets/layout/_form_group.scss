@@ -3,11 +3,11 @@
 .gv-form-group {
   width: 100%;
   position: relative;
-  margin-bottom: $default-distance * 0.5;
+  margin-bottom: $default-distance * 0.75;
 
   &.required {
     & > label:after {
-      content: "*";
+      content: '*';
     }
   }
 

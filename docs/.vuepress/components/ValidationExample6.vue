@@ -15,9 +15,9 @@
                   <gv-input-box
                     name="transport"
                     v-model="transport"
-                    :label="item"
                     :val="index"
-                  />
+                    >{{ item }}</gv-input-box
+                  >
                 </gv-col>
               </gv-row>
             </gv-form-group>
@@ -35,8 +35,8 @@
 export default {
   data() {
     return {
-      transport: []
+      transport: [],
     };
-  }
+  },
 };
 </script>

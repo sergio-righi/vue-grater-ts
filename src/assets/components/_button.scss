@@ -13,7 +13,6 @@
   text-align: center;
   position: relative;
   white-space: nowrap;
-  text-decoration: none;
   height: $button-height;
   @include d-inline-flex;
   @include block-selection;
@@ -33,8 +32,8 @@
     border: 0;
   }
 
-  &:hover,
-  &:focus {
+  &:not(.inline):hover,
+  &:not(.inline):focus {
     text-decoration: none !important;
   }
 
@@ -89,6 +88,11 @@
   &.inline {
     height: initial;
     padding: initial;
+    font-weight: 700;
+
+    &:hover {
+      text-decoration: underline;
+    }
   }
 
   &:not(.outline) {

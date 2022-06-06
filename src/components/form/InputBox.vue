@@ -1,5 +1,5 @@
 <template>
-  <div class="gv-input-box" :class="{ checkbox: !radio, radio: radio }">
+  <div class="gv-input-box" :class="{checkbox: !radio, radio: radio}">
     <input
       :value="val"
       ref="element"
@@ -17,19 +17,12 @@
 
 <script>
 export default {
-  name: "gv-input-box",
+  name: 'gv-input-box',
   inheritAttrs: false,
   props: {
     radio: Boolean,
-    checked: Boolean,
-    val: {
-      default: false,
-      type: [Number, String, Boolean, Object],
-    },
-    value: {
-      default: false,
-      type: [Array, Number, String, Object, Boolean],
-    },
+    val: [Number, String, Boolean, Object],
+    value: [Array, Number, String, Object, Boolean],
   },
   data() {
     return {
@@ -46,7 +39,7 @@ export default {
     isChecked() {
       if (Array.isArray(this.value)) {
         return this.value.includes(this.val);
-      } else if (typeof this.value === "boolean") {
+      } else if (typeof this.value === 'boolean') {
         return this.checked || this.value;
       }
       return this.value === this.val;
@@ -58,21 +51,19 @@ export default {
     }
   },
   methods: {
-    set: function (status) {
+    set: function (state) {
       if (Array.isArray(this.input)) {
         const index = this.input.indexOf(this.val);
-        if (index === -1 && status) {
+        if (index === -1 && state) {
           this.input.push(this.val);
-        } else if (index !== -1 && !status) {
+        } else if (index !== -1 && !state) {
           this.input.splice(index, 1);
         }
-      } else if (typeof this.input === "boolean") {
-        this.input = status;
       } else {
-        if (!status) return;
+        if (!state) return;
         this.input = this.val;
       }
-      this.$emit("input", this.input);
+      this.$emit('input', this.input);
     },
     focus: function () {
       this.element.focus();
@@ -82,7 +73,7 @@ export default {
     },
     onChange: function (event) {
       this.set(event.target.checked);
-      this.$emit("change", event);
+      this.$emit('change', event);
     },
   },
   watch: {

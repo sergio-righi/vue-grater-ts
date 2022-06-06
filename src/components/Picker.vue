@@ -5,6 +5,7 @@
     ref="element"
     :label="label"
     :error="error"
+    :outline="outline"
     v-bind="$attrs"
     v-model="display"
     @onblur="onBlur"
@@ -26,16 +27,16 @@
       <div class="gv-picker">
         <div
           class="gv-content"
-          :class="{ 'gv-overlay': isPopup, active: b.active }"
+          :class="{'gv-overlay': isPopup, active: b.active}"
           @click.self="close"
         >
-          <div class="gv-datetime" :class="{ active: b.active }" tabindex="-1">
+          <div class="gv-datetime" :class="{active: b.active}" tabindex="-1">
             <div v-if="hasHeader" class="gv-header">
               <div v-if="isDate" class="gv-date">
                 <div
                   class="gv-day"
                   :data-label="t('picker.day')"
-                  :class="{ active: icomponent === component.day }"
+                  :class="{active: icomponent === component.day}"
                   @click="icomponent = component.day"
                 >
                   {{ sday }}
@@ -43,7 +44,7 @@
                 <div
                   class="gv-month"
                   :data-label="t('picker.month')"
-                  :class="{ active: icomponent === component.month }"
+                  :class="{active: icomponent === component.month}"
                   @click="icomponent = component.month"
                 >
                   {{ smonth }}
@@ -51,7 +52,7 @@
                 <div
                   class="gv-year"
                   :data-label="t('picker.year')"
-                  :class="{ active: icomponent === component.year }"
+                  :class="{active: icomponent === component.year}"
                   @click="icomponent = component.year"
                 >
                   {{ syear }}
@@ -61,7 +62,7 @@
               <div v-if="isTime" class="gv-time">
                 <div
                   class="gv-hour"
-                  :class="{ active: icomponent === component.hour }"
+                  :class="{active: icomponent === component.hour}"
                   @click="icomponent = component.hour"
                 >
                   {{ shour }}
@@ -69,7 +70,7 @@
                 <div class="gv-separator">:</div>
                 <div
                   class="gv-minute"
-                  :class="{ active: icomponent === component.minute }"
+                  :class="{active: icomponent === component.minute}"
                   @click="icomponent = component.minute"
                 >
                   {{ sminute }}
@@ -116,9 +117,9 @@
 </template>
 
 <script>
-import { date, i18n } from "@/utils";
+import {date, i18n} from '@/utils';
 export default {
-  name: "gv-picker",
+  name: 'gv-picker',
   inheritAttrs: false,
   props: {
     min: Date,
@@ -127,13 +128,17 @@ export default {
     value: [Date, Number],
     locale: {
       type: String,
-      default: "en-CA",
+      default: 'en-CA',
     },
     isDate: {
       type: Boolean,
       default: true,
     },
     isAmpm: {
+      type: Boolean,
+      default: true,
+    },
+    outline: {
       type: Boolean,
       default: true,
     },
@@ -207,27 +212,27 @@ export default {
       },
     },
     smonth() {
-      return Number.isInteger(this.f.month) ? this.pad(this.f.month + 1) : "--";
+      return Number.isInteger(this.f.month) ? this.pad(this.f.month + 1) : '--';
     },
     sday() {
-      return Number.isInteger(this.f.day) ? this.pad(this.f.day) : "--";
+      return Number.isInteger(this.f.day) ? this.pad(this.f.day) : '--';
     },
     syear() {
-      return Number.isInteger(this.f.year) ? this.f.year : "----";
+      return Number.isInteger(this.f.year) ? this.f.year : '----';
     },
     sdate() {
       return this.ddate ? date.toDateString(this.ddate, this.locale) : null;
     },
     sweekday() {
       return this.ddate
-        ? this.ddate.toLocaleString(this.locale, { weekday: "long" })
+        ? this.ddate.toLocaleString(this.locale, {weekday: 'long'})
         : null;
     },
     shour() {
-      return this.f.hour === null ? "--" : this.f.hour;
+      return this.f.hour === null ? '--' : this.f.hour;
     },
     sminute() {
-      return this.f.minute !== null ? this.pad(this.f.minute) : "--";
+      return this.f.minute !== null ? this.pad(this.f.minute) : '--';
     },
     stime() {
       const hour =
@@ -238,14 +243,14 @@ export default {
                   (!this.b.am && this.f.hour !== 12)
                   ? this.f.hour + 12
                   : this.f.hour
-                : this.f.hour
+                : this.f.hour,
             )
           : null;
       const minute = this.f.minute ? this.pad(this.f.minute) : null;
       return hour !== null && minute !== null
         ? new Date(0, 0, 0, hour, minute).toLocaleString(this.locale, {
-            hour: "numeric",
-            minute: "numeric",
+            hour: 'numeric',
+            minute: 'numeric',
             hour12: this.isAmpm,
           })
         : null;
@@ -254,10 +259,10 @@ export default {
       return this.b.am ? this.sam : this.spm;
     },
     sam() {
-      return this.t("picker.am");
+      return this.t('picker.am');
     },
     spm() {
-      return this.t("picker.pm");
+      return this.t('picker.pm');
     },
     element() {
       return this.$refs.element;
@@ -267,16 +272,16 @@ export default {
     value() {
       this.build();
     },
-    "f.year"() {
+    'f.year'() {
       this.manageVisibility();
     },
-    "f.month"() {
+    'f.month'() {
       this.manageVisibility();
     },
-    "f.day"() {
+    'f.day'() {
       this.manageVisibility();
     },
-    "b.active"(val) {
+    'b.active'(val) {
       if (!val) {
         this.select();
       }
@@ -284,16 +289,16 @@ export default {
   },
   mounted() {
     this.build();
-    document.addEventListener("click", this.handleOutside);
+    document.addEventListener('click', this.handleOutside);
     if (this.isPopup) {
-      window.addEventListener("keyup", this.handleWindowKeyup);
+      window.addEventListener('keyup', this.handleWindowKeyup);
     }
   },
   beforeDestroy() {
-    document.removeEventListener("click", this.handleOutside);
+    document.removeEventListener('click', this.handleOutside);
     if (this.isPopup) {
       this.setOverflow(false);
-      window.removeEventListener("keyup", this.handleWindowKeyup);
+      window.removeEventListener('keyup', this.handleWindowKeyup);
     }
   },
   methods: {
@@ -314,7 +319,7 @@ export default {
       this.display = null;
       this.hasValue = false;
       this.close();
-      this.$emit("input", null);
+      this.$emit('input', null);
     },
     onFocus: function () {
       this.open();
@@ -350,11 +355,11 @@ export default {
     select: function () {
       this.set();
       if (this.isYear) {
-        this.$emit("input", this.f.year);
+        this.$emit('input', this.f.year);
       } else if (this.isMonth) {
         this.$emit(
-          "input",
-          Number.isInteger(this.f.month) ? this.f.month : null
+          'input',
+          Number.isInteger(this.f.month) ? this.f.month : null,
         );
       } else if (this.isDate && this.isTime) {
         if (
@@ -365,14 +370,14 @@ export default {
           Number.isInteger(this.f.minute)
         ) {
           this.$emit(
-            "input",
+            'input',
             new Date(
               this.f.year,
               this.f.month,
               this.f.day,
               this.f.hour,
-              this.f.minute
-            )
+              this.f.minute,
+            ),
           );
           this.hasValue = true;
         } else {
@@ -384,7 +389,7 @@ export default {
           Number.isInteger(this.f.month) &&
           Number.isInteger(this.f.day)
         ) {
-          this.$emit("input", new Date(this.f.year, this.f.month, this.f.day));
+          this.$emit('input', new Date(this.f.year, this.f.month, this.f.day));
           this.hasValue = true;
         } else {
           this.hasValue = false;
@@ -393,14 +398,14 @@ export default {
         if (Number.isInteger(this.f.hour) && Number.isInteger(this.f.minute)) {
           const date = new Date();
           this.$emit(
-            "input",
+            'input',
             new Date(
               this.f.year ?? date.getUTCFullYear(),
               this.f.month ?? date.getUTCMonth(),
               this.f.day ?? date.getUTCDate(),
               this.f.hour,
-              this.f.minute
-            )
+              this.f.minute,
+            ),
           );
           this.hasValue = true;
         } else {
@@ -436,14 +441,14 @@ export default {
     set: function () {
       if (this.isMonth) {
         this.display = Number.isInteger(this.f.month)
-          ? date.toMonthString(this.f.month, this.locale, "long")
+          ? date.toMonthString(this.f.month, this.locale, 'long')
           : null;
       } else if (this.isYear) {
         this.display = this.f.year;
       } else if (this.isDate && this.isTime) {
         this.display =
           this.sdate === null || this.stime === null
-            ? ""
+            ? ''
             : `${this.sdate} ${this.stime}`;
       } else if (this.isDate) {
         this.display = this.sdate;
@@ -474,9 +479,9 @@ export default {
     setOverflow: function (visibility) {
       if (this.isPopup) {
         if (visibility) {
-          document.body.classList.add("o-hidden");
+          document.body.classList.add('o-hidden');
         } else {
-          document.body.classList.remove("o-hidden");
+          document.body.classList.remove('o-hidden');
         }
       }
     },
@@ -511,7 +516,7 @@ export default {
       return this.$utils.number.pad(value);
     },
     t: function (key) {
-      return "$i18n" in this ? this.$t(key) : i18n.t(key);
+      return '$i18n' in this ? this.$t(key) : i18n.t(key);
     },
     handleOutside: function (event) {
       if (this.b.active && !this.$el.contains(event.target)) {

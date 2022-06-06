@@ -28,10 +28,7 @@
       />
     </template>
     <template #embed>
-      <div
-        class="gv-select"
-        :class="{ active: b.active, multiple: isMultiple }"
-      >
+      <div class="gv-select" :class="{active: b.active, multiple: isMultiple}">
         <div
           v-if="isMultiple"
           class="gv-content"
@@ -75,7 +72,7 @@
 
 <script>
 export default {
-  name: "gv-select",
+  name: 'gv-select',
   inheritAttrs: false,
   props: {
     items: {
@@ -84,7 +81,10 @@ export default {
     },
     label: String,
     error: Boolean,
-    outline: Boolean,
+    outline: {
+      type: Boolean,
+      default: true,
+    },
     disabled: Boolean,
     multiple: Boolean,
     required: Boolean,
@@ -147,21 +147,21 @@ export default {
       return values
         ? this.isArray
           ? values.length
-            ? values.join(", ")
+            ? values.join(', ')
             : null
           : values
         : null;
     },
     options() {
       return this.elements.filter(
-        (item, i, self) => i === self.findIndex((x) => x.value === item.value)
+        (item, i, self) => i === self.findIndex((x) => x.value === item.value),
       );
     },
     selectedIndex() {
       return this.options.findIndex((item) => item.value === this.input);
     },
     term() {
-      return this.query.length > 0 ? this.query.join("") : null;
+      return this.query.length > 0 ? this.query.join('') : null;
     },
     element() {
       return this.$refs.element;
@@ -190,7 +190,7 @@ export default {
       this.keepFocus = false;
     },
     onInput: function () {
-      this.$emit("input", this.input);
+      this.$emit('input', this.input);
     },
     onMousedown: function (event) {
       event.preventDefault();
@@ -270,7 +270,7 @@ export default {
           event.preventDefault();
           if (event.which === keycode.up) {
             this.focusedIndex = this.prev(
-              this.focusedIndex === -1 ? 0 : this.focusedIndex
+              this.focusedIndex === -1 ? 0 : this.focusedIndex,
             );
           } else if (event.which === keycode.down) {
             this.focusedIndex = this.next(this.focusedIndex);
@@ -282,7 +282,7 @@ export default {
         ) {
           if (event.which === keycode.left) {
             this.focusedIndex = this.prev(
-              this.focusedIndex === -1 ? 0 : this.focusedIndex
+              this.focusedIndex === -1 ? 0 : this.focusedIndex,
             );
           } else if (event.which === keycode.right) {
             this.focusedIndex = this.next(this.focusedIndex);
@@ -298,16 +298,17 @@ export default {
       if (event.which === this.$utils.keycode.backspace) {
         this.query.pop();
       } else {
-        const regex = new RegExp("^[a-zA-Z0-9 ]+$");
+        const regex = new RegExp('^[a-zA-Z0-9 ]+$');
         const char = String.fromCharCode(
-          !event.charCode ? event.which : event.charCode
+          !event.charCode ? event.which : event.charCode,
         ).toLowerCase();
         if (!regex.test(char)) return;
         this.query.push(char);
       }
       const index = this.options.findIndex(
         (item) =>
-          !item.disabled && String(item.value).toLowerCase().includes(this.term)
+          !item.disabled &&
+          String(item.value).toLowerCase().includes(this.term),
       );
       this.focusedIndex = index === -1 ? this.focusedIndex : index;
       if (!this.b.active) {

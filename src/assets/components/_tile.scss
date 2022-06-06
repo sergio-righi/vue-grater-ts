@@ -100,7 +100,7 @@
     }
 
     & > .gv-trailing {
-      width: 40px;
+      // width: 40px;
       @include d-inline-flex;
       @include align-items(center);
       margin-left: $default-distance;

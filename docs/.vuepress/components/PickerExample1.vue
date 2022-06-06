@@ -13,8 +13,8 @@
 export default {
   data() {
     return {
-      value: null
+      value: null,
     };
-  }
+  },
 };
 </script>

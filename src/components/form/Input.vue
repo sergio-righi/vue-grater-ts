@@ -86,12 +86,8 @@
         v-bind="$attrs"
       />
     </div>
-    <div class="gv-helper" :class="{ persistent: placeholder }">
-      <div
-        class="gv-text"
-        :class="{ active: validationMessage }"
-        v-if="hasText"
-      >
+    <div class="gv-helper" :class="{persistent: placeholder}">
+      <div class="gv-text" :class="{active: validationMessage}" v-if="hasText">
         {{ helperText }}
       </div>
       <div class="gv-counter" v-if="hasCounter">
@@ -103,14 +99,17 @@
 
 <script>
 export default {
-  name: "gv-input",
+  name: 'gv-input',
   inheritAttrs: false,
   props: {
     value: null,
     label: String,
     embed: Boolean,
     error: Boolean,
-    outline: Boolean,
+    outline: {
+      type: Boolean,
+      default: true,
+    },
     required: Boolean,
     disabled: Boolean,
     multiline: Boolean,
@@ -159,7 +158,7 @@ export default {
       return this.maxLength;
     },
     listeners() {
-      return { ...this.$listeners, input: this.onInput };
+      return {...this.$listeners, input: this.onInput};
     },
     length() {
       return this.input?.length ?? 0;
@@ -186,23 +185,23 @@ export default {
     },
     onInput: function () {
       this.validate();
-      this.$emit("input", this.input);
+      this.$emit('input', this.input);
       if (this.embed) {
         this.$nextTick(() => {
-          this.$utils.node.trigger(this.hidden, "input", true);
+          this.$utils.node.trigger(this.hidden, 'input', true);
         });
       }
     },
     onBlur: function (event) {
       this.bfocused = false;
-      this.$emit("onblur", event);
+      this.$emit('onblur', event);
       if (this.embed) {
-        this.$utils.node.trigger(this.hidden, "blur", true);
+        this.$utils.node.trigger(this.hidden, 'blur', true);
       }
     },
     onFocus(event) {
       this.bfocused = true;
-      this.$emit("onfocus", event);
+      this.$emit('onfocus', event);
     },
   },
   watch: {
