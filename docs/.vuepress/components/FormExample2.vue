@@ -39,17 +39,17 @@ export default {
       input: 4,
       multiple: [3],
       items: [
-        { value: 0, text: "Airplane" },
-        { value: 2, text: "Car", disabled: true },
-        { value: 3, text: "Train" },
-        { value: 4, text: "Bus" },
-        { value: 4, text: "Rocket" },
-        { value: 5, text: "Motorcycle" },
-        { value: 6, text: "Spaceship" },
-        { value: 7, text: "Ship" },
-        { value: 8, text: "Bike" }
-      ]
+        {value: 0, text: 'Airplane'},
+        {value: 2, text: 'Car', disabled: true},
+        {value: 3, text: 'Train'},
+        {value: 4, text: 'Bus'},
+        {value: 4, text: 'Rocket'},
+        {value: 5, text: 'Motorcycle'},
+        {value: 6, text: 'Spaceship'},
+        {value: 7, text: 'Ship'},
+        {value: 8, text: 'Bike'},
+      ],
     };
-  }
+  },
 };
 </script>

@@ -41,6 +41,7 @@
             :key="item.id"
             v-model="input"
             @click.native="onClick"
+            @change.native="onInput"
             :checked="isSelected(item.value)"
             :disabled="item.disabled"
             :val="item.value"

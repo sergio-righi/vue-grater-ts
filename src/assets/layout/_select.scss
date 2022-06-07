@@ -96,7 +96,7 @@
 
     &:before {
       font-size: $font-size * 0.75;
-      content: icon.mdi("magnify");
+      content: icon.mdi('magnify');
       font-family: $font-family-icon;
       margin-right: $default-distance * 0.25;
     }

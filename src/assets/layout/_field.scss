@@ -4,7 +4,7 @@
   @include d-flex;
   @include flex(1);
   @include flex-direction(column);
-  margin-bottom: $default-distance * 0.75;
+  margin-bottom: $default-distance * 0.875;
 
   &.disabled {
     pointer-events: none;
@@ -117,6 +117,18 @@
           }
         }
       }
+
+      & > .gv-inline {
+        & > .gv-outline {
+          & > .gv-leading {
+            border-bottom-left-radius: 0;
+          }
+
+          & > .gv-trailing {
+            border-bottom-right-radius: 0;
+          }
+        }
+      }
     }
 
     & > .gv-inline {
@@ -154,7 +166,7 @@
         & > .gv-inline {
           & > .gv-label,
           & > .gv-outline > .gv-notch > .gv-label {
-            @include transform(translateY(-26px) scale(0.75));
+            @include transform(translateY(-23px) scale(0.75));
           }
 
           & > .gv-element {
@@ -201,6 +213,10 @@
 
   &.multiline {
     & > .gv-inline {
+      & > .gv-element {
+        overflow-y: auto;
+      }
+
       & > .gv-label,
       & > .gv-outline > .gv-notch > .gv-label {
         @include transform(initial);
@@ -211,6 +227,14 @@
 
   &.embed {
     cursor: pointer;
+
+    & > .gv-inline {
+      & > .gv-element {
+        white-space: nowrap;
+        display: inline-block;
+        text-overflow: ellipsis;
+      }
+    }
   }
 
   & > .gv-inline {
