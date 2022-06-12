@@ -2,14 +2,14 @@
   <div v-if="!href">
     <slot />
   </div>
-  <a v-else-if="isURL" :href="href" :target="target" :class="{ muted: muted }">
+  <a v-else-if="isURL" :href="href" :target="target" :class="{muted: muted}">
     <slot />
   </a>
   <component
     v-else-if="isComponent"
     :is="component"
     :to="href"
-    :class="{ muted: muted }"
+    :class="{muted: muted}"
   >
     <slot />
   </component>
@@ -17,19 +17,19 @@
 
 <script>
 export default {
-  name: "gv-link",
+  name: 'gv-link',
   props: {
     href: {
       required: false,
       validator: (value) =>
-        ["string", "object", "function"].includes(typeof value) ||
+        ['string', 'object', 'function'].includes(typeof value) ||
         value === null,
     },
     target: {
       type: String,
-      default: "_self",
+      default: '_self',
       validator: (value) =>
-        ["_self", "_blank", "_parent", "_top", null].includes(value),
+        ['_self', '_blank', '_parent', '_top', null].includes(value),
     },
     muted: Boolean,
   },
@@ -47,7 +47,7 @@ export default {
       return !!this.$router;
     },
     component() {
-      return this.isNuxt ? "nuxt-link" : "router-link";
+      return this.isNuxt ? 'nuxt-link' : 'router-link';
     },
   },
 };

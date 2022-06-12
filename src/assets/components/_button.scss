@@ -13,6 +13,7 @@
   text-align: center;
   position: relative;
   white-space: nowrap;
+  text-decoration: none;
   height: $button-height;
   @include d-inline-flex;
   @include block-selection;
@@ -92,6 +93,10 @@
 
     &:hover {
       text-decoration: underline;
+    }
+
+    &:focus {
+      @include box-shadow(none);
     }
   }
 
