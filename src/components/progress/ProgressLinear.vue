@@ -2,7 +2,7 @@
   <div class="gv-progress-linear">
     <div
       class="gv-progress"
-      :class="{ error: error, success: isSuccess, dismissed: isDismissible }"
+      :class="{error: error, success: isSuccess, dismissed: isDismissible}"
     >
       <div
         v-if="buffer"
@@ -12,7 +12,7 @@
       <div v-if="stream" class="gv-stream"></div>
       <div
         class="gv-bar"
-        :class="{ indeterminate: isIndeterminate }"
+        :class="{indeterminate: isIndeterminate}"
         :style="`width:${Math.min(percentage, 100)}%`"
       ></div>
     </div>
@@ -21,22 +21,24 @@
 
 <script>
 export default {
-  name: "gv-progress-linear",
+  name: 'gv-progress-linear',
   props: {
     percentage: {
       default: 0,
-      type: Number
+      type: [String, Number],
+      validator: (value) => Number.isInteger(Number(value)),
     },
     buffer: {
       default: 0,
-      type: Number
+      type: [String, Number],
+      validator: (value) => Number.isInteger(Number(value)),
     },
     query: Boolean,
     error: Boolean,
     stream: Boolean,
     success: Boolean,
     dismissible: Boolean,
-    indeterminate: Boolean
+    indeterminate: Boolean,
   },
   computed: {
     isIndeterminate() {
@@ -47,7 +49,7 @@ export default {
     },
     isSuccess() {
       return this.success && this.percentage >= 100;
-    }
-  }
+    },
+  },
 };
 </script>

@@ -5,7 +5,7 @@
       error: error,
       success: isSuccess,
       dismissed: isDismissible,
-      indeterminate: indeterminate
+      indeterminate: indeterminate,
     }"
   >
     <svg :width="size" :height="size">
@@ -20,7 +20,7 @@
       ></circle>
     </svg>
     <div class="gv-info">
-      <span v-if="hasInfo" :style="{ fontSize: size / 3 + 'px' }">
+      <span v-if="hasInfo" :style="{fontSize: size / 3 + 'px'}">
         {{ Math.min(percentage, 100) }}
       </span>
       <slot v-else />
@@ -30,34 +30,37 @@
 
 <script>
 export default {
-  name: "gv-progress-circle",
+  name: 'gv-progress-circle',
   props: {
     color: {
       type: String,
-      default: "gray"
+      default: 'gray',
     },
     percentage: {
       default: 0,
-      type: Number
+      type: [String, Number],
+      validator: (value) => Number.isInteger(Number(value)),
     },
     size: {
       default: 60,
-      type: Number
+      type: [String, Number],
+      validator: (value) => Number.isInteger(Number(value)),
     },
     width: {
       default: 2,
-      type: Number,
-      validator: value => value >= 1 && value <= 6
+      type: [String, Number],
+      validator: (value) =>
+        Number.isInteger(Number(value)) && value >= 1 && value <= 6,
     },
     error: Boolean,
     success: Boolean,
     display: Boolean,
     dismissible: Boolean,
-    indeterminate: Boolean
+    indeterminate: Boolean,
   },
   data() {
     return {
-      stroke: null
+      stroke: null,
     };
   },
   computed: {
@@ -85,7 +88,7 @@ export default {
     },
     circunference() {
       return 2 * Math.PI * this.radius;
-    }
+    },
   },
   watch: {
     color(value) {
@@ -95,22 +98,22 @@ export default {
       if (success && this.success) {
         this.setStrokeColor(this.success);
       }
-    }
+    },
   },
   mounted() {
     this.setStrokeColor(this.color);
   },
   methods: {
-    setStrokeColor: function(color) {
+    setStrokeColor: function (color) {
       if (/^\w/gi.test(color)) {
         this.$el.classList.add(`bg-${color}`);
         const css = window.getComputedStyle(this.$el);
-        this.stroke = css.getPropertyValue("background-color");
+        this.stroke = css.getPropertyValue('background-color');
         this.$el.classList.remove(`bg-${color}`);
       } else {
         this.stroke = `bg-${color}`;
       }
-    }
-  }
+    },
+  },
 };
 </script>
