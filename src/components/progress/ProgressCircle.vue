@@ -39,18 +39,18 @@ export default {
     percentage: {
       default: 0,
       type: [String, Number],
-      validator: (value) => Number.isInteger(Number(value)),
+      validator: (value) => !isNaN(parseFloat(value)) && isFinite(value),
     },
     size: {
       default: 60,
       type: [String, Number],
-      validator: (value) => Number.isInteger(Number(value)),
+      validator: (value) => !isNaN(parseFloat(value)) && isFinite(value),
     },
     width: {
       default: 2,
       type: [String, Number],
       validator: (value) =>
-        Number.isInteger(Number(value)) && value >= 1 && value <= 6,
+        !isNaN(parseFloat(value)) && isFinite(value) && value >= 1 && value <= 6,
     },
     error: Boolean,
     success: Boolean,

@@ -82,11 +82,11 @@
 
         & > .gv-arrow {
           &.arrow-left {
-            left: $default-distance;
+            left: 0;
           }
 
           &.arrow-right {
-            right: $default-distance;
+            right: 0;
           }
         }
       }
@@ -123,41 +123,53 @@
         }
       }
 
-      & > .gv-nav,
       & > .gv-arrow {
-        @include transition(all 300ms ease);
-      }
-
-      & > .gv-arrow {
-        line-height: 1;
-        cursor: pointer;
-        text-align: center;
-        color: var(--gv-color-font);
-        @include vertical-absolute;
-        @include box-shadow-default;
-        background-color: var(--gv-color-theme);
-        @include border-radius($border-radius);
+        top: 0;
+        bottom: 0;
+        width: 80px;
+        position: absolute;
 
         &:before {
-          font-size: $font-size * 1.5;
+          font-size: $font-size * 2;
           font-family: $font-family-icon;
         }
 
         &.arrow-left {
           left: -80px;
+          background: linear-gradient(
+            to right,
+            rgba(0, 0, 0, 0.35),
+            transparent
+          );
 
           &:before {
-            content: icon.mdi("chevron-left");
+            content: icon.mdi('chevron-left');
           }
         }
 
         &.arrow-right {
           right: -80px;
+          background: linear-gradient(to left, rgba(0, 0, 0, 0.35), transparent);
 
           &:before {
-            content: icon.mdi("chevron-right");
+            content: icon.mdi('chevron-right');
           }
         }
+
+        &.arrow-left,
+        &.arrow-right {
+          &:before {
+            line-height: 1;
+            cursor: pointer;
+            @include center-absolute;
+            color: var(--gv-color-white);
+          }
+        }
+      }
+
+      & > .gv-nav,
+      & > .gv-arrow {
+        @include transition(all 300ms ease);
       }
     }
   }
@@ -171,7 +183,7 @@
       & > .gv-control {
         & > .gv-arrow {
           &:before {
-            font-size: $font-size * 1.5;
+            font-size: $font-size * 3.5;
             font-family: $font-family-icon;
           }
         }

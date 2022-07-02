@@ -75,7 +75,7 @@
       position: relative;
       @include flex(1 0 auto);
       @include block-selection;
-      background-color: var(--gv-color-border);
+      background-color: var(--gv-secondary-light);
       @include border-radius($border-radius-circle);
       @include transition(300ms cubic-bezier(0.25, 0.8, 0.5, 1));
 

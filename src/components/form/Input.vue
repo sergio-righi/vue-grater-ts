@@ -69,7 +69,7 @@
       <label :for="$attrs.id" class="gv-label" v-if="hasLabel && !outline">
         {{ label }}
       </label>
-      <div class="gv-line" v-if="!outline"></div>
+      <!-- <div class="gv-line" v-if="!outline"></div> -->
       <div class="gv-outline" v-else>
         <div class="gv-leading"></div>
         <div class="gv-notch" v-if="hasLabel">

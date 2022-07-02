@@ -14,6 +14,8 @@
   --gv-color-font: #{map-get($dark, "font")};
   --gv-color-link: #{map-get($dark, "font")};
 
+  --gv-color-field: #{map-get($dark, "field")};
+
   --gv-disabled: var(--gv-secondary);
   --gv-color-disabled: #{map-get($dark, "disabled")};
   --gv-readonly: var(--gv-secondary-light);
