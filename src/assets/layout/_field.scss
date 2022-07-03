@@ -57,6 +57,11 @@
           & > .gv-trailing {
             border-color: var(--gv-error) !important;
           }
+          & > .gv-notch {
+            & > .gv-label {
+              color: var(--gv-error);
+            }
+          }
         }
       }
     }
