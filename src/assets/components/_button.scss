@@ -96,6 +96,7 @@
       text-decoration: underline;
     }
 
+    &:hover,
     &:focus {
       @include box-shadow(none);
     }
