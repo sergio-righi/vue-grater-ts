@@ -1,5 +1,6 @@
 export { default as GraterAlert } from "./alert/Alert.vue";
 export { default as GraterAlertItem } from "./alert/AlertItem.vue";
+export { default as GraterBracket } from "./Bracket.vue";
 export { default as GraterBreadcrumb } from "./breadcrumb/Breadcrumb.vue";
 export { default as GraterBreadcrumbItem } from "./breadcrumb/BreadcrumbItem.vue";
 export { default as GraterCollapseItem } from "./collapse/CollapseItem.vue";

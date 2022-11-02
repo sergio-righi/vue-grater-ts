@@ -1,0 +1,226 @@
+@use '../utils/index' as *;
+
+.gv-bracket {
+  width: 100%;
+  max-width: 100%;
+  @include d-flex;
+  overflow-x: auto;
+  position: relative;
+  @include flex-direction(column);
+  -ms-overflow-style: -ms-autohiding-scrollbar;
+
+  &.out-of-8 > .gv-content {
+    & > .round {
+      &.of-8 {
+        & > .box {
+          &:not(:last-child) {
+            margin-bottom: 2rem;
+          }
+
+          & > .matchups .matchup:not(:last-child) {
+            margin-bottom: 2rem;
+          }
+
+          & > .connector {
+            & > .bracket {
+              height: 6rem;
+            }
+
+            & > .line {
+              height: 3rem;
+            }
+          }
+        }
+      }
+
+      &.of-4 {
+        & > .box {
+          & > .matchups .matchup:not(:last-child) {
+            margin-bottom: 8rem;
+          }
+
+          & > .connector {
+            & > .bracket {
+              height: 12rem;
+            }
+
+            & > .line {
+              height: 6rem;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  & > .gv-content {
+    margin: 0;
+    width: 100%;
+    white-space: nowrap;
+    display: inline-block;
+
+    & > .round {
+      display: inline-block;
+      vertical-align: middle;
+
+      &.of-16 > .box {
+        &:not(:last-child) {
+          margin-bottom: 2rem;
+        }
+
+        & > .matchups .matchup:not(:last-child) {
+          margin-bottom: 2rem;
+        }
+
+        & > .connector {
+          & > .bracket {
+            height: 6rem;
+          }
+
+          & > .line {
+            height: 3rem;
+          }
+        }
+      }
+
+      &.of-8 > .box {
+        &:not(:last-child) {
+          margin-bottom: 8rem;
+        }
+
+        & > .matchups .matchup:not(:last-child) {
+          margin-bottom: 8rem;
+        }
+
+        & > .connector {
+          & > .bracket {
+            height: 12rem;
+          }
+
+          & > .line {
+            height: 6rem;
+          }
+        }
+      }
+
+      &.of-4 > .box {
+        & > .matchups .matchup:not(:last-child) {
+          margin-bottom: 20rem;
+        }
+
+        & > .connector {
+          & > .bracket {
+            height: 24rem;
+          }
+          & > .line {
+            height: 12rem;
+          }
+        }
+      }
+
+      &.of-2 > .box {
+        & > .connector {
+          & > .bracket {
+            height: 3rem;
+          }
+
+          & > .line {
+            height: 1.5rem;
+          }
+        }
+      }
+
+      & > .box {
+        & > div {
+          display: inline-block;
+          vertical-align: middle;
+        }
+
+        & > .matchups .matchup {
+          &:last-child {
+            margin-bottom: 0 !important;
+          }
+
+          & > .participants {
+            z-index: 3;
+            overflow: hidden;
+            position: relative;
+
+            & > .participant {
+              width: 10rem;
+              height: 2rem;
+              @include border-radius($border-radius);
+              background-color: var(--gv-secondary-light);
+
+              &:not(:last-child) {
+                margin-bottom: $default-distance * 0.25;
+              }
+
+              &.winner {
+                border-width: 0;
+                color: var(--gv-color-white);
+                background-color: var(--gv-color-green);
+              }
+
+              & > span {
+                font-size: $font-size * 0.75;
+                padding: $default-distance * 0.5;
+              }
+            }
+          }
+        }
+
+        & > .connector {
+          overflow: hidden;
+          position: relative;
+
+          &.filled .line,
+          &.filled.bottom .bracket:after,
+          &.filled.top .bracket:before {
+            border-color: var(--gv-color-green);
+          }
+
+          & > .line {
+            width: 1rem;
+            margin-left: -8px;
+            border-bottom: 1px solid var(--gv-secondary);
+          }
+
+          & > .bracket {
+            width: 2rem;
+            height: 8rem;
+            position: relative;
+            margin-left: -$border-radius;
+
+            &:before,
+            &:after {
+              content: '';
+              width: 100%;
+              height: 50%;
+              display: block;
+              border: 0 solid;
+              border-color: var(--gv-secondary);
+              @include border-radius($border-radius);
+            }
+
+            &:before {
+              border-top-width: 1px;
+              border-right-width: 1px;
+            }
+
+            &:after {
+              border-right-width: 1px;
+              border-bottom-width: 1px;
+            }
+          }
+
+          & > .line,
+          & > .bracket {
+            vertical-align: top;
+            display: inline-block;
+          }
+        }
+      }
+    }
+  }
+}
