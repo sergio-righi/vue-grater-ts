@@ -90,11 +90,13 @@
     height: initial;
     padding: initial;
     font-weight: 700;
+    --current-background-color: transparent;
 
     &:hover {
       text-decoration: underline;
     }
 
+    &:hover,
     &:focus {
       @include box-shadow(none);
     }

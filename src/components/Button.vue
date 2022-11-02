@@ -10,6 +10,7 @@
       {
         sm: sm,
         lg: lg,
+        flat: flat,
         info: info,
         plain: plain,
         round: round,
@@ -25,7 +26,6 @@
         primary: primary,
         active: selected,
         checked: checked,
-        flat: flat || inline,
       },
     ]"
     :style="styleButton"

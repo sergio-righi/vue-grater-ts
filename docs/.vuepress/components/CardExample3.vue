@@ -7,10 +7,8 @@
           <gv-icon value="heart" color="red" class="ml-auto" />
         </template>
         <template #content>
-          <gv-image src="/img/landscape/img_13.jpg">
-            <gv-position overlay>
-              Lorem ipsum dolor sit amet
-            </gv-position>
+          <gv-image src="/img/landscape/img_13.jpg" top>
+            Lorem ipsum dolor sit amet
           </gv-image>
           <p>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla eget
@@ -66,10 +64,8 @@
           </gv-tile>
         </template>
         <template #content>
-          <gv-image src="/img/landscape/img_7.jpg" zoom>
-            <gv-position color="white" top md overlay>
-              Lorem ipsum dolor sit amet
-            </gv-position>
+          <gv-image src="/img/landscape/img_7.jpg" zoom top>
+            Lorem ipsum dolor sit amet
           </gv-image>
           <p>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla eget

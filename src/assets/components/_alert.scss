@@ -179,7 +179,7 @@
         line-height: 1;
         color: inherit;
         cursor: pointer;
-        font-weight: 600;
+        // font-weight: 600;
         text-transform: uppercase;
         font-size: $font-size * 0.75;
       }
@@ -228,7 +228,7 @@
         @include flex(initial);
         @include flex-direction(column);
         @include justify-content(center);
-        border-left: 1px solid currentColor;
+        // border-left: 1px solid currentColor;
         padding-left: $default-distance * 0.75;
       }
     }

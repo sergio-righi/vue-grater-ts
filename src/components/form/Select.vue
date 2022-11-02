@@ -91,7 +91,7 @@ export default {
     required: Boolean,
     placeholder: String,
     autocomplete: Boolean,
-    value: [Array, Number, String],
+    value: [Array, Number, String, Object],
   },
   data() {
     return {
